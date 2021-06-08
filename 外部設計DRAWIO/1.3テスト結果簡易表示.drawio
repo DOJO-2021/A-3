@@ -1,0 +1,43 @@
+<mxfile>
+    <diagram id="gdnpW9DnttdO5BJbr3VI" name="ページ1">
+        <mxGraphModel dx="683" dy="398" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="ヘッダ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="80" width="480" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="180" width="470" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="230" width="420" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="テスト詳細画面" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="320" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="トップ画面に戻る" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="320" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="開始時間" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="240" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="終了時間" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="240" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="正解率" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="240" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="合否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="240" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="--" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="240" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="解説" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="240" width="50" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
