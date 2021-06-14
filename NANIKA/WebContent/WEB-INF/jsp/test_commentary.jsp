@@ -8,8 +8,10 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-
-		<div class="menu">
+		<div>
+			<p><a href="">メニュー</a></p>
+			<p><a href="">テスト受験</a></p>
+			<p><a href="">テスト結果一覧</a></p>
 		</div>
 		<!-- ここにforEach -->
 			<div>
