@@ -23,3 +23,5 @@
 		<input type="submit" name="" value="新規登録">
 		<input type="button" name="" value="クリア">
 	</form>
+</body>
+</html>
