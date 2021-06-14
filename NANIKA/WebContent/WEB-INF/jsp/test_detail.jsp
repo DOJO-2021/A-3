@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h3>のテスト詳細</h3>
+	<c:forEach var = "i" begin = "0" end = "9" step = "1">
 	<table frame="box">
 		<tr>
 		<td>---</td>
@@ -20,9 +21,6 @@
 		<td><input type="submit" name="REGIST" value="解説"></td>
 		</tr>
 	</table>
-	<p>レーダーチャート</p>
-	<p>棒グラフ</p>
-	<p>評価</p>
-	<p>苦手な分野</p>
+	</c:forEach>
 </body>
 </html>
