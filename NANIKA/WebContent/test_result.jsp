@@ -9,9 +9,9 @@
 <body>
 	<h1>テスト結果簡易表示</h1>
 	<p>●●のテスト結果</p>
-	<table>
+	<table border="1">
 		<th>
-		<tr>---</tr>
+		<td>---</td>
 		<td>開始時間</td>
 		<td>終了時間</td>
 		<td>正解率</td>
@@ -19,7 +19,8 @@
 		<td><input type="submit" name="REGIST" value="解説"></td>
 		</th>
 	</table>
-	<a>テスト詳細画面</a>
-	<a>ホーム画面に戻る</a>
+	<br>
+	<input type="button" name="REGIST" value="テスト詳細画面">
+	<input type="button" name="REGIST" value="ホームに戻る">
 </body>
 </html>
