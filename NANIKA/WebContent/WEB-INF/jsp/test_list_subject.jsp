@@ -11,21 +11,21 @@
 <body>
 	<nav>
 		<ul>
-			<li>メニュー</li>
-			<li>テスト受験</li>
-			<li>テスト結果一覧</li>
+			<li><a>メニュー</a></li>
+			<li><a>テスト受験</a></li>
+			<li><a>テスト結果一覧</a></li>
 		</ul>
 	</nav>
 	<nav>
 		<ul>
-			<li>アルゴリズム</li>
-			<li>ネットワーク</li>
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
-			<li>データベース</li>
-			<li>Java</li>
-			<li>品質・セキュリティ</li>
+			<li><a>アルゴリズム</a></li>
+			<li><a>ネットワーク</a></li>
+			<li><a>HTML</a></li>
+			<li><a>CSS</a></li>
+			<li><a>JavaScript</a></li>
+			<li><a>データベース</a></li>
+			<li><a>Java</a></li>
+			<li><a>品質・セキュリティ</a></li>
 		</ul>
 	</nav>
 </body>
