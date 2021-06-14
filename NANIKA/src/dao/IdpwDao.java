@@ -18,7 +18,7 @@ public class IdpwDao {
 			Class.forName("org.h2.Driver");
 
 			// データベースに接続する（仮）
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/NANIKA", "sa", "");
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 
 			// SELECT文を準備する
 			String sql = "select count(*) from table_user where email = ? and password = ?";
@@ -76,7 +76,7 @@ public class IdpwDao {
 			Class.forName("org.h2.Driver");
 
 			// データベースに接続する（仮）
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/NANIKA", "sa", "");
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 
 			// SELECT文を準備する
 			String sql = "select user_id, account_name  from table_user where email = ? and password = ?";
