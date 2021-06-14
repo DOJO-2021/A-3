@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1><a href="#"><img src="" alt="ロゴ"></a></h1>
+	<h1>ホーム画面</h1>
 	<!--メニュータブ （左） -->
 	<div>
 		<p><a href="">メニュー</a></p>
@@ -34,10 +35,10 @@
     var myRadarChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ["(仮)java", "（仮）css", "（仮）html", "（仮）php", "（仮）javascript"],
+            labels: ["(仮)アルゴリズム","(仮)ネットワーク", "（仮）HTML","（仮）CSS", "（仮）JavaScript","(仮)データベース",  "（仮）Java","（仮）品質・セキュリティ"],
             datasets: [{
                 label: 'Aさん',
-                data: [92, 72, 86, 74, 86],
+                data: [92, 72, 86, 74, 86, 70, 39, 90],
                 backgroundColor: 'RGBA(225,95,150, 0.5)',
                 borderColor: 'RGBA(225,95,150, 1)',
                 borderWidth: 1,
