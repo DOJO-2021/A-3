@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1><a href="login.jsp"><img alt="ロゴ" src=""></a></h1>
-<form action="#" method="post">
+<form action="/NANIKA/LoginServlet" method="post">
 <label>E-mail<input type="email" placeholder="someone@example.com" name="EMAIL"></label><br>
 <label>Password<input type="password" placeholder="Password" name="PW"></label><br>
 <input type="submit" value="Login"><br>
