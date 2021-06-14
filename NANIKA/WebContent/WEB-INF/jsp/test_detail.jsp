@@ -7,13 +7,16 @@
 <title>テスト詳細画面</title>
 </head>
 <body>
-	<p>のテスト詳細</p>
-	<table border="1">
+	<h3>のテスト詳細</h3>
+	<table frame="box">
 		<tr>
 		<td>---</td>
+		<td></td>
 		<td>開始時間</td>
 		<td>終了時間</td>
+		<td></td>
 		<td>合否</td>
+		<td></td>
 		<td><input type="submit" name="REGIST" value="解説"></td>
 		</tr>
 	</table>

@@ -35,6 +35,7 @@
 				</table>
 				<a><input type="submit" value="戻る"></a>
 			    <a><input type="submit" value="次へ" ></a>
+			    <a><input type="submit" value="終了" ></a>
 			</form>
 		</section>
 	</div>

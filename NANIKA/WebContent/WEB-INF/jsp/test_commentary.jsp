@@ -1,12 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
 
-</body>
+		<div class="menu">
+		</div>
+		<!-- ここにforEach -->
+			<div>
+				<div>
+			        <h2>問題1</h2>
+			        <div>
+			        	問題文
+			        </div>
+			        <h2>解説</h2>
+			        <div>
+			        	解説文
+			        </div>
+		        </div>
+				<div class="commentary">
+					<table>
+						<tr><th>正解</th><th>選択</th><th>選択肢</th><th>解説</th></tr>
+						<c:forEach var="i" begin="1" end="4" step="1">
+						<tr><td>○or×</td><td>✓orNULL<td ><div>選択肢${i}</div></td><td><div>解説${i}</div></td></tr>
+						</c:forEach>
+					</table>
+					<div>
+						<button>次へ<!--　最後消す？  --></button>
+						<button>戻る</button>
+			            <button>終了</button>
+                    </div>
+				</div>
+		<!-- ここに/forEach -->
+
+			<div>
+				<ul>
+					<c:forEach var="i" begin="1" end="10" step="1">
+				        <li>
+				        <a href="#">
+					        ${i}<br/>
+							○or×
+						</a>
+						</li>
+					</c:forEach>
+				</ul>
+			</div>
+		</div>
+
+
+	</body>
 </html>
