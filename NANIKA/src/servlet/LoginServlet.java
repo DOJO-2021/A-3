@@ -55,10 +55,14 @@ public class LoginServlet extends HttpServlet {
 		//ログイン判定
 		if(iDao.isLoginOK(email,pw)) {
 			//ユーザIDとnameを取得
-			UserBeans userbeans = iDao.〇〇〇(email,pw);
+			UserBeans userbeans = iDao.login(email,pw);
+			System.out.println("----------------LoginServlet");
+			System.out.println("ユーザ："+ userbeans.getAccount_name());
+			System.out.println("ユーザID："+ userbeans.getUser_id());
+
 			// セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
-			session.setAttribute("user", userbeans);
+			session.setAttribute("userbeans", userbeans);
 			// ホームサーブレットにリダイレクトする。ページが変わるのでリダイレクトを使用している。
 			response.sendRedirect("/NANIKA/HomeServlet");
 		}else {

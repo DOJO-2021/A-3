@@ -20,6 +20,16 @@ public class UserBeans implements Serializable {
 		this.account_name_kana = account_name_kana;
 	}
 
+
+
+	public UserBeans(int user_id, String account_name) {
+		super();
+		this.user_id = user_id;
+		this.account_name = account_name;
+	}
+
+
+
 	//引数のないコンストラクタ(デフォルトコンストラクタ)
 	public UserBeans() {
 		super();
