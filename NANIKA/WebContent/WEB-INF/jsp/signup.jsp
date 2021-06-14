@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1><a href="#"><img src="" alt="ロゴ"></a></h1>
 <h1>新規登録画面</h1>
 	<form>
 		名前（必須）<br>
