@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>LoginPage</title>
 </head>
 <body>
-
+<h1><a href="login.jsp"><img alt="ロゴ" src=""></a></h1>
+<form action="#" method="post">
+<label>E-mail<input type="email" placeholder="someone@example.com"></label><br>
+<label>Password<input type="password" placeholder="Password"></label><br>
+<input type="submit" value="Login"><br>
+</form>
+<form action="#" method="post">
+<input type="submit" value="Regist">
+</form>
 </body>
 </html>
