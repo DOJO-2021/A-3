@@ -6,27 +6,25 @@
 <meta charset="UTF-8">
 <title>NANIKA</title>
 </head>
-<a>メニュー</a> >
-<a>テスト受験</a>
+<ul>
+<li>メニュー</li> >
+<li>テスト受験</li>
+</ul>
 <body>
 	<nav>
-		<ul>
-			<li><a>メニュー</a></li>
-			<li><a>テスト受験</a></li>
-			<li><a>テスト結果一覧</a></li>
-		</ul>
+			<p><a href="">メニュー</a></p>
+			<p><a href="">テスト受験</a></p>
+			<p><a href="">テスト結果一覧</a></p>
 	</nav>
 	<nav>
-		<ul>
-			<li><a>アルゴリズム</a></li>
-			<li><a>ネットワーク</a></li>
-			<li><a>HTML</a></li>
-			<li><a>CSS</a></li>
-			<li><a>JavaScript</a></li>
-			<li><a>データベース</a></li>
-			<li><a>Java</a></li>
-			<li><a>品質・セキュリティ</a></li>
-		</ul>
+			<p><a href="">アルゴリズム</a></p>
+			<p><a href="">ネットワーク</a></p>
+			<p><a href="">HTML</a></p>
+			<p><a href="">CSS</a></p>
+			<p><a href="">JavaScript</a></p>
+			<p><a href="">データベース</a></p>
+			<p><a href="">Java</a></p>
+			<p><a href="">品質・セキュリティ</a></p>
 	</nav>
 </body>
 </html>
