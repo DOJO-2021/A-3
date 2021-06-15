@@ -76,17 +76,30 @@ public class SignupServlet extends HttpServlet {
 
 		//エラーが出たら新規登録画面に再度遷移
 		if(count > 0) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/signup.jsp");
-			dispatcher.forward(request, response);
-		}else {
+//			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/signup.jsp");
+//			dispatcher.forward(request, response);
+
+			this.doGet(request, response);
+		}
+
+
+
 			// 登録処理を行う
 			IdpwDao ipDao = new IdpwDao();
-			ipDao.signUp(new UserBeans(0,account_name,email,password,account_name_kana));
 
-			//　ログインページにフォワード
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
-			dispatcher.forward(request, response);
-		}
+			if(!ipDao.isLoginOK(email, password)) {
+
+				ipDao.signUp(new UserBeans(0,account_name,email,password,account_name_kana));
+
+				//　ログインページにフォワード
+//				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
+//				dispatcher.forward(request, response);
+
+				// メニューサーブレットにリダイレクトする。ページが変わるのでリダイレクトを使用している。
+				response.sendRedirect("/NANIKA/LoginServlet");
+			}
+
+
 	}
 
 }
