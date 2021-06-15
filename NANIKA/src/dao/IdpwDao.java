@@ -124,5 +124,61 @@ public class IdpwDao {
 	}
 
 
+	// 新規登録用（サインアップ）
+	public boolean signUp(UserBeans param) {
+		Connection conn = null;
+		boolean result = false;
+		UserBeans userbeans=null; //返り値用
+
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する（仮）
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+
+			// INSERT文を準備する
+			String sql = "insert into table_user values (null, ?, ?, ?, ?)";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setString(1, param.getAccount_name());
+			pStmt.setString(2, param.getEmail());
+			pStmt.setString(3, param.getPassword());
+			pStmt.setString(4, param.getAccount_name_kana());
+
+			// INSERT文を正常に実行できたかの判断
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+
+
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+//			loginResult = false;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+//			loginResult = false;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+//					loginResult = false;
+				}
+			}
+		}
+		// 結果を返す
+		return result;
+
+
+	}
+
+
 
 }
