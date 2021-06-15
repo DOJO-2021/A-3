@@ -9,7 +9,7 @@
 <body>
 <h1><a href="#"><img src="" alt="ロゴ"></a></h1>
 <h1>新規登録画面</h1>
-	<form>
+	<form action="/NANIKA/SignupServlet" method="post">
 		名前（必須）<br>
 		<input type="text" name="NAME"><br>
 		名前（カナ文字）（必須）<br>

@@ -68,7 +68,7 @@ public class SignupServlet extends HttpServlet {
 		}
 
 		//パスワード(確認用)とパスワードが一致しているかのチェック
-		if(password != re_password) {
+		if(!password.equals(re_password)) {
 			String re_pass_err = ("※パスワードが一致しません");
 			request.setAttribute("re_pass_err",re_pass_err);
 			count++;
@@ -81,7 +81,7 @@ public class SignupServlet extends HttpServlet {
 		}else {
 			// 登録処理を行う
 			IdpwDao ipDao = new IdpwDao();
-			ipDao.insert(new UserBeans(0,account_name,email,password,account_name_kana));
+			ipDao.signUp(new UserBeans(0,account_name,email,password,account_name_kana));
 
 			//　ログインページにフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");

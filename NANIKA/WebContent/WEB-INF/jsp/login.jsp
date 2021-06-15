@@ -15,7 +15,7 @@
 			<p><c:out value="${err}"/></p>
 			<p><input type="submit" value="Login"></p>
 		</form>
-		<form action="#" method="post">
+		<form action="/NANIKA/SignupServlet" method="get">
 			<p><input type="submit" value="Regist"></p>
 		</form>
 	</body>
