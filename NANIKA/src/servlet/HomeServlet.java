@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.UserBeans;
+
 /**
  * Servlet implementation class HomeServlet
  */
@@ -20,14 +22,35 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
-		if (session.getAttribute("email") == null) {
+		UserBeans userbeans = (UserBeans)session.getAttribute("userbeans");
+
+		try {
+
+			if (userbeans.getAccount_name() == null) {
+//				return;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+			// メニューページにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home.jsp");
+			dispatcher.forward(request, response);
+		}catch(NullPointerException e) {
+			System.out.println("--------------------HomeServlet(doGet)");
+			System.out.println("ログイン画面へ戻す（userbeansがsessionに存在しない為）");
 			response.sendRedirect("/NANIKA/LoginServlet");
-			return;
 		}
 
-		// メニューページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home.jsp");
-		dispatcher.forward(request, response);
+
 
 	}
 

@@ -59,6 +59,7 @@ public class LoginServlet extends HttpServlet {
 			System.out.println("----------------LoginServlet");
 			System.out.println("ユーザ："+ userbeans.getAccount_name());
 			System.out.println("ユーザID："+ userbeans.getUser_id());
+			System.out.println("ユーザのemail："+ userbeans.getEmail());
 
 			// セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
