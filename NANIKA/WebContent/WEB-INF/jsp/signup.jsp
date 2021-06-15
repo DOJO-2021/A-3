@@ -15,14 +15,15 @@
 		名前（カナ文字）（必須）<br>
 		<input type="text" name="KANA"><br>
 		Email（必須）<br>
-		<input type="text" name="EMAIL"><br>
+		<input type="email" name="EMAIL"><br>
 		パスワード（必須）<br>
 		<input type="password" name="PW"><br>
 		パスワード（※確認用）<br>
 		<input type="password" name="PW1"><br>
 
 		<input type="submit" name="" value="新規登録">
-		<input type="button" name="" value="クリア">
+		<input type="reset" name="" value="クリア">
 	</form>
+	<a href="/NANIKA/LoginServlet">ログイン画面に戻る</a>
 </body>
 </html>
