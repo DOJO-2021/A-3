@@ -42,6 +42,17 @@ public class NanikaBeans implements Serializable  {
 		this.score = score;
 	}
 
+	//ScoreDao.java で１．４ユーザが受けた、単元の一覧情報を取得する際に（ScoreDao.java→scoreAll(int user_id )）で使用する。
+	public NanikaBeans(int user_id, String unit, String start_time, String end_time, int result) {
+		super();
+		this.user_id = user_id;
+		this.unit = unit;
+		this.start_time = start_time;
+		this.end_time = end_time;
+		this.result = result;
+	}
+
+
 	public int getUser_id() {
 		return user_id;
 	}
