@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +27,15 @@
 	<div>
 		<label>コメント</label>
 	</div>
+
+	<hr>
+	<h2>確認用</h2>
+	<c:forEach var="list_item" items="${list}">
+		<p>スコア（確認用）： ${list_item.score} </p>
+		<p>科目（確認用）： ${list_item.subject} </p><br>
+	</c:forEach>
+
+
 </body>
 
 <!-- CDN -->
@@ -35,10 +46,16 @@
     var myRadarChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ["(仮)アルゴリズム","(仮)ネットワーク", "（仮）HTML","（仮）CSS", "（仮）JavaScript","(仮)データベース",  "（仮）Java","（仮）品質・セキュリティ"],
+            labels: [
+
+            	"(仮)アルゴリズム","(仮)ネットワーク", "（仮）HTML","（仮）CSS", "（仮）JavaScript","(仮)データベース",  "（仮）Java","（仮）品質・セキュリティ"
+
+            	],
             datasets: [{
-                label: 'Aさん',
-                data: [92, 72, 86, 74, 86, 70, 39, 90],
+                label: '${userbeans.account_name}',
+                data: [
+                	92, 72, 86, 74, 86, 70, 39, 90
+                	],
                 backgroundColor: 'RGBA(225,95,150, 0.5)',
                 borderColor: 'RGBA(225,95,150, 1)',
                 borderWidth: 1,
