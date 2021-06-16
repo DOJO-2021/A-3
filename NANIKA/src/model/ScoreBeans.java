@@ -12,11 +12,6 @@ public class ScoreBeans {
 		super();
 	}
 
-
-
-
-
-
 	public int getUser_id() {
 		return user_id;
 	}
@@ -41,10 +36,10 @@ public class ScoreBeans {
 	public void setEnd_time(String end_time) {
 		this.end_time = end_time;
 	}
-	public String getScore() {
+	public int getScore() {
 		return score;
 	}
-	public void setScore(String score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 	public int getResult() {
