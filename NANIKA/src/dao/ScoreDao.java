@@ -23,12 +23,7 @@ public class ScoreDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 
 			// SELECT文を準備する
-			String sql = "select s.user_id , sub.subject, avg(score)from table_score s"
-					+ "inner join  table_unit  u on  s.unit_id = u.unit_id"
-					+ "inner join  table_subject  sub  on  u.subject_id = sub.subject_id"
-					+ "where user_id = ? and (u.unit_id,end_time)"
-					+ "in (select unit_id, max(end_time) from table_score group by unit_id)"
-					+ "group by  s.user_id ,  sub.subject";
+			String sql = "select s.user_id , sub.subject, avg(score)from table_score  s inner join  table_unit  u on  s.unit_id = u.unit_id inner join  table_subject  sub  on  u.subject_id = sub.subject_id where user_id = ? and (u.unit_id,end_time) in (select unit_id, max(end_time) from table_score group by unit_id) group by  s.user_id ,  sub.subject";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, user_id);
 
@@ -38,8 +33,8 @@ public class ScoreDao {
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
 				NanikaBeans score = new NanikaBeans(
-				rs.getInt("s.user_id"),
-				rs.getString("sub.subject"),
+				rs.getInt("user_id"),
+				rs.getString("subject"),
 				rs.getInt("avg(score)")
 				);
 			scoreList.add(score);
