@@ -130,11 +130,11 @@ public class NanikaBeans implements Serializable  {
 		this.end_time = end_time;
 	}
 
-	public String getScore() {
+	public int getScore() {
 		return score;
 	}
 
-	public void setScore(String score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 
