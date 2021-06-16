@@ -5,7 +5,7 @@ public class ScoreBeans {
 	private int unit_id;
 	private String start_time;
 	private String end_time;
-	private String score;
+	private int score;
 	private int result;
 
 	public ScoreBeans() {
