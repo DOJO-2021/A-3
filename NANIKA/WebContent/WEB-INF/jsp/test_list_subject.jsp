@@ -10,13 +10,13 @@
 </head>
 <ul>
 <li><a href="/NANIKA/HomeServlet">メニュー</a></li> $gt;
-<li><a href="/NANIKA/SubjectServlet">テスト受験</a></li>
+<li><a href="/NANIKA/TestSubjectServlet">テスト受験</a></li>
 </ul>
 <body>
 	<nav>
 			<p><a href="/NANIKA/HomeServlet">メニュー</a></p>
-			<p><a href="/NANIKA/SubjectServlet">テスト受験</a></p>
-			<p><a href="/NANIKA/TestResultServlet">テスト結果一覧</a></p>
+			<p><a href="/NANIKA/TestSubjectServlet">テスト受験</a></p>
+			<p><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></p>
 	</nav>
 	<nav>
 			<c:forEach var="subject" items="${list}">
