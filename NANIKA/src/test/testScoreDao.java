@@ -16,7 +16,7 @@ public class testScoreDao {
 
 		for (NanikaBeans nanika : nanikaList) {
 			System.out.println(nanika.getUser_id());
-			System.out.println(nanika.getSubject_id());
+			System.out.println(nanika.getSubject());
 			System.out.println(nanika.getScore());
 
 			System.out.println();
