@@ -14,8 +14,8 @@
 	<!--メニュータブ （左） -->
 	<div>
 		<p><a href="">メニュー</a></p>
-		<p><a href="">テスト受験</a></p>
-		<p><a href="">テスト結果一覧</a></p>
+		<p><a href="/NANIKA/TestSubjectServlet">テスト受験</a></p>
+		<p><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></p>
 	</div>
 
 
