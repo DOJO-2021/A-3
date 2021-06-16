@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,24 +9,28 @@
 <title>NANIKA</title>
 </head>
 <ul>
-<li>メニュー</li> >
-<li>テスト受験</li>
+<li><a href="/NANIKA/HomeServlet">メニュー</a></li> $gt;
+<li><a href="/NANIKA/SubjectServlet">テスト受験</a></li>
 </ul>
 <body>
 	<nav>
-			<p><a href="">メニュー</a></p>
-			<p><a href="">テスト受験</a></p>
-			<p><a href="">テスト結果一覧</a></p>
+			<p><a href="/NANIKA/HomeServlet">メニュー</a></p>
+			<p><a href="/NANIKA/SubjectServlet">テスト受験</a></p>
+			<p><a href="/NANIKA/TestResultServlet">テスト結果一覧</a></p>
 	</nav>
 	<nav>
-			<p><a href="">アルゴリズム</a></p>
-			<p><a href="">ネットワーク</a></p>
-			<p><a href="">HTML</a></p>
-			<p><a href="">CSS</a></p>
+			<c:forEach var="subject" items="${list}">
+			<p><a href="/NANIKA/UnitServlet"><c:out value="${subject.subject}"></c:out></a></p>
+			</c:forEach>
+<!--
+			<p><a href="/NANIKA/UnitServlet">ネットワーク</a></p>
+			<p><a href="/NANIKA/UnitServlet">HTML</a></p>
+  			<p><a href="">CSS</a></p>
 			<p><a href="">JavaScript</a></p>
 			<p><a href="">データベース</a></p>
-			<p><a href="">Java</a></p>
-			<p><a href="">品質・セキュリティ</a></p>
+			<p><a href="">Java</a>
+			<p><a href="">品質・セキュリティ</a>
+-->
 	</nav>
 </body>
 </html>
