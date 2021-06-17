@@ -42,7 +42,7 @@ public class SubjectServlet extends HttpServlet {
 
 		System.out.println(param);
 
-		request.setAttribute("subject", param);
+		request.setAttribute("subject_id", param);
 
 		response.sendRedirect("/NANIKA/UnitServlet");
 

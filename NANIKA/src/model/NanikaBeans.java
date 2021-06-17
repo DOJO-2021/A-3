@@ -35,7 +35,7 @@ public class NanikaBeans implements Serializable  {
 
 	private String user_answer; //ユーザーが選択した問題の選択肢
 
-	public NanikaBeans(int user_id, String subject,int subject_id, int score) {
+	public NanikaBeans(int user_id, String subject, int score, int subject_id) {
 		super();
 		this.user_id = user_id;
 		this.subject = subject;

@@ -21,7 +21,8 @@
 	</nav>
 	<nav>
 			<c:forEach var="subject" items="${list}">
-			<p><a href="/NANIKA/UnitServlet" class="subject"><c:out value="${subject.subject}"></c:out></a></p>
+			<c:if test=""></c:if>
+			<p><a href="/NANIKA/UnitServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
 			</c:forEach>
 <!--
 			<p><a href="/NANIKA/UnitServlet">ネットワーク</a></p>
@@ -44,7 +45,7 @@
 			subject[i].addEventListener("click",() => {
 
 			let request = {
-				param : subject[i].textContent
+				param : subject[i].name
 			};
 
 			$.ajax({
