@@ -24,7 +24,7 @@ public class ResultSubjectServlet extends HttpServlet {
 		HttpSession  session = request.getSession();
 		session.setAttribute("menu_tab", "テスト結果一覧");
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_subject.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result_list_subject.jsp");
 		dispatcher.forward(request, response);
 	}
 

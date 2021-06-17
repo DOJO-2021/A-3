@@ -35,11 +35,12 @@ public class NanikaBeans implements Serializable  {
 
 	private String user_answer; //ユーザーが選択した問題の選択肢
 
-	public NanikaBeans(int user_id, String subject, int score) {
+	public NanikaBeans(int user_id, String subject,int subject_id, int score) {
 		super();
 		this.user_id = user_id;
 		this.subject = subject;
 		this.score = score;
+		this.subject_id = subject_id;
 	}
 
 	//ScoreDao.java で１．４ユーザが受けた、単元の一覧情報を取得する際に（ScoreDao.java→scoreAll(int user_id )）で使用する。
@@ -50,6 +51,15 @@ public class NanikaBeans implements Serializable  {
 		this.start_time = start_time;
 		this.end_time = end_time;
 		this.result = result;
+	}
+
+
+	//UnitDaoで使うコンストラクタ
+	public NanikaBeans(int unit_id, String unit, int subject_id) {
+		super();
+		this.unit_id = unit_id;
+		this.unit = unit;
+		this.subject_id = subject_id;
 	}
 
 
