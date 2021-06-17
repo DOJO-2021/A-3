@@ -1,12 +1,18 @@
 package model;
 
-public class UnitBeans {
+import java.io.Serializable;
+
+public class UnitBeans implements Serializable {
 	private int unit_id;
 	private String unit;
-	private int sublect_id;
+	private int subject_id;
 
-	public UnitBeans() {
+
+	public UnitBeans(int unit_id,String unit,int subject_id) {
 		super();
+		this.unit_id = unit_id;
+		this.unit = unit;
+		this.subject_id = subject_id;
 	}
 
 	public int getUnit_id() {
@@ -25,12 +31,12 @@ public class UnitBeans {
 		this.unit = unit;
 	}
 
-	public int getSublect_id() {
-		return sublect_id;
+	public int getSubject_id() {
+		return subject_id;
 	}
 
-	public void setSublect_id(int sublect_id) {
-		this.sublect_id = sublect_id;
+	public void setSublect_id(int subject_id) {
+		this.subject_id = subject_id;
 	}
 
 

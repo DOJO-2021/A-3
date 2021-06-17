@@ -3,6 +3,7 @@ package test;
 import java.util.List;
 
 import dao.ScoreDao;
+import dao.UnitDao;
 import model.NanikaBeans;
 
 public class testScoreDao {
@@ -23,6 +24,19 @@ public class testScoreDao {
 			System.out.println();
 		}
 
-	}
+		// UnitDao()のテスト
+		UnitDao dao1 = new UnitDao();
 
+		System.out.println("---------- UnitDao()のテスト ----------");
+		List<NanikaBeans> UnitList = dao1.selectUnit(new NanikaBeans(1,"",1));
+
+		for (NanikaBeans unit : UnitList) {
+			System.out.println(unit.getUnit_id());
+			System.out.println(unit.getUnit());
+			System.out.println(unit.getSubject_id());
+
+			System.out.println();
+			System.out.println();
+		}
+	}
 }
