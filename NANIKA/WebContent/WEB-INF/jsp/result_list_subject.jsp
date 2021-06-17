@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>NANIKA</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <ul>
 <li><a href="/NANIKA/HomeServlet">メニュー</a></li> &gt;
@@ -20,7 +21,8 @@
 	</nav>
 	<nav>
 			<c:forEach var="subject" items="${list}">
-			<p><a href="/NANIKA/UnitServlet"><c:out value="${subject.subject}"></c:out></a></p>
+			<c:if test=""></c:if>
+			<p><a href="/NANIKA/SubjectServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
 			</c:forEach>
 <!--
 			<p><a href="/NANIKA/UnitServlet">ネットワーク</a></p>
@@ -32,5 +34,37 @@
 			<p><a href="">品質・セキュリティ</a>
 -->
 	</nav>
+
+	<script type="text/javascript">
+	$(function(){
+
+		const dc = document;
+		let subject = dc.getElementsByClassName('subject');
+		console.log(subject);
+		for(let i = 0; i < subject.length; i++){
+			subject[i].addEventListener("click",() => {
+
+			let request = {
+				param : subject[i].name
+			};
+
+			$.ajax({
+				type:"POST",
+				url:"http://localhost:8080/NANIKA/SubjectServlet",
+				data:request,
+				dateType:"json"
+			}).done(function(date){
+				alert(subject[i].textContent+"\n"+request);
+			}).fall(function(){
+				alert("fall");
+			}).always(function(){
+
+			});
+
+			}, false);
+		}
+	});
+
+	</script>
 </body>
 </html>

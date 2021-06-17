@@ -50,7 +50,7 @@
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8080/NANIKA/SubjectServlet",
+				url:"http://localhost:8080/NANIKA/TestResultServlet",
 				data:request,
 				dateType:"json"
 			}).done(function(date){
