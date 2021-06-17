@@ -38,7 +38,14 @@ public class SubjectServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String param = request.getParameter("param");
+
+		System.out.println(param);
+
+		request.setAttribute("subject", param);
+
+		response.sendRedirect("/NANIKA/UnitServlet");
+
 	}
 
 }
