@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.UnitDao;
 import model.NanikaBeans;
+import model.UnitBeans;
 
 /**
  * Servlet implementation class UnitServlet
@@ -25,10 +26,10 @@ public class UnitServlet extends HttpServlet {
 //		HttpSession session = request.getSession();
 //		session.getAttribute("id");
 		HttpSession sessionsubject = request.getSession();
-		NanikaBeans subject = (NanikaBeans)sessionsubject.getAttribute("subject");
+		NanikaBeans subject = (NanikaBeans)sessionsubject.getAttribute("list");
 
 		UnitDao uDao = new UnitDao();
-		List<NanikaBeans> UnitList = UnitDao.selectUnit(subject);
+		List<UnitBeans> UnitList = UnitDao.selectUnit(subject);
 		request.setAttribute("UnitList", UnitList);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
