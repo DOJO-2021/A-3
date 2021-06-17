@@ -1,0 +1,35 @@
+insert into table_subject values(null, 'Java');
+insert into table_subject values(null, 'データベース');
+insert into table_subject values(null, 'HTML');
+insert into table_subject values(null, 'CSS');
+insert into table_subject values(null, 'JavaScript');
+
+insert into table_unit values(null, '配列', 1);
+insert into table_unit values(null, 'メソッド', 1);
+insert into table_unit values(null, 'オブジェクト', 1);
+insert into table_unit values(null, '継承', 1);
+insert into table_unit values(null, '多態性', 1);
+
+insert into table_unit values(null, 'SQL', 2);
+insert into table_unit values(null, '', 2);
+insert into table_unit values(null, '', 2);
+insert into table_unit values(null, '', 2);
+insert into table_unit values(null, '', 2);
+
+insert into table_unit values(null, '', 3);
+insert into table_unit values(null, '', 3);
+insert into table_unit values(null, '', 3);
+insert into table_unit values(null, '', 3);
+insert into table_unit values(null, '', 3);
+
+insert into table_unit values(null, '', 4);
+insert into table_unit values(null, '', 4);
+insert into table_unit values(null, '', 4);
+insert into table_unit values(null, '', 4);
+insert into table_unit values(null, '', 4);
+
+insert into table_unit values(null, '', 5);
+insert into table_unit values(null, '', 5);
+insert into table_unit values(null, '', 5);
+insert into table_unit values(null, '', 5);
+insert into table_unit values(null, '', 5);
