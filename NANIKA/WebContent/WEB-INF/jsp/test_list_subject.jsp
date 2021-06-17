@@ -21,7 +21,6 @@
 	</nav>
 	<nav>
 			<c:forEach var="subject" items="${list}">
-			<c:if test=""></c:if>
 			<p><a href="/NANIKA/UnitServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
 			</c:forEach>
 <!--
@@ -50,7 +49,7 @@
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8080/NANIKA/TestResultServlet",
+				url:"http://localhost:8080/NANIKA/TestSubjectServlet",
 				data:request,
 				dateType:"json"
 			}).done(function(date){

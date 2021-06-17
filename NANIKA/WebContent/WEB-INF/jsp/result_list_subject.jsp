@@ -22,7 +22,7 @@
 	<nav>
 			<c:forEach var="subject" items="${list}">
 			<c:if test=""></c:if>
-			<p><a href="/NANIKA/SubjectServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
+			<p><a href="/NANIKA/UnitServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
 			</c:forEach>
 <!--
 			<p><a href="/NANIKA/UnitServlet">ネットワーク</a></p>
@@ -50,7 +50,7 @@
 
 			$.ajax({
 				type:"POST",
-				url:"http://localhost:8080/NANIKA/SubjectServlet",
+				url:"http://localhost:8080/NANIKA/ResultSubjectServlet",
 				data:request,
 				dateType:"json"
 			}).done(function(date){
