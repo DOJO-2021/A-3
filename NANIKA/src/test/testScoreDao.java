@@ -29,7 +29,7 @@ public class testScoreDao {
 		UnitDao dao1 = new UnitDao();
 
 		System.out.println("---------- UnitDao()のテスト ----------");
-		List<NanikaBeans> UnitList = dao1.selectUnit(new NanikaBeans(1,"",1));
+		List<NanikaBeans> UnitList = dao1.selectUnit(1);
 
 		for (NanikaBeans unit : UnitList) {
 			System.out.println(unit.getUnit_id());

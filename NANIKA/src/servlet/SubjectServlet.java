@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class SubjectServlet
@@ -41,8 +42,8 @@ public class SubjectServlet extends HttpServlet {
 		String param = request.getParameter("param");
 
 		System.out.println(param);
-
-		request.setAttribute("subject_id", param);
+		HttpSession session = request.getSession();
+		session.setAttribute("subject_id", param);
 
 		response.sendRedirect("/NANIKA/UnitServlet");
 

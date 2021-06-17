@@ -35,9 +35,11 @@ public class UnitServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		HttpSession session = request.getSession();
 //		session.getAttribute("id");
-		HttpSession sessionsubject = request.getSession();
-		NanikaBeans subject = (NanikaBeans)sessionsubject.getAttribute("list");
-		int subjectId = (int)request.getAttribute("subject_id");
+		HttpSession session = request.getSession();
+//		List subject = (List) sessionsubject.getAttribute("list");
+
+
+		int subjectId = Integer.parseInt((String)session.getAttribute("subject_id"));
 		UnitDao uDao = new UnitDao();
 		List<NanikaBeans> UnitList = uDao.selectUnit(subjectId);
 		request.setAttribute("UnitList", UnitList);

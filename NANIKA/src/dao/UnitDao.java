@@ -13,7 +13,7 @@ import model.NanikaBeans;
 
 public class UnitDao {
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<NanikaBeans> selectUnit(NanikaBeans param) {
+	public List<NanikaBeans> selectUnit(int subject_id) {
 		//箱を準備
 		Connection conn = null;
 		List<NanikaBeans> UnitList = new ArrayList<NanikaBeans>();
@@ -31,7 +31,7 @@ public class UnitDao {
 			//SELECT文を準備
 			String sql = "Select * from table_unit where subject_id = ?";
 			pStmt = conn.prepareStatement(sql);
-			pStmt.setInt(1,param.getSubject_id());
+			pStmt.setInt(1,subject_id);
 
 			//SELECT文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
