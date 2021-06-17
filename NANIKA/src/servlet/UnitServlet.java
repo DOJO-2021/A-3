@@ -14,8 +14,6 @@ import javax.servlet.http.HttpSession;
 import dao.UnitDao;
 import model.NanikaBeans;
 import model.UnitBeans;
-=======
->>>>>>> 3c7fce19ecf4b20d3decff48be8f02de9649e4ee
 
 /**
  * Servlet implementation class UnitServlet
@@ -36,7 +34,6 @@ public class UnitServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD
 //		HttpSession session = request.getSession();
 //		session.getAttribute("id");
 		HttpSession sessionsubject = request.getSession();
@@ -45,8 +42,6 @@ public class UnitServlet extends HttpServlet {
 		UnitDao uDao = new UnitDao();
 		List<UnitBeans> UnitList = UnitDao.selectUnit(subject);
 		request.setAttribute("UnitList", UnitList);
-=======
->>>>>>> 3c7fce19ecf4b20d3decff48be8f02de9649e4ee
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
 		dispatcher.forward(request, response);
