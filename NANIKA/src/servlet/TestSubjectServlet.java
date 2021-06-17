@@ -42,11 +42,13 @@ public class TestSubjectServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String param = request.getParameter("param");
-
-		System.out.println(param);
+		String param1 = request.getParameter("param1");
+		String param2 = request.getParameter("param2");
+		System.out.println(param1+"+"+param2);
 		HttpSession session = request.getSession();
-		session.setAttribute("subject_id", param);
+		session.setAttribute("subject_id", param1);
+		HttpSession subject = request.getSession();
+		subject.setAttribute("subjectName", param2);
 
 		response.sendRedirect("/NANIKA/UnitServlet");
 	}
