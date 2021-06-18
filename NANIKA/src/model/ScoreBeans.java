@@ -1,6 +1,7 @@
 package model;
 
 public class ScoreBeans {
+
 	private int user_id;
 	private int unit_id;
 	private String start_time;
@@ -8,6 +9,15 @@ public class ScoreBeans {
 	private int score;
 	private int result;
 
+	public ScoreBeans(int user_id, int unit_id, String start_time, String end_time, int score, int result) {
+		super();
+		this.user_id = user_id;
+		this.unit_id = unit_id;
+		this.start_time = start_time;
+		this.end_time = end_time;
+		this.score = score;
+		this.result = result;
+	}
 	public ScoreBeans() {
 		super();
 	}
