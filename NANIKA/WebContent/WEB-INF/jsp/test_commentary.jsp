@@ -17,6 +17,27 @@
 
 			<div id="js-que">
 				<div class="que-contents">
+				<h2>確認用</h2>
+				<hr>
+				<c:forEach var="report" items="${queston_report}">
+					<c:out value="${report.start_time}"></c:out>         <br>
+					<c:out value="${report.question_id}"></c:out>        <br>
+					<c:out value="${report.question}"></c:out>           <br>
+					<c:out value="${report.commentary}"></c:out>         <br>
+					<c:out value="${report.answer_commentary1}"></c:out>         <br>
+					<c:out value="${report.answer_commentary2}"></c:out>         <br>
+					<c:out value="${report.answer_commentary3}"></c:out>         <br>
+					<c:out value="${report.answer_commentary4}"></c:out>         <br>
+					<c:out value="${report.answer1}"></c:out>         <br>
+					<c:out value="${report.answer2}"></c:out>         <br>
+					<c:out value="${report.answer3}"></c:out>         <br>
+					<c:out value="${report.answer4}"></c:out>         <br>
+					<c:out value="${report.answer}"></c:out>          <br>
+					<c:out value="${report.user_answer}"></c:out>     <br>
+				</c:forEach>
+
+
+
 
 					<c:forEach var="i" begin="0" end="9" step="1">
 				    <div class="que-contents-item" data-content="${i}">
