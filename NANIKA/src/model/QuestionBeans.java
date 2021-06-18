@@ -17,6 +17,40 @@ public class QuestionBeans implements Serializable {
 	private String answer4;
 	private String answer;
 
+	public QuestionBeans(int question_id, int unit_id, String question, String commentary, String answer_commentary1,
+			String answer_commentary2, String answer_commentary3, String answer_commentary4, String answer1,
+			String answer2, String answer3, String answer4, String answer) {
+		super();
+		this.question_id = question_id;
+		this.unit_id = unit_id;
+		this.question = question;
+		this.commentary = commentary;
+		this.answer_commentary1 = answer_commentary1;
+		this.answer_commentary2 = answer_commentary2;
+		this.answer_commentary3 = answer_commentary3;
+		this.answer_commentary4 = answer_commentary4;
+		this.answer1 = answer1;
+		this.answer2 = answer2;
+		this.answer3 = answer3;
+		this.answer4 = answer4;
+		this.answer = answer;
+	}
+
+
+	//1.2画面 QuestionDaoに使うコンストラクタ
+	public QuestionBeans(int question_id, int unit_id, String question, String answer1, String answer2, String answer3,
+			String answer4, String answer) {
+		super();
+		this.question_id = question_id;
+		this.unit_id = unit_id;
+		this.question = question;
+		this.answer1 = answer1;
+		this.answer2 = answer2;
+		this.answer3 = answer3;
+		this.answer4 = answer4;
+		this.answer = answer;
+	}
+
 	//------------------------------------------------
 	public QuestionBeans() {
 		super();
@@ -112,6 +146,7 @@ public class QuestionBeans implements Serializable {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
+
 
 
 }
