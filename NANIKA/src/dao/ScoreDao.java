@@ -68,7 +68,7 @@ public class ScoreDao {
 
 
 	//1.4テスト詳細画面用
-	public List<NanikaBeans> scoreAll(int user_id){
+	public List<NanikaBeans> scoreAll(int user_id, int unit_id){
 		List<NanikaBeans> scoreall = new ArrayList<NanikaBeans>();
 		Connection conn = null;
 
@@ -83,9 +83,10 @@ public class ScoreDao {
 			String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.result  from table_score s "
 					+ "inner join table_user u on u.user_id = s.user_id "
 					+ "inner join table_unit uni on uni.unit_id = s.unit_id "
-					+ "where s.user_id = ?";
+					+ "where s.user_id = ? AND uni.unit = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, user_id);
+			pStmt.setInt(2, unit_id);
 
 			// SELECT文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
