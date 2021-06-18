@@ -44,9 +44,10 @@ public class HomeServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 
 			for (NanikaBeans nanika : list) {
-				System.out.print("ユーザID:"+nanika.getUser_id());
-				System.out.print("テスト科目:"+nanika.getSubject());
-				System.out.print("最新の平均点:"+nanika.getScore());
+				System.out.println("----------------HomeServlet");
+				System.out.println("ユーザID:"+nanika.getUser_id());
+				System.out.println("テスト科目:"+nanika.getSubject());
+				System.out.println("最新の平均点:"+nanika.getScore());
 				System.out.println();
 			}
 

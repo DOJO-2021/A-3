@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.ScoreDao;
 import model.NanikaBeans;
+import model.UserBeans;
 
 /**
  * Servlet implementation class TestDetailServlet
@@ -22,21 +23,31 @@ public class TestDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		ログイン確認処理
+
+		if(request.getParameter("unit_id") != null) {
+			String unitId = request.getParameter("unit_id");
+			System.out.println(unitId);
+			HttpSession session = request.getSession();
+			session.setAttribute("unitId", unitId);
+		}
+
+		//		ログイン確認処理
 		HttpSession session = request.getSession();
-		int userId = Integer.parseInt((String)session.getAttribute("userbeans"));
+		UserBeans userbeans = (UserBeans) session.getAttribute("userbeans");
 		int unitId = Integer.parseInt((String)session.getAttribute("unitId"));
-//		if (session.getAttribute("user_id") == null) {
-//			response.sendRedirect("/NANIKA/LoginServlet");
-//			return;
-//		}
-//		HttpSession session = request.getSession();
-//		UserBeans UserBeans = (UserBeans)session.getAttribute("userbeans");
+		int userId = userbeans.getUser_id();
+
 		//スコアテーブルのデータをもらう処理
 		ScoreDao sDao = new ScoreDao();
 		List<NanikaBeans> scoreall = sDao.scoreAll(userId, unitId);
 
 		request.setAttribute("scoreall", scoreall);
+		for (NanikaBeans nanika : scoreall) {
+			System.out.println("----------------ResultServlet");
+			System.out.println("ユーザID:"+ nanika.getUser_id());
+			System.out.println("テスト科目:"+ nanika.getUnit());
+			System.out.println();
+		}
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_detail.jsp");
 		dispatcher.forward(request, response);
