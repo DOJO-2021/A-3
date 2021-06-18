@@ -38,8 +38,7 @@ public class HomeServlet extends HttpServlet {
 			//引数とメソッドの名前と戻り値の型を聞く　引数( nanikaBeans )userbeansGetUser_id List型返り値 radarData　scoreDao
 			ArrayList<NanikaBeans> list = (ArrayList<NanikaBeans>)scoreDao.radarData(userbeans.getUser_id());
 			//セッション領域にセット
-			HttpSession sessionsubject = request.getSession();
-			sessionsubject.setAttribute("list",list);
+			session.setAttribute("list",list);
 			//ホームページに遷移
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home.jsp");
 			dispatcher.forward(request, response);
