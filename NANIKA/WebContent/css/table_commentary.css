@@ -1,1 +1,31 @@
-@charset "UTF-8";
+.list-nav {
+	width: auto;
+}
+
+.ulist {
+	display: flex;
+}
+
+.list {
+	margin-right: 2px;
+	background: #ccc;
+	color: #000;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px 5px 5px 5px;
+	text-align: center
+}
+
+.list.is-active{
+	background: #000;
+	color: #fff;
+}
+
+.que-contents {
+ border: 1px solid #ccc;
+ padding: 20px;
+}
+
+.que-contents-item {
+	display: none;
+}
