@@ -1,8 +1,8 @@
 insert into table_subject values(null, 'Java');
 insert into table_subject values(null, 'データベース');
-insert into table_subject values(null, 'HTML');
-insert into table_subject values(null, 'CSS');
-insert into table_subject values(null, 'JavaScript');
+insert into table_subject values(null, 'Webプログラミング');
+insert into table_subject values(null, '品質管理');
+insert into table_subject values(null, 'セキュリティ');
 
 insert into table_unit values(null, '配列', 1);
 insert into table_unit values(null, 'メソッド', 1);
@@ -10,26 +10,26 @@ insert into table_unit values(null, 'オブジェクト', 1);
 insert into table_unit values(null, '継承', 1);
 insert into table_unit values(null, '多態性', 1);
 
+insert into table_unit values(null, 'DBMS', 2);
 insert into table_unit values(null, 'SQL', 2);
-insert into table_unit values(null, '', 2);
-insert into table_unit values(null, '', 2);
-insert into table_unit values(null, '', 2);
-insert into table_unit values(null, '', 2);
+insert into table_unit values(null, 'トランザクション', 2);
+insert into table_unit values(null, 'テーブル設計', 2);
+insert into table_unit values(null, 'バックアップ', 2);
 
-insert into table_unit values(null, '', 3);
-insert into table_unit values(null, '', 3);
-insert into table_unit values(null, '', 3);
-insert into table_unit values(null, '', 3);
-insert into table_unit values(null, '', 3);
+insert into table_unit values(null, 'HTML', 3);
+insert into table_unit values(null, 'CSS', 3);
+insert into table_unit values(null, 'インデント処理', 3);
+insert into table_unit values(null, 'API', 3);
+insert into table_unit values(null, 'オブジェクト', 3);
 
-insert into table_unit values(null, '', 4);
-insert into table_unit values(null, '', 4);
-insert into table_unit values(null, '', 4);
-insert into table_unit values(null, '', 4);
-insert into table_unit values(null, '', 4);
+insert into table_unit values(null, '品質の基礎知識', 4);
+insert into table_unit values(null, 'テストの進め方', 4);
+insert into table_unit values(null, '具体的なテストの方法', 4);
+insert into table_unit values(null, '品質特性', 4);
+insert into table_unit values(null, '品質の向上', 4);
 
-insert into table_unit values(null, '', 5);
-insert into table_unit values(null, '', 5);
-insert into table_unit values(null, '', 5);
-insert into table_unit values(null, '', 5);
-insert into table_unit values(null, '', 5);
+insert into table_unit values(null, '企業とセキュリティ', 5);
+insert into table_unit values(null, 'セキュリティの基本', 5);
+insert into table_unit values(null, 'ネットワークのセキュリティ', 5);
+insert into table_unit values(null, 'ソフトウェアのセキュリティ', 5);
+insert into table_unit values(null, '暗号化', 5);
