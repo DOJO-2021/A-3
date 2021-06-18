@@ -40,12 +40,21 @@ public class UnitServlet extends HttpServlet {
 
 
 		int subjectId = Integer.parseInt((String)session.getAttribute("subject_id"));
+		String menuTab = (String)session.getAttribute("menu_tab");
 		UnitDao uDao = new UnitDao();
 		List<NanikaBeans> UnitList = uDao.selectUnit(subjectId);
 		request.setAttribute("UnitList", UnitList);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
-		dispatcher.forward(request, response);
+		if(menuTab.equals("テスト受験")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
+			dispatcher.forward(request, response);
+		}
+
+		if(menuTab.equals("テスト結果一覧")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result_list_unit.jsp");
+			dispatcher.forward(request, response);
+		}
+
 	}
 
 	/**
@@ -57,8 +66,7 @@ public class UnitServlet extends HttpServlet {
 		System.out.println(param1+"+"+param2);
 		HttpSession session = request.getSession();
 		session.setAttribute("subject_id", param1);
-		HttpSession subject = request.getSession();
-		subject.setAttribute("subjectName", param2);
+		session.setAttribute("subjectName", param2);
 
 		response.sendRedirect("/NANIKA/UnitServlet");
 	}

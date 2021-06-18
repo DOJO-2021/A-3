@@ -34,8 +34,7 @@ public class ResultSubjectServlet extends HttpServlet {
 		System.out.println(param1+"+"+param2);
 		HttpSession session = request.getSession();
 		session.setAttribute("subject_id", param1);
-		HttpSession subject = request.getSession();
-		subject.setAttribute("subjectName", param2);
+		session.setAttribute("subjectName", param2);
 
 		response.sendRedirect("/NANIKA/UnitServlet");
 	}

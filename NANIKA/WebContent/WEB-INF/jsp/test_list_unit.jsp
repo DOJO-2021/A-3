@@ -11,7 +11,7 @@
 </head>
 <ul>
 	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-	<li><a href="/NANIKA/TestSubjectServlet">テスト受験</a></li>
+	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
 	<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
 </ul>
 <body>
@@ -37,10 +37,11 @@
 	<nav>
 		<c:forEach var="unit" items="${UnitList}">
 			<p>
-				<a href="/NANIKA/TestServlet"><c:out value="${unit.unit} " /></a>
+				<a href="/NANIKA/TestServlet" class="js-unit" name='${unit.unit_id}'><c:out value="${unit.unit} " /></a>
 			</p>
 		</c:forEach>
 	</nav>
 	<script src="js/subject.js"></script>
+	<script src="js/unit.js"></script>
 </body>
 </html>
