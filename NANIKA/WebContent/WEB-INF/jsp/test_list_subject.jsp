@@ -34,36 +34,6 @@
 -->
 	</nav>
 
-	<script type="text/javascript">
-	$(function(){
-
-		const dc = document;
-		let subject = dc.getElementsByClassName('subject');
-		console.log(subject);
-		for(let i = 0; i < subject.length; i++){
-			subject[i].addEventListener("click",() => {
-
-			let request = {
-				param : subject[i].name
-			};
-
-			$.ajax({
-				type:"POST",
-				url:"http://localhost:8080/NANIKA/TestSubjectServlet",
-				data:request,
-				dateType:"json"
-			}).done(function(date){
-				alert(subject[i].textContent+"\n"+request);
-			}).fall(function(){
-				alert("fall");
-			}).always(function(){
-
-			});
-
-			}, false);
-		}
-	});
-
-	</script>
+	<script src="js/subject.js"></script>
 </body>
 </html>

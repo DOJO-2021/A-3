@@ -6,12 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>NANIKA | 単元一覧</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <ul>
-	<li>メニュー</li> &gt;
-	<li>テスト受験</li> &gt;
-	<li>Java</li>
+	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+	<li><a href="/NANIKA/TestSubjectServlet">テスト受験</a></li>
+	<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
 </ul>
 <body>
 	<nav>
@@ -28,7 +29,8 @@
 	<nav>
 		<c:forEach var="subject" items="${list}">
 			<p>
-				<a href="/NANIKA/UnitServlet" class="subject" name = '${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
+				<a href="/NANIKA/UnitServlet" class="subject"
+					name='${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
 			</p>
 		</c:forEach>
 	</nav>
@@ -39,36 +41,6 @@
 			</p>
 		</c:forEach>
 	</nav>
-	<script type="text/javascript">
-	$(function(){
-
-		const dc = document;
-		let subject = dc.getElementsByClassName('subject');
-		console.log(subject);
-		for(let i = 0; i < subject.length; i++){
-			subject[i].addEventListener("click",() => {
-
-			let request = {
-				param : subject[i].name
-			};
-
-			$.ajax({
-				type:"POST",
-				url:"http://localhost:8080/NANIKA/TestSubjectServlet",
-				data:request,
-				dateType:"json"
-			}).done(function(date){
-				alert(subject[i].textContent+"\n"+request);
-			}).fall(function(){
-				alert("fall");
-			}).always(function(){
-
-			});
-
-			}, false);
-		}
-	});
-
-	</script>
+	<script src="js/subject.js"></script>
 </body>
 </html>
