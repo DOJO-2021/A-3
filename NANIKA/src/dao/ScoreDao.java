@@ -83,11 +83,7 @@ public class ScoreDao {
 			String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.result  from table_score s "
 					+ "inner join table_user u on u.user_id = s.user_id "
 					+ "inner join table_unit uni on uni.unit_id = s.unit_id "
-<<<<<<< HEAD
-					+ "where s.user_id = ? AND s.unit_id = ?";
-=======
 					+ "where s.user_id = ? AND uni.unit_id = ?";
->>>>>>> 0715e161d5347a235dd25de3ded7ae671ed44cb4
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, user_id);
 			pStmt.setInt(2, unit_id);
