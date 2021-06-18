@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.QuestionsDao;
 import model.NanikaBeans;
+import model.UserBeans;
 
 /**
  * Servlet implementation class TestCommentaryServlet
@@ -53,15 +54,15 @@ public class TestCommentaryServlet extends HttpServlet {
 		//テスト詳細画面の解説ボタンでPOSt
 		//パラメータの取得
 		//test_detail.jspの「解説ボタン」formのsubmitされたものを貰う。
-		NanikaBeans nanikaBeans = (NanikaBeans) session.getAttribute("userbeans");
-		int user_id = nanikaBeans.getUnit_id();
+		UserBeans nanikaBeans = (UserBeans) session.getAttribute("userbeans");
+		int user_id = nanikaBeans.getUser_id();
 //		int unit_id = Integer.parseInt(request.getParameter("unit_id"));
 
 		String start_time = request.getParameter("start_time");
 		//QuestionDao(questionDao)をインスタンス
 		QuestionsDao questionsDao = new QuestionsDao();
 		//questionDaoのメソッドでselectする　おそらく返り値はNanikabeans;(返り値は未定)
-		List queston_report  = questionsDao.getUserCommentary(user_id, start_time);
+		List<NanikaBeans> queston_report = questionsDao.getUserCommentary(user_id, start_time);
 		//sessionスコープに入れてリダイレクトする
 		session.setAttribute("queston_report", queston_report );
 
