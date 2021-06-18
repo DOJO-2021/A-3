@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.QuestionsDao;
+import model.NanikaBeans;
 
 /**
  * Servlet implementation class TestCommentaryServlet
@@ -47,17 +49,21 @@ public class TestCommentaryServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 
+		HttpSession session = request.getSession();
 		//テスト詳細画面の解説ボタンでPOSt
 		//パラメータの取得
-		int unit_id = request.getParameter("〇〇〇〇");
-		String start_time = request.getParameter("〇〇〇〇");
+		//test_detail.jspの「解説ボタン」formのsubmitされたものを貰う。
+		NanikaBeans nanikaBeans = (NanikaBeans) session.getAttribute("userbeans");
+		int user_id = nanikaBeans.getUnit_id();
+//		int unit_id = Integer.parseInt(request.getParameter("unit_id"));
+
+		String start_time = request.getParameter("start_time");
 		//QuestionDao(questionDao)をインスタンス
 		QuestionsDao questionsDao = new QuestionsDao();
 		//questionDaoのメソッドでselectする　おそらく返り値はNanikabeans;(返り値は未定)
-		List queston_report  = (〇〇型)questionsDao.〇〇〇(〇〇〇);
+		List queston_report  = questionsDao.getUserCommentary(user_id, start_time);
 		//sessionスコープに入れてリダイレクトする
-		HttpSession session = request.getSession();
-		session.setAttribute("〇〇〇", queston_report );
+		session.setAttribute("queston_report", queston_report );
 
 		this.doGet(request, response);
 
