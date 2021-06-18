@@ -62,6 +62,27 @@ public class NanikaBeans implements Serializable  {
 		this.subject_id = subject_id;
 	}
 
+	//QuestionsDaoで使用（ユーザ解説画面で使用）
+	public NanikaBeans(int user_id, String start_time, int question_id, String question, String commentary,
+			String answer_commentary1, String answer_commentary2, String answer_commentary3, String answer_commentary4,
+			String answer1, String answer2, String answer3, String answer4, String answer, String user_answer) {
+		super();
+		this.user_id = user_id;
+		this.start_time = start_time;
+		this.question_id = question_id;
+		this.question = question;
+		this.commentary = commentary;
+		this.answer_commentary1 = answer_commentary1;
+		this.answer_commentary2 = answer_commentary2;
+		this.answer_commentary3 = answer_commentary3;
+		this.answer_commentary4 = answer_commentary4;
+		this.answer1 = answer1;
+		this.answer2 = answer2;
+		this.answer3 = answer3;
+		this.answer4 = answer4;
+		this.answer = answer;
+		this.user_answer = user_answer;
+	}
 
 	public int getUser_id() {
 		return user_id;
