@@ -2,9 +2,11 @@ package test;
 
 import java.util.List;
 
+import dao.QuestionsDao;
 import dao.ScoreDao;
 import dao.UnitDao;
 import model.NanikaBeans;
+import model.QuestionBeans;
 
 public class testScoreDao {
 
@@ -35,6 +37,51 @@ public class testScoreDao {
 			System.out.println(unit.getUnit_id());
 			System.out.println(unit.getUnit());
 			System.out.println(unit.getSubject_id());
+
+			System.out.println();
+			System.out.println();
+		}
+
+		// QuestionsDao()のテスト
+		QuestionsDao dao2 = new QuestionsDao();
+
+		System.out.println("---------- QuestionsDao()のテスト ----------");
+		List<NanikaBeans> comentaryList = dao2.getUserCommentary(0,0,"");
+
+		for (NanikaBeans  comentary : comentaryList ) {
+			System.out.println(comentary.getUser_id());
+			System.out.println(comentary.getStart_time());
+			System.out.println(comentary.getQuestion());
+			System.out.println(comentary.getCommentary());
+			System.out.println(comentary.getAnswer_commentary1());
+			System.out.println(comentary.getAnswer_commentary2());
+			System.out.println(comentary.getAnswer_commentary3());
+			System.out.println(comentary.getAnswer_commentary4());
+			System.out.println(comentary.getAnswer1());
+			System.out.println(comentary.getAnswer2());
+			System.out.println(comentary.getAnswer3());
+			System.out.println(comentary.getAnswer4());
+			System.out.println(comentary.getUser_answer());
+
+			System.out.println();
+			System.out.println();
+		}
+
+		// QuestionsDao()のテスト
+		QuestionsDao dao3 = new QuestionsDao();
+
+		System.out.println("---------- QuestionsDao()のテスト ----------");
+		List<QuestionBeans> testQuestionList = dao3.testQuestion(0);
+
+		for (QuestionBeans qb  : testQuestionList ) {
+			System.out.println(qb.getQuestion_id());
+			System.out.println(qb.getUnit_id());
+			System.out.println(qb.getQuestion());
+			System.out.println(qb.getAnswer1());
+			System.out.println(qb.getAnswer2());
+			System.out.println(qb.getAnswer3());
+			System.out.println(qb.getAnswer4());
+			System.out.println(qb.getAnswer());
 
 			System.out.println();
 			System.out.println();
