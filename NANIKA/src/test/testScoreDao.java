@@ -46,7 +46,7 @@ public class testScoreDao {
 		QuestionsDao dao2 = new QuestionsDao();
 
 		System.out.println("---------- QuestionsDao()のテスト ----------");
-		List<NanikaBeans> comentaryList = dao2.getUserCommentary(0,0,"");
+		List<NanikaBeans> comentaryList = dao2.getUserCommentary(1,"2021/06/14 14:36:00");
 
 		for (NanikaBeans  comentary : comentaryList ) {
 			System.out.println(comentary.getUser_id());

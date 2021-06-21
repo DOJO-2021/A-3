@@ -56,7 +56,7 @@ public class TestCommentaryServlet extends HttpServlet {
 		//test_detail.jspの「解説ボタン」formのsubmitされたものを貰う。
 		UserBeans nanikaBeans = (UserBeans) session.getAttribute("userbeans");
 		int user_id = nanikaBeans.getUser_id();
-//		int unit_id = Integer.parseInt(request.getParameter("unit_id"));
+		//int unit_id = Integer.parseInt((String)session.getAttribute("unit_id"));
 
 		String start_time = request.getParameter("start_time");
 		//QuestionDao(questionDao)をインスタンス

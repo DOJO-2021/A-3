@@ -11,13 +11,60 @@
 	<body>
 		<div>
 			<p><a href="/NANIKA/HomeServlet">メニュー</a></p>
-			<p><a href="">テスト受験</a></p>
-			<p><a href="">テスト結果一覧</a></p>
+			<p><a href="/NANIKA/TestSubjectServlet">テスト受験</a></p>
+			<p><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></p>
 		</div>
 
 			<div id="js-que">
 				<div class="que-contents">
-				<h2>確認用</h2>
+
+					<c:forEach var="report" items="${queston_report}" varStatus="status">
+				    <div class="que-contents-item" data-content="${status.index}">
+				    <div>
+				        <h2>問題${status.count}</h2>
+				        <div>
+				        	<c:out value="${report.question}" />
+				        </div>
+				        <h2>解説</h2>
+				        <div>
+				        	<c:out value="${report.commentary}" />
+				        </div>
+			        </div>
+					<div class="commentary">
+						<table>
+							<tr><th>正解</th><th>選択</th><th>選択肢</th><th>解説</th></tr>
+							<tr><td data-false>○</td><td><div data-answer>${report.user_answer}</div><td><div data-select>${report.answer1}</div></td><td><div>${report.answer_commentary1}</div></td></tr>
+							<tr><td data-false>○</td><td><div data-answer>${report.user_answer}</div><td><div data-select>${report.answer2}</div></td><td><div>${report.answer_commentary2}</div></td></tr>
+							<tr><td data-false>○</td><td><div data-answer>${report.user_answer}</div><td><div data-select>${report.answer3}</div></td><td><div>${report.answer_commentary3}</div></td></tr>
+							<tr><td data-false>○</td><td><div data-answer>${report.user_answer}</div><td><div data-select>${report.answer4}</div></td><td><div>${report.answer_commentary4}</div></td></tr>
+						</table>
+						<div class="answer" data-true>${report.answer}</div>
+						<div class="answer" data-true>${report.answer}</div>
+						<div class="answer" data-true>${report.answer}</div>
+						<div class="answer" data-true>${report.answer}</div>
+						<div class="js-button">
+							<button data-back="${status.index-1}" class="back ">戻る<!--　最後消す？  --></button>
+							<button data-next="${status.count}" class="next ">次へ</button>
+				            <button onclick="location.href='/NANIKA/TestDetailServlet'">終了</button>
+	                    </div>
+					</div>
+					</div>
+					</c:forEach>
+				</div>
+
+				<br>
+
+
+			<div class="list-nav">
+				<div class="ulist">
+					<c:forEach var="report" items="${queston_report}" varStatus="status">
+					<a href="#"  class="list" data-nav="${status.index}">${status.count}<br/>○</a>
+					</c:forEach>
+				</div>
+			</div>
+			</div>
+<!--
+<h2>確認用</h2>
 				<hr>
 				<c:forEach var="report" items="${queston_report}">
 					<c:out value="${report.start_time}"></c:out>         <br>
@@ -36,51 +83,7 @@
 					<c:out value="${report.user_answer}"></c:out>     <br>
 				</c:forEach>
 
-
-
-
-					<c:forEach var="i" begin="0" end="9" step="1">
-				    <div class="que-contents-item" data-content="${i}">
-				    <div>
-				        <h2>問題${i+1}</h2>
-				        <div>
-				        	問題文
-				        </div>
-				        <h2>解説</h2>
-				        <div>
-				        	解説文
-				        </div>
-			        </div>
-					<div class="commentary">
-						<table>
-							<tr><th>正解</th><th>選択</th><th>選択肢</th><th>解説</th></tr>
-							<c:forEach var="i" begin="1" end="4" step="1">
-							<tr><td>○or×</td><td>✓orNULL<td ><div>選択肢${i}</div></td><td><div>解説${i}</div></td></tr>
-							</c:forEach>
-						</table>
-						<div>
-							<button>次へ<!--　最後消す？  --></button>
-							<button>戻る</button>
-				            <button>終了</button>
-	                    </div>
-					</div>
-					</div>
-					</c:forEach>
-				</div>
-				<br>
-
-
-			<div class="list-nav">
-				<div class="ulist">
-					<c:forEach var="i" begin="0" end="9" step="1">
-					<a href="#"  class="list" data-nav="${i}">${i+1}<br/>○</a>
-					</c:forEach>
-				</div>
-			</div>
-		</div>
-
-
-
+-->
 	<script type="text/javascript" src="js/commentary.js"></script>
 	</body>
 </html>

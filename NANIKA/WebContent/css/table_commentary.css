@@ -29,3 +29,17 @@
 .que-contents-item {
 	display: none;
 }
+
+.next{
+	display: block;
+}
+
+.js-button{
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+}
+
+.answer{
+	display: none;
+}

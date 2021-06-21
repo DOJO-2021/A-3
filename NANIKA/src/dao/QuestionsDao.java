@@ -14,7 +14,7 @@ import model.QuestionBeans;
 public class QuestionsDao {
 
 	//ユーザの受けたテストの解説情報の取得（ユーザ解説画面で使用）
-	public List<NanikaBeans> getUserCommentary(int user_id, int unit_id, String start_time){
+	public List<NanikaBeans> getUserCommentary(int user_id, String start_time){
 		List<NanikaBeans> comentaryList = new ArrayList<NanikaBeans>();
 		Connection conn = null;
 
@@ -36,8 +36,7 @@ public class QuestionsDao {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			//-----  ---------------------------
 			pStmt.setInt(1, user_id);
-			pStmt.setInt(2, unit_id);
-			pStmt.setString(3, start_time);
+			pStmt.setString(2, start_time);
 			//------
 
 			// SELECT文を実行し、結果表を取得する
