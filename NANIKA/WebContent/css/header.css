@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+.logo{
+	width: 980px;
+	height: 150px;
+}
+
+h1{
+	text-align: center;
+}

@@ -1,1 +1,12 @@
 @charset "UTF-8";
+
+.wrapper{
+	margin: 0 auto;
+	max-width: 980px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.login{
+
+}

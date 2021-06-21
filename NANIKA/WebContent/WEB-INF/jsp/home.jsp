@@ -9,8 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1><a href="#"><img src="" alt="ロゴ"></a></h1>
-	<h1>ホーム画面</h1>
+	<div class=wrapper>
+	<header>
+		<jsp:include page="/header.jsp"/>
+	</header>
+	<main>
 	<!--メニュータブ （左） -->
 	<div>
 		<p><a href="">メニュー</a></p>
@@ -29,13 +32,15 @@
 	</div>
 
 	<hr>
+	<!--
 	<h2>確認用</h2>
 	<c:forEach var="list_item" items="${list}" >
 		<p class="score" style="display: block">${list_item.score}</p>
 		<p class="subject" style="display: block">${list_item.subject}</p><br>
 	</c:forEach>
-
-
+	 -->
+	</main>
+	</div>
 </body>
 
 <!-- CDN -->
