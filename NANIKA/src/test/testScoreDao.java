@@ -90,5 +90,21 @@ public class testScoreDao {
 			System.out.println();
 			System.out.println();
 		}
+		// テスト簡易のテスト
+				System.out.println("---------- テスト簡易ののテスト ----------");
+				List<NanikaBeans> scoreList = dao.scoreNew(1, 1);
+
+				for (NanikaBeans nanikas : scoreList) {
+					System.out.println(nanikas.getUser_id());
+					System.out.println(nanikas.getUnit());
+					System.out.println(nanikas.getStart_time());
+					System.out.println(nanikas.getEnd_time());
+					System.out.println(nanikas.getScore());
+					System.out.println(nanikas.getResult());
+
+					System.out.println();
+					System.out.println();
+				}
+
 	}
 }
