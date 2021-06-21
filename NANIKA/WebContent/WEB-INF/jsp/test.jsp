@@ -14,7 +14,7 @@
 	<div>
 		<section>
 			<h1>テスト受験</h1>
-			<p>テスト残り時間：00:00:00</p>
+			<p>テスト残り時間：  <span id="time_h"></span>:<span id="time_m"></span></p>
 			<p>単元：${unitName}</p>
 	<c:forEach var="q_list" items="${questList}">
 			<p>問題文</p>
@@ -61,3 +61,53 @@
   -->
 </body>
 </html>
+<script>
+const timeL1 = document.getElementById('time_h');
+const timeL2 = document.getElementById('time_m');
+
+const timeLimit = 1740*1000; //(30分設定)
+var startTime;
+function start(){
+  // alert('スタートですね。');
+  startTime = Date.now();
+  updateTimer();
+}
+window.onload = function(){
+  startTime = Date.now();
+  updateTimer();
+}
+
+function updateTimer() {
+  const timeLeft = (startTime+ timeLimit) -Date.now();
+	var origin = (timeLeft/1000).toFixed(0);
+  var hour = (origin/60).toFixed(0);
+  var minuits = (origin%60);
+  if(hour < 10){
+    hour = '0'+hour;
+  }
+  if(minuits === 0){
+    minuits = '0';
+  }
+  if(minuits < 10){
+    minuits = '0'+minuits;
+  }
+
+  timeL1.textContent = hour;
+  timeL2.textContent = minuits;
+  console.log('timeLeft  '+timeLeft);
+
+	const timeoutId = setTimeout(()=>{
+		updateTimer();
+	},10);
+	if(timeLeft < 0){
+		clearTimeout(timeoutId);
+		// time.textContent='0.00';
+		setTimeout(()=>{
+			alert('とりあえず終わりです。');
+			//*********
+			//ここでテスト時間終了の処理を読んであげる。「テストの終了」処理はまだ完成していないはず。。
+			//***********
+		},100);
+	}
+}
+</script>
