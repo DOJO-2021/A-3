@@ -13,7 +13,6 @@
 </head>
 <body>
 	<h1>テスト結果簡易表示</h1>
-	<p>●●のテスト結果</p>
 	<p><c:out value="${scorenew.unit}"></c:out>のテスト結果</p>
 	<table border="1">
 		<tr>
