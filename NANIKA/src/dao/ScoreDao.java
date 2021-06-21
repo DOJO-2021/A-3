@@ -127,6 +127,63 @@ public class ScoreDao {
 		return scoreall;
 	}
 
+	//テスト結果簡易表示画面
+		public List<NanikaBeans> scoreNew(int user_id, int unit_id){
+			List<NanikaBeans> scorenew = new ArrayList<NanikaBeans>();
+			Connection conn = null;
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+				// データベースに接続する（仮）
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+				// SELECT文を準備する
+				String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.result, s.score from table_score s "
+						+ "inner join table_user u on u.user_id = s.user_id "
+						+ "inner join table_unit uni on uni.unit_id = s.unit_id "
+						+ "where s.user_id = ? AND uni.unit_id = ? order by s.start_time desc";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+				pStmt.setInt(1, user_id);
+				pStmt.setInt(2, unit_id);
+				// SELECT文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					NanikaBeans score = new NanikaBeans(
+					rs.getInt("user_id"),
+					rs.getString("unit"),
+					rs.getString("start_time"),
+					rs.getString("end_time"),
+					rs.getInt("score"),
+					rs.getInt("result")
+					);
+					scorenew.add(score);
+			}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				scorenew = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				scorenew = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						scorenew = null;
+					}
+				}
+			}
+			// 結果を返す
+			return scorenew;
+		}
+
+
 	//解答insert「table_user_score」にnsertする(user_id、question_id、stat_time、user_answer)
 	public boolean insert_table_user_score(NanikaBeans answer) {
 		Connection conn = null;
