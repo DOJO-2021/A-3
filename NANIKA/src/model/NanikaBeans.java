@@ -84,6 +84,18 @@ public class NanikaBeans implements Serializable  {
 		this.user_answer = user_answer;
 	}
 
+
+	//test.jsp 選択した答えのinsertで使うコンストラクタ
+
+	public NanikaBeans(int user_id, int question_id, String start_time, String user_answer) {
+		super();
+		this.user_id = user_id;
+		this.question_id = question_id;
+		this.start_time = start_time;
+		this.user_answer = user_answer;
+	}
+
+	//---------------------------------------
 	public int getUser_id() {
 		return user_id;
 	}

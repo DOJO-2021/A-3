@@ -127,7 +127,22 @@ public class ScoreDao {
 		return scoreall;
 	}
 
-	//選択した答え
+	//選択した答えをinsertする
+	public boolean insert(Nanika answer) {
+		Connection conn = null;
+		boolean result = false;
 
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+
+			// SQL文を準備する
+			String sql = "insert into 作成したテーブル values (null,null,?,?)"
+
+
+		}
 
 }
