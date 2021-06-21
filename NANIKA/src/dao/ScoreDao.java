@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.NanikaBeans;
+import model.ScoreBeans;
 
 public class ScoreDao {
 	public List<NanikaBeans> radarData(int user_id){
@@ -258,7 +259,7 @@ public class ScoreDao {
 
 	//解答insert「table_score」
 	//nsertする(user_id、unit_id、start_time、end_time、score、result)
-	public boolean insert_table_score(NanikaBeans answer) {
+	public boolean insert_table_score(ScoreBeans answer) {
 		Connection conn = null;
 		boolean user_ans = false;
 
@@ -270,7 +271,7 @@ public class ScoreDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 
 			// SQL文を準備する
-			String sql = "insert into table_user_score values (?,?,?,?,?,?)";
+			String sql = "insert into table_score values (?,?,?,?,?,?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			//SQL文を完成させる
