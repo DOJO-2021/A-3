@@ -36,6 +36,7 @@ public class TestDetailServlet extends HttpServlet {
 		UserBeans userbeans = (UserBeans) session.getAttribute("userbeans");
 		int unitId = Integer.parseInt((String)session.getAttribute("unitId"));
 		int userId = userbeans.getUser_id();
+		request.setAttribute("unit_id", unitId);
 
 		//スコアテーブルのデータをもらう処理
 		ScoreDao sDao = new ScoreDao();
