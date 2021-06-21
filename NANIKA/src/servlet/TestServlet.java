@@ -69,9 +69,14 @@ public class TestServlet extends HttpServlet {
 		int count = 0;
 		int index = 0;
 		int result = 0;
+
 		for(int i = 1;i<20;i++) {
+			System.out.println("上count:"+count);
+			System.out.println("上index:"+index);
 			if(request.getParameter("questionid"+i) == null) {
-				int score = (count/index)*100;
+				System.out.println("if文count:"+count);
+				System.out.println("if文index:"+index);
+				int score = (int)(count*100/index);
 				System.out.println(score);
 				if(score>=80) {
 					result = 1;
@@ -87,11 +92,13 @@ public class TestServlet extends HttpServlet {
 				break;
 			}else{
 				index++;
+				System.out.println("index:"+index);
 			}
 			String answer = request.getParameter("answer"+i);
 			String user_answer = request.getParameter("radiobutton"+i);
 			if(answer.equals(user_answer)) {
 				count++;
+				System.out.println("count:"+count);
 			}
 		}
 
