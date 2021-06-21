@@ -27,7 +27,7 @@ public class TestResultServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		UserBeans userbeans = (UserBeans) session.getAttribute("userbeans");
 		int userId = userbeans.getUser_id();
-		int unitId = Integer.parseInt((String)session.getAttribute("userbeans"));
+		int unitId = (int)session.getAttribute("unitId");
 		request.setAttribute("unit_id", unitId);
 
 		ScoreDao nDao = new ScoreDao();

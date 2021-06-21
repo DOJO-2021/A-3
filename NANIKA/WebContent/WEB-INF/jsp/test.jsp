@@ -13,70 +13,62 @@
 <main>
 	<div>
 		<section>
+		<form action="/NANIKA/TestServlet" method="post">
 			<h1>テスト受験</h1>
 			<p>テスト残り時間：  <span id="time_h"></span>:<span id="time_m"></span></p>
 			<p>単元：${unitName}</p>
-	<c:forEach var="q_list" items="${questList}">
+			<c:forEach var="q_list" items="${questList}" varStatus="status">
 			<p>問題文</p>
 			<p>${q_list.question}</p>
-
-			<form action="/NANIKA/TestServlet" method="GET">
+			<input type="hidden" name="questionid${status.count}" value="${q_list.question_id}">
+			<input type="hidden" name="answer${status.count}" value="${q_list.answer}">
 				<table border="1">
 					<tr>
-					    <td><input type="radio" name="radiobutton" value="answer1"> ${q_list.answer1}</td>
+					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer1}"> ${q_list.answer1}</label></td>
 					</tr>
 					<tr>
-					    <td><input type="radio" name="radiobutton" value="answer2"> ${q_list.answer2}</td>
+					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer2}"> ${q_list.answer2}</label></td>
 					</tr>
 					<tr>
-					    <td><input type="radio" name="radiobutton" value="answer3"> ${q_list.answer3}</td>
+					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer3}"> ${q_list.answer3}</label></td>
 					</tr>
 					<tr>
-						<td> <input type="radio" name="radiobutton" value="answer4"> ${q_list.answer4}</td>
+						<td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer4}"> ${q_list.answer4}</label></td>
 					</tr>
 				</table>
-			 </c:forEach>
-				<a><input type="submit" value="戻る"></a>
-			    <a><input type="submit" value="次へ" ></a>
+
+
+				<a><button type="submit" value="">戻る</button></a>
+			    <a><button type="submit" value="" >次へ</button></a>
+
+
+
+			</c:forEach>
+			<a><input type="submit" value="終了" id="checkButton"></a>
 			</form>
 		</section>
 	</div>
 </main>
-<!--
+
 <hr>
 <h2>確認用</h2>
 <p>${unitId}</p>
 <p>${unitName}</p>
 <hr>
 <c:forEach var="q_list" items="${questList}">
- <c:out value="${q_list.unit_id}"/>
  <c:out value="${q_list.question_id}"/>
- <c:out value="${q_list.question}"/>
- <c:out value="${q_list.answer1}"/>
- <c:out value="${q_list.answer2}"/>
- <c:out value="${q_list.answer3}"/>
- <c:out value="${q_list.answer4}"/>
  <c:out value="${q_list.answer}"/>
  </c:forEach>
-  -->
-</body>
-</html>
-<script>
+
+<script type="text/javascript">
 const timeL1 = document.getElementById('time_h');
 const timeL2 = document.getElementById('time_m');
-
 const timeLimit = 1740*1000; //(30分設定)
 var startTime;
-function start(){
-  // alert('スタートですね。');
-  startTime = Date.now();
-  updateTimer();
-}
 window.onload = function(){
   startTime = Date.now();
   updateTimer();
 }
-
 function updateTimer() {
   const timeLeft = (startTime+ timeLimit) -Date.now();
 	var origin = (timeLeft/1000).toFixed(0);
@@ -91,11 +83,9 @@ function updateTimer() {
   if(minuits < 10){
     minuits = '0'+minuits;
   }
-
   timeL1.textContent = hour;
   timeL2.textContent = minuits;
   console.log('timeLeft  '+timeLeft);
-
 	const timeoutId = setTimeout(()=>{
 		updateTimer();
 	},10);
@@ -111,3 +101,6 @@ function updateTimer() {
 	}
 }
 </script>
+
+</body>
+</html>
