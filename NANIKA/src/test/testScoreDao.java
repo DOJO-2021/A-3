@@ -42,6 +42,8 @@ public class testScoreDao {
 			System.out.println();
 		}
 
+		/*
+
 		// QuestionsDao()のテスト
 		QuestionsDao dao2 = new QuestionsDao();
 
@@ -67,11 +69,13 @@ public class testScoreDao {
 			System.out.println();
 		}
 
+		*/
+
 		// QuestionsDao()のテスト
 		QuestionsDao dao3 = new QuestionsDao();
 
 		System.out.println("---------- QuestionsDao()のテスト ----------");
-		List<QuestionBeans> testQuestionList = dao3.testQuestion(0);
+		List<QuestionBeans> testQuestionList = dao3.testQuestion(1);
 
 		for (QuestionBeans qb  : testQuestionList ) {
 			System.out.println(qb.getQuestion_id());
