@@ -26,6 +26,8 @@ public class HomeServlet extends HttpServlet {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
 		UserBeans userbeans = (UserBeans)session.getAttribute("userbeans");
+		String userName = userbeans.getAccount_name();
+		session.setAttribute("userName", userName);
 
 		try {
 
