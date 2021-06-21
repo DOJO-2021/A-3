@@ -127,6 +127,7 @@ public class ScoreDao {
 		return scoreall;
 	}
 
+	//選択した答え
 
 
 }
