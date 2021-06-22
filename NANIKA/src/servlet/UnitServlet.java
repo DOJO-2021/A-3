@@ -21,23 +21,20 @@ import model.NanikaBeans;
 public class UnitServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UnitServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
+
 //		HttpSession session = request.getSession();
 //		session.getAttribute("id");
 		HttpSession session = request.getSession();
 //		List subject = (List) sessionsubject.getAttribute("list");
 
+		int index = 0;
+		session.setAttribute("index", index);
 
 		int subjectId = Integer.parseInt((String)session.getAttribute("subject_id"));
 		String menuTab = (String)session.getAttribute("menu_tab");
@@ -57,10 +54,14 @@ public class UnitServlet extends HttpServlet {
 
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
+
+		request.setCharacterEncoding("UTF-8");
 		String param1 = request.getParameter("param1");
 		String param2 = request.getParameter("param2");
 		System.out.println(param1+"+"+param2);
