@@ -46,7 +46,7 @@
 
 			</div>
 			</c:forEach>
-			<a><input type="submit" value="終了" id="checkButton"></a>
+			<a><input type="submit" value="終了" id="checkButton" onclick="return disp()"></a>
 			</form>
 		</section>
 	</div>

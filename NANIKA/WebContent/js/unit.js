@@ -39,3 +39,14 @@ $(function(){
 			}, false);
 		}
 	});
+
+function disp(){
+
+	if(window.confirm('本当に開始しますか？')){
+		return true;
+	}else{
+		window.alert('キャンセルされました');
+		return false;
+
+	}
+}
