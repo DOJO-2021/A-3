@@ -61,13 +61,11 @@
 			$back[index].style.display = 'none';
 		}
 
-
-		$end.style.visibility = "visible";
-
 		$next[index].addEventListener('click', (e) => nextClick(e));
-		$
+		$next[contentLen-2].addEventListener('click', function(){
+			$end.style.visibility = "visible";
+		}, false);
 		$back[index].addEventListener('click', (e) => backClick(e));
-
 		index++;
 	}
 
