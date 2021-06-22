@@ -13,7 +13,6 @@
 	padding: -10px;
 	margin: 0 auto;
 	text-align:center;
-	background: linear-gradient(transparent 70%, #a7d6ff 70%);
 }
 /*　入力空欄　*/
 .cp_iptxt {
@@ -91,11 +90,10 @@
   line-height: 42px;
   padding: 0;
   border: none;
-  background: rgb(255,27,0);
-background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  background: #dbae58;
 }
 .btn:hover {
-  color: #f0094a;
+  color: #dbae58;
   background: transparent;
    box-shadow:none;
 }
@@ -107,7 +105,7 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
   right:0;
   height:2px;
   width:0;
-  background: #f0094a;
+  background: #dbae58;
   box-shadow:
    -1px -1px 5px 0px #fff,
    7px 7px 20px 0px #0003,
@@ -126,3 +124,13 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
   transition:800ms ease all;
 }
 /*------------------------------------------------------*/
+
+body{
+	color: #332d30;
+}
+
+.error{
+	text-align: center;
+	color: #66330e;
+
+}

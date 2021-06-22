@@ -16,7 +16,7 @@
 			<h1 class = "logo"><a href="/NANIKA/LoginServlet"><img alt="ロゴ" src="image/logo3.png"></a></h1>
 		</header>
 		<main>
-      <h1 class="h1login">Login</h1>
+      <h1 class="h1login"><b>Login</b></h1>
 			<form action="/NANIKA/LoginServlet" method="post" >
        <table class="logintable">
          <tr>
@@ -36,7 +36,7 @@
           </td>
          </tr>
         </table>
-        <p><c:out value="${err}"/></p>
+        <p class="error"><c:out value="${err}"/></p>
         <div class="submitbtn">
 	        <a class="custom-btn btn">
 						<input class="custom-btn btn" type="submit" value="Login">
