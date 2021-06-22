@@ -49,12 +49,12 @@
 			<th>終了時間</th>
 			<th>合否</th>
 		</tr>
-		<c:forEach var="scoreall" items="${scoreall}">
+		<c:forEach var="scoreall" items="${scoreall}" varStatus="count">
 			<form method="POST" action="/NANIKA/TestCommentaryServlet">
 			<input type="hidden" name='unit_id' value="${unit.unit}" >
 			<input type="hidden" name='start_time' value="${scoreall.start_time}">
 				<tr>
-					<td>---</td>
+					<td><c:out value="${count.index+1}" /></td>
 					<td><c:out value="${scoreall.start_time} " /></td>
 					<td><c:out value="${scoreall.end_time} " /></td>
 					<td><c:out value="${scoreall.result} " /></td>
