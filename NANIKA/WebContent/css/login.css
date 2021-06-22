@@ -28,7 +28,21 @@
 .cp_iptxt input[type='text']:focus::after {
 	outline: none;
 }
-
+.cp_iptxt input[type='password'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	padding-left: 40px;
+	letter-spacing: 1px;
+	border: 0;
+}
+.cp_iptxt input[type='password']:focus {
+	outline: none;
+}
+.cp_iptxt input[type='password']:focus::after {
+	outline: none;
+}
 .cp_iptxt::after {
 	display: block;
 	width: 100%;
