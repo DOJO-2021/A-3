@@ -35,14 +35,15 @@ public class TestServlet extends HttpServlet {
 			System.out.println(unitId+"+"+unitName);
 			session.setAttribute("unitId", unitId);
 			session.setAttribute("unitName", unitName);
-
-			//QuestionsDaoから単元に当てはまるテスト問題を持ってくる
-			QuestionsDao qDao = new QuestionsDao();
-			List<QuestionBeans> questList = qDao.testQuestion(unitId);
-
-			//テスト問題をリクエストスコープに入れる
-			session.setAttribute("questList", questList);
 		}
+		int unitId = (int)session.getAttribute("unitId");
+		request.setAttribute("unit_id", unitId);
+		//QuestionsDaoから単元に当てはまるテスト問題を持ってくる
+		QuestionsDao qDao = new QuestionsDao();
+		List<QuestionBeans> questList = qDao.testQuestion(unitId);
+
+		//テスト問題をリクエストスコープに入れる
+		session.setAttribute("questList", questList);
 
 		//テスト受験画面にフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
@@ -117,8 +118,6 @@ public class TestServlet extends HttpServlet {
 			}
 
 		}
-
-
 
 		//TestResultServletにリダイレクト
 		response.sendRedirect("/NANIKA/TestResultServlet");
