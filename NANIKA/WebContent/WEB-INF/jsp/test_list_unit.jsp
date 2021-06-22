@@ -6,16 +6,23 @@
 <head>
 <meta charset="UTF-8">
 <title>NANIKA | 単元一覧</title>
+<link rel="stylesheet" href="/NANIKA/css/common.css">
+<link rel="stylesheet" href="/NANIKA/css/header.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<ul>
-	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
+<body>
+	<div class="wrapper">
+		<header>
+			<jsp:include page="/header.jsp" />
+		</header>
+<ul class="explorer">
+	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>&gt;
+	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>&gt;
 	<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
 </ul>
-<body>
-	<nav>
+
+	<nav class="menu">
 		<p>
 			<a href="/NANIKA/HomeServlet">メニュー</a>
 		</p>
@@ -26,15 +33,15 @@
 			<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
 		</p>
 	</nav>
-	<nav>
-		<c:forEach var="subject" items="${list}">
-			<p>
-				<a href="/NANIKA/UnitServlet" class="subject"
-					name='${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
-			</p>
-		</c:forEach>
+		<nav class="subjectmenu">
+			<c:forEach var="subject" items="${subjectList}">
+				<p>
+					<a href="/NANIKA/UnitServlet" class="subject"
+						name='${subject.subject_id}'>${subject.subject}</a>
+				</p>
+			</c:forEach>
 	</nav>
-	<nav>
+	<nav class="unitmenu">
 		<c:forEach var="unit" items="${UnitList}">
 			<p>
 				<a href="/NANIKA/TestServlet" class="js-unit" name='${unit.unit_id}' onclick="return disp()"><c:out value="${unit.unit} " /></a>
