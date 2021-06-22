@@ -33,15 +33,15 @@
 			<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
 		</p>
 	</nav>
-	<nav>
-		<c:forEach var="subject" items="${list}">
-			<p>
-				<a href="/NANIKA/UnitServlet" class="subject"
-					name='${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
-			</p>
-		</c:forEach>
+		<nav class="subjectmenu">
+			<c:forEach var="subject" items="${subjectList}">
+				<p>
+					<a href="/NANIKA/UnitServlet" class="subject"
+						name='${subject.subject_id}'>${subject.subject}</a>
+				</p>
+			</c:forEach>
 	</nav>
-	<nav>
+	<nav class="unitmenu">
 		<c:forEach var="unit" items="${UnitList}">
 			<p>
 				<a href="/NANIKA/TestServlet" class="js-unit" name='${unit.unit_id}' onclick="return disp()"><c:out value="${unit.unit} " /></a>
