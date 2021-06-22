@@ -1,1 +1,9 @@
 @charset "UTF-8";
+
+.que-contents-item {
+	display: none;
+}
+
+.next{
+	display: block;
+}

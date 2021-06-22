@@ -6,18 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>テスト受験</title>
+<link rel="stylesheet" href="css/test_table.css">
 </head>
 <body>
 	<header>
 	</header>
 <main>
 	<div>
-		<section>
+		<section id = "js-que">
 		<form action="/NANIKA/TestServlet" method="post">
 			<h1>テスト受験</h1>
 			<p>テスト残り時間：  <span id="time_h"></span>:<span id="time_m"></span></p>
 			<p>単元：${unitName}</p>
 			<c:forEach var="q_list" items="${questList}" varStatus="status">
+			<div class="que-contents-item" data-content="${status.index}">
 			<p>問題文</p>
 			<p>${q_list.question}</p>
 			<input type="hidden" name="questionid${status.count}" value="${q_list.question_id}">
@@ -38,11 +40,11 @@
 				</table>
 
 
-				<a><button type="submit" value="">戻る</button></a>
-			    <a><button type="submit" value="" >次へ</button></a>
+				<button data-back="${status.index-1}" class="back ">戻る</button>
+			    <button data-next="${status.count}" class="next ">次へ</button>
 
 
-
+			</div>
 			</c:forEach>
 			<a><input type="submit" value="終了" id="checkButton"></a>
 			</form>
@@ -59,48 +61,6 @@
  <c:out value="${q_list.question_id}"/>
  <c:out value="${q_list.answer}"/>
  </c:forEach>
-
-<script type="text/javascript">
-const timeL1 = document.getElementById('time_h');
-const timeL2 = document.getElementById('time_m');
-const timeLimit = 1740*1000; //(30分設定)
-var startTime;
-window.onload = function(){
-  startTime = Date.now();
-  updateTimer();
-}
-function updateTimer() {
-  const timeLeft = (startTime+ timeLimit) -Date.now();
-	var origin = (timeLeft/1000).toFixed(0);
-  var hour = (origin/60).toFixed(0);
-  var minuits = (origin%60);
-  if(hour < 10){
-    hour = '0'+hour;
-  }
-  if(minuits === 0){
-    minuits = '0';
-  }
-  if(minuits < 10){
-    minuits = '0'+minuits;
-  }
-  timeL1.textContent = hour;
-  timeL2.textContent = minuits;
-  console.log('timeLeft  '+timeLeft);
-	const timeoutId = setTimeout(()=>{
-		updateTimer();
-	},10);
-	if(timeLeft < 0){
-		clearTimeout(timeoutId);
-		// time.textContent='0.00';
-		setTimeout(()=>{
-			alert('とりあえず終わりです。');
-			//*********
-			//ここでテスト時間終了の処理を読んであげる。「テストの終了」処理はまだ完成していないはず。。
-			//***********
-		},100);
-	}
-}
-</script>
-
+<script src="js/test.js"></script>
 </body>
 </html>
