@@ -128,7 +128,7 @@ public class IdpwDao {
 	public boolean signUp(UserBeans param) {
 		Connection conn = null;
 		boolean result = false;
-		UserBeans userbeans=null; //返り値用
+		//UserBeans userbeans=null; //返り値用
 
 
 		try {
