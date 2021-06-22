@@ -4,9 +4,31 @@
 	margin: 0 auto;
 	max-width: 980px;
 	overflow: hidden;
-	text-align: center;
+}
+.menu{
+	text-align: left;
 }
 
-.login{
-
+/*メニューバー -------------------*/
+.menu p{
+display: inline;
+padding: 0;
+margin: 0;
 }
+.menu p a{
+display: block;
+border-left: 8px solid #C97556;
+background-color: #474655;
+padding: 3px 10px;
+text-decoration: none;
+color: #E1E2CF;
+width: 150px;
+margin: 1px 0px;
+text-align: left;
+font-size: 14px;
+}
+.menu p a:hover{
+border-left: 8px solid #990033;
+background-color: #474655;
+}
+/*--------------------------------*/

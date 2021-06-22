@@ -7,15 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/NANIKA/css/common.css">
+<link rel="stylesheet" href="/NANIKA/css/header.css">
 </head>
 <body>
-	<div class=wrapper>
+	<div class="wrapper">
 	<header>
 		<jsp:include page="/header.jsp"/>
 	</header>
 	<main>
 	<!--メニュータブ （左） -->
-	<div>
+	<div class="menu">
 		<p><a href="">メニュー</a></p>
 		<p><a href="/NANIKA/TestSubjectServlet">テスト受験</a></p>
 		<p><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></p>

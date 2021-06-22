@@ -19,9 +19,9 @@
 <h1 class="logo">
 	<a href="/NANIKA/HomeServlet"><img src="image/logo2.png" alt="NANIKA"></a>
 </h1>
-<nav>
+<nav class="name">
 	<ul>
 		<li><c:out value="${userName }" /></li>
-		<li><a href="#">ログアウト</a></li>
+		<li><a href="/NANIKA/LoginServlet">ログアウト</a></li>
 	</ul>
 </nav>

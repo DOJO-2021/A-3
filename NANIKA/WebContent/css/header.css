@@ -1,10 +1,18 @@
 @charset "UTF-8";
 
+
 .logo{
+	text-align: center;
 	width: 980px;
 	height: 150px;
+	margin: 0 auto;
 }
 
-h1{
-	text-align: center;
+.name {
+	text-align: right;
+}
+
+
+ul {
+    list-style: none;
 }
