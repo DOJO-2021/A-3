@@ -19,21 +19,11 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		// キャッシュを無効にする
-		response.setHeader("Pragma","no-cache");
-		response.setHeader("Cache-Control","no-cache");
-		response.setDateHeader("Expires",0);
-
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		// キャッシュを無効にする
-		response.setHeader("Pragma","no-cache");
-		response.setHeader("Cache-Control","no-cache");
-		response.setDateHeader("Expires",0);
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
