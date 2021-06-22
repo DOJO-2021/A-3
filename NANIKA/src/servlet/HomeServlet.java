@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.ScoreDao;
+import dao.SubjectDao;
 import model.NanikaBeans;
+import model.SubjectBeans;
 import model.UserBeans;
 
 /**
@@ -43,10 +45,13 @@ public class HomeServlet extends HttpServlet {
 
 			//Daoからスコアをとってくる
 			ScoreDao scoreDao = new ScoreDao();
+			SubjectDao subjectDao = new SubjectDao();
 			//引数とメソッドの名前と戻り値の型を聞く　引数( nanikaBeans )userbeansGetUser_id List型返り値 radarData　scoreDao
 			ArrayList<NanikaBeans> list = (ArrayList<NanikaBeans>)scoreDao.radarData(userbeans.getUser_id());
+			ArrayList<SubjectBeans> subjectList = (ArrayList<SubjectBeans>)subjectDao.subjectData();
 			//セッション領域にセット
 			session.setAttribute("list",list);
+			session.setAttribute("subjectList",subjectList);
 			//ホームページに遷移
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/home.jsp");
 			dispatcher.forward(request, response);

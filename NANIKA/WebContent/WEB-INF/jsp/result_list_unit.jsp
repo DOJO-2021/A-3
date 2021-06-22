@@ -37,7 +37,7 @@
 	<nav>
 		<c:forEach var="unit" items="${UnitList}">
 			<p>
-				<a href="/NANIKA/TestDetailServlet" class="js-unit" name='${unit.unit_id}' onclick="return disp()"><c:out value="${unit.unit} " /></a>
+				<a href="/NANIKA/TestDetailServlet" class="js-unit" name='${unit.unit_id}'><c:out value="${unit.unit} " /></a>
 			</p>
 		</c:forEach>
 	</nav>

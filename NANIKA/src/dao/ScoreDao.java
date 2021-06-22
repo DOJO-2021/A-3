@@ -13,7 +13,7 @@ import model.ScoreBeans;
 
 public class ScoreDao {
 	public List<NanikaBeans> radarData(int user_id){
-		List<NanikaBeans> scoreList = new ArrayList<NanikaBeans>();
+		List<NanikaBeans> radarList = new ArrayList<NanikaBeans>();
 		Connection conn = null;
 
 		try {
@@ -39,16 +39,16 @@ public class ScoreDao {
 				rs.getInt("avg(score)"),
 				rs.getInt("subject_id")
 				);
-			scoreList.add(score);
+				radarList.add(score);
 		}
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
-			scoreList = null;
+			radarList = null;
 		}
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			scoreList = null;
+			radarList = null;
 		}
 		finally {
 			// データベースを切断
@@ -58,12 +58,12 @@ public class ScoreDao {
 				}
 				catch (SQLException e) {
 					e.printStackTrace();
-					scoreList = null;
+					radarList = null;
 				}
 			}
 		}
 		// 結果を返す
-		return scoreList;
+		return radarList;
 	}
 
 

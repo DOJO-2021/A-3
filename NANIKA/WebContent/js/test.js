@@ -4,11 +4,13 @@
 	const $content = $doc.querySelectorAll('[data-content]');
 	const $next = $doc.querySelectorAll('[data-next]');
 	const $back = $doc.querySelectorAll('[data-back]');
+	const $end = $doc.getElementById('end');
 	const contentLen = $content.length;
 
 	//初期化
 	const init = () => {
 		$content[0].style.display ='block';
+		$end.style.visibility = "hidden";
 	}
 	init();
 
@@ -59,8 +61,13 @@
 			$back[index].style.display = 'none';
 		}
 
+
+		$end.style.visibility = "visible";
+
 		$next[index].addEventListener('click', (e) => nextClick(e));
+		$
 		$back[index].addEventListener('click', (e) => backClick(e));
+
 		index++;
 	}
 
