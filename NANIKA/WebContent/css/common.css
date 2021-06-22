@@ -40,15 +40,15 @@ body {
 }
 
 a:link {
-	color: #f5deb3;
+	color: #deb887;
 }
 
 a:visited {
-	color: #f5deb3;
+	color: #deb887;
 }
 
 a:hover {
-	color: #deb887;
+	color: #f5deb3;
 }
 
 a:active {
