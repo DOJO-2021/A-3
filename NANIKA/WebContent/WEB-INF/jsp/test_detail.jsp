@@ -41,17 +41,17 @@
 			</p>
 		</c:forEach>
 	</nav>
-		<h3><c:out value="${unit.unit} " />のテスト詳細</h3>
+		<h3><c:out value="${unitName} " />のテスト詳細</h3>
 	<table frame="box">
 		<tr>
-			<th><c:out value="${unit.unit} " /></th>
+			<th>回数</th>
 			<th>開始時間</th>
 			<th>終了時間</th>
 			<th>合否</th>
 		</tr>
 		<c:forEach var="scoreall" items="${scoreall}" varStatus="count">
 			<form method="POST" action="/NANIKA/TestCommentaryServlet">
-			<input type="hidden" name='unit_id' value="${unit.unit}" >
+			<input type="hidden" name='unit_id' value="${unitId}" >
 			<input type="hidden" name='start_time' value="${scoreall.start_time}">
 				<tr>
 					<td><c:out value="${count.index+1}" /></td>
