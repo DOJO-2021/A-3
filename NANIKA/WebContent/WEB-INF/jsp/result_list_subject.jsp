@@ -20,7 +20,7 @@
 			<p><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></p>
 	</nav>
 	<nav>
-			<c:forEach var="subject" items="${list}">
+			<c:forEach var="subject" items="${subjectList}">
 			<c:if test=""></c:if>
 			<p><a href="/NANIKA/UnitServlet" class="subject" name = '${subject.subject_id}' >${subject.subject}</a></p>
 			</c:forEach>

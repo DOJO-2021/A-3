@@ -46,12 +46,13 @@
 
 			</div>
 			</c:forEach>
-			<a><input type="submit" value="終了" id="checkButton" onclick="return disp()"></a>
+			<div class="end"><input type="submit" value="終了" onclick="return disp()" id = "end"></div>
 			</form>
 		</section>
 	</div>
 </main>
 
+<!--
 <hr>
 <h2>確認用</h2>
 <p>${unitId}</p>
@@ -60,7 +61,7 @@
 <c:forEach var="q_list" items="${questList}">
  <c:out value="${q_list.question_id}"/>
  <c:out value="${q_list.answer}"/>
- </c:forEach>
+ </c:forEach> -->
 <script src="js/test.js"></script>
 </body>
 </html>
