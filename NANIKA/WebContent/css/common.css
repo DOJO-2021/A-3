@@ -63,7 +63,7 @@ a:active {
 
 /*科目名メニューバー -------------------*/
 
-.subjectmenu {position: relative; left: 150; }
+.subjectmenu {position: relative; left: 180px; bottom: 58px; }
 .subjectmenu p {
 	display: inline;
 	padding: 0;
