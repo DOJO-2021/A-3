@@ -13,7 +13,7 @@
 	<body>
 		<div class=wrapper>
 		<header>
-			<h1 class = "logo"><a href="/NANIKA/LoginServlet"><img alt="ロゴ" src="image/logo2.png"></a></h1>
+			<h1 class = "logo"><a href="/NANIKA/LoginServlet"><img alt="ロゴ" src="image/logo3.png"></a></h1>
 		</header>
 		<main>
       <h1 class="h1login">Login</h1>
@@ -37,12 +37,12 @@
          </tr>
         </table>
         <p><c:out value="${err}"/></p>
-        <a id="loginbtn_cover">
-					<input id="loginbtn" type="submit" value="Login">
-				</a>
-        <form action="/NANIKA/SignupServlet" method="get">
-				<a><input type="submit" value="Regist"></a>
-			</form>
+        <div class="submitbtn">
+	        <a class="custom-btn btn">
+						<input class="custom-btn btn" type="submit" value="Login">
+					</a>
+			<a href="/NANIKA/SignupServlet" class="custom-btn btn" >Regist</a>
+		</div>
 		</main>
 		</div>
 	</body>

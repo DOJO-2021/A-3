@@ -10,9 +10,29 @@
 
 .name {
 	text-align: right;
+	color: #332d30;
 }
 
 
 ul {
     list-style: none;
+}
+
+.name { font-size: smaller;}
+.name ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.name ul li { display: inline;}
+.name ul li::after {
+    content: "|";
+    padding-left: 7px;
+}
+.name ul li:last-child::after {content: none; }
+.main_visual {
+    width:  auto;
+    height: auto;
+    margin: 0 auto 48px;
+    text-align: center;
 }

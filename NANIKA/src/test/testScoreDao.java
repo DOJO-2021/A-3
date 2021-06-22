@@ -42,7 +42,7 @@ public class testScoreDao {
 			System.out.println();
 		}
 
-		/*
+
 
 		// QuestionsDao()のテスト
 		QuestionsDao dao2 = new QuestionsDao();
@@ -69,7 +69,7 @@ public class testScoreDao {
 			System.out.println();
 		}
 
-		*/
+
 
 		// QuestionsDao()のテスト
 		QuestionsDao dao3 = new QuestionsDao();
