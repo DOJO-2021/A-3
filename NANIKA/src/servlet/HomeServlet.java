@@ -23,6 +23,12 @@ public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		// キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
+
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 		HttpSession session = request.getSession();
 		UserBeans userbeans = (UserBeans)session.getAttribute("userbeans");

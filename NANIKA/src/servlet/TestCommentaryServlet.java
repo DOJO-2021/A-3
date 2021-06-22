@@ -15,27 +15,16 @@ import dao.QuestionsDao;
 import model.NanikaBeans;
 import model.UserBeans;
 
-/**
- * Servlet implementation class TestCommentaryServlet
- */
 @WebServlet("/TestCommentaryServlet")
 public class TestCommentaryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public TestCommentaryServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+		// キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_commentary.jsp");
 		dispatcher.forward(request, response);
@@ -43,12 +32,12 @@ public class TestCommentaryServlet extends HttpServlet {
 
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		doGet(request, response);
+
+		// キャッシュを無効にする
+		response.setHeader("Pragma","no-cache");
+		response.setHeader("Cache-Control","no-cache");
+		response.setDateHeader("Expires",0);
 
 		HttpSession session = request.getSession();
 		//テスト詳細画面の解説ボタンでPOSt

@@ -24,7 +24,7 @@
 			<input type="hidden" name="answer${status.count}" value="${q_list.answer}">
 				<table border="1">
 					<tr>
-					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer1}"> ${q_list.answer1}</label></td>
+					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer1}" checked> ${q_list.answer1}</label></td>
 					</tr>
 					<tr>
 					    <td><label><input type="radio" name="radiobutton${status.count}" value="${q_list.answer2}"> ${q_list.answer2}</label></td>
