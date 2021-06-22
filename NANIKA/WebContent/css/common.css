@@ -32,3 +32,22 @@ border-left: 8px solid #990033;
 background-color: #474655;
 }
 /*--------------------------------*/
+
+body{
+	background-color: #488a99;
+}
+
+a:link {
+		color: #f5deb3;
+}
+a:visited {
+		color: #f5deb3;
+}
+a:hover {
+		color: #deb887;
+}
+a:active {
+		color: #f0e68c;
+}
+
+

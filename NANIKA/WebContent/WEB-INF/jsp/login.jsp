@@ -13,7 +13,7 @@
 	<body>
 		<div class=wrapper>
 		<header>
-			<h1 class = "logo"><a href="/NANIKA/LoginServlet"><img alt="ロゴ" src="image/logo2.png"></a></h1>
+			<h1 class = "logo"><a href="/NANIKA/LoginServlet"><img alt="ロゴ" src="image/logo3.png"></a></h1>
 		</header>
 		<main>
       <h1 class="h1login">Login</h1>
