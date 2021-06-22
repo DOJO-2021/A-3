@@ -1,53 +1,88 @@
 @charset "UTF-8";
 
-.wrapper{
+.wrapper {
 	margin: 0 auto;
 	max-width: 980px;
 	overflow: hidden;
 }
-.menu{
+
+.menu {
 	text-align: left;
 }
 
 /*メニューバー -------------------*/
-.menu p{
-display: inline;
-padding: 0;
-margin: 0;
+.menu p {
+	display: inline;
+	padding: 0;
+	margin: 0;
 }
-.menu p a{
-display: block;
-border-left: 8px solid #C97556;
-background-color: #474655;
-padding: 3px 10px;
-text-decoration: none;
-color: #E1E2CF;
-width: 150px;
-margin: 1px 0px;
-text-align: left;
-font-size: 14px;
+
+.menu p a {
+	display: block;
+	border-left: 8px solid #C97556;
+	background-color: #474655;
+	padding: 3px 10px;
+	text-decoration: none;
+	color: #E1E2CF;
+	width: 150px;
+	margin: 1px 0px;
+	text-align: left;
+	font-size: 14px;
 }
-.menu p a:hover{
-border-left: 8px solid #990033;
-background-color: #474655;
+
+.menu p a:hover {
+	border-left: 8px solid #990033;
+	background-color: #474655;
 }
 /*--------------------------------*/
-
-body{
+body {
 	background-color: #488a99;
 }
 
 a:link {
-		color: #f5deb3;
+	color: #f5deb3;
 }
+
 a:visited {
-		color: #f5deb3;
+	color: #f5deb3;
 }
+
 a:hover {
-		color: #deb887;
+	color: #deb887;
 }
+
 a:active {
-		color: #f0e68c;
+	color: #f0e68c;
 }
 
+/* 上のリンク＞リンクのやつ*/
+.explorer li {
+	display: inline;
+	list-style-type: 0;
+}
 
+/*科目名メニューバー -------------------*/
+.subjectmenu p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.subjectmenu p a {
+	display: block;
+	border-left: 8px solid #C97556;
+	background-color: #474655;
+	padding: 3px 10px;
+	text-decoration: none;
+	color: #E1E2CF;
+	width: 150px;
+	margin: 1px 0px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.subjectmenu p a:hover {
+	border-left: 8px solid #990033;
+	background-color: #474655;
+}
+/*--------------------------------*/
