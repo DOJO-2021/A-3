@@ -16,21 +16,38 @@
 	<p><c:out value="${unitName}"></c:out>のテスト結果</p>
 	<table border="1">
 		<tr>
-		<td>---</td>
+		<td>回数</td>
 		<td>開始時間</td>
 		<td>終了時間</td>
 		<td>正解率</td>
 		<td>合否</td>
+		<td>解説</td>
 		</tr>
-		<form >
-
-		</form>
+		<c:forEach var="scorenew" items="${scorenew}" varStatus="count">
+			<form method="POST" action="/NANIKA/TestCommentaryServlet">
+			<input type="hidden" name='unit_id' value="${unitId}" >
+			<input type="hidden" name='start_time' value="${scorenew.start_time}">
+				<tr>
+					<td><c:out value="${count.index+1}" /></td>
+					<td><c:out value="${scorenew.start_time} " /></td>
+					<td><c:out value="${scorenew.end_time} " /></td>
+					<td><c:out value="${scorenew.score} " /></td>
+					<c:choose>
+					<c:when test="${scorenew.result == 0}">
+					<td>×</td>
+					</c:when>
+					<c:when test="${scorenew.result == 1}">
+					<td>○</td>
+					</c:when>
+					</c:choose>
+					<td><input type="submit" name="REGIST" value="解説"></td>
+				</tr>
+			</form>
+		</c:forEach>
 	</table>
 	<br>
-	<input type="button" name="REGIST" value="テスト詳細画面">
-	<input type="button" name="REGIST" value="ホームに戻る">
-	<form method="POST" action="/NANIKA/TestDetailServlet">
-	<input type="hidden" name='unit_id' value="${unit_id}" >
+	<form method="get" action="/NANIKA/TestDetailServlet">
+		<input type="hidden" name='unit_id' value="${unitId}" >
 		<input type="submit" name="REGIST" value="テスト詳細画面">
 	</form>
 	<a href= "/NANIKA/HomeServlet">ホームに戻る</a>

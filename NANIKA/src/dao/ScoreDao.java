@@ -138,10 +138,12 @@ public class ScoreDao {
 				// データベースに接続する（仮）
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 				// SELECT文を準備する
-				String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.result, s.score from table_score s "
-						+ "inner join table_user u on u.user_id = s.user_id "
-						+ "inner join table_unit uni on uni.unit_id = s.unit_id "
-						+ "where s.user_id = ? AND uni.unit_id = ? order by s.start_time desc";
+				String sql = "select s.user_id, max(s.start_time), s.end_time, uni.unit, s.result, s.score"
+						+ " from table_score s inner join table_user u on u.user_id = s.user_id"
+						+ " inner join table_unit uni on uni.unit_id = s.unit_id"
+						+ " where s.user_id = ? AND uni.unit_id = ?"
+						+ " group by s.user_id,s.end_time, uni.unit, s.result, s.score"
+						+ " order by s.start_time desc limit 1";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 				pStmt.setInt(1, user_id);
 				pStmt.setInt(2, unit_id);
@@ -152,7 +154,7 @@ public class ScoreDao {
 					NanikaBeans score = new NanikaBeans(
 					rs.getInt("user_id"),
 					rs.getString("unit"),
-					rs.getString("start_time"),
+					rs.getString("max(s.start_time)"),
 					rs.getString("end_time"),
 					rs.getInt("score"),
 					rs.getInt("result")
