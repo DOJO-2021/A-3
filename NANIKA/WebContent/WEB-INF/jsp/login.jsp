@@ -23,7 +23,7 @@
            <th>Email:</th>
            <td>
         <div class="cp_iptxt">
-	<input type="text" placeholder="Someone@example.com">
+	<input type="text" placeholder="Someone@example.com" name="EMAIL" class="login">
 </div>
            </td>
          </tr>
@@ -31,7 +31,7 @@
           <th>Password:</th>
           <td>
              <div class="cp_iptxt">
-	<input type="text" placeholder="Password">
+	<input type="password" placeholder="Password" name="PW" class="login">
 </div>
           </td>
          </tr>
