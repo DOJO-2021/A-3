@@ -28,6 +28,7 @@
 	padding-left: 40px;
 	letter-spacing: 1px;
 	border: 0;
+	background-color: #488a99;
 }
 .cp_iptxt input[type='text']:focus {
 	outline: none;
@@ -43,6 +44,7 @@
 	padding-left: 40px;
 	letter-spacing: 1px;
 	border: 0;
+	background-color: #488a99;
 }
 .cp_iptxt input[type='password']:focus {
 	outline: none;
@@ -58,7 +60,10 @@
 	content: '';
 	border-width: 0 1px 1px 1px;
 	border-style: solid;
-	border-color: #da3c41;
+	border-color: #c499ff;
+}
+::placeholder{
+	color: #145866;
 }
 /*------------------------------------------------------*/
 

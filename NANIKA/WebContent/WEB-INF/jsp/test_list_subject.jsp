@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NANIKA</title>
+<title>NANIKA | 単元一覧</title>
 <link rel="stylesheet" href="/NANIKA/css/common.css">
 <link rel="stylesheet" href="/NANIKA/css/header.css">
 <script

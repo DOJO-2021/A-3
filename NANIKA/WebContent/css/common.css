@@ -63,7 +63,7 @@ a:active {
 
 /*科目名メニューバー -------------------*/
 
-.subjectmenu {position: relative; left: 150; }
+.subjectmenu {position: relative; left: 180px; bottom: 58px; }
 .subjectmenu p {
 	display: inline;
 	padding: 0;
@@ -84,6 +84,34 @@ a:active {
 }
 
 .subjectmenu p a:hover {
+	border-left: 8px solid #990033;
+	background-color: #474655;
+}
+/*--------------------------------*/
+
+/*単元名メニューバー -------------------*/
+
+.unitmenu {position: relative; left: 360px; bottom: 140px; }
+.unitmenu p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.unitmenu p a {
+	display: block;
+	border-left: 8px solid #C97556;
+	background-color: #474655;
+	padding: 3px 10px;
+	text-decoration: none;
+	color: #E1E2CF;
+	width: 150px;
+	margin: 1px 0px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.unitmenu p a:hover {
 	border-left: 8px solid #990033;
 	background-color: #474655;
 }
