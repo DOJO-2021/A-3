@@ -34,7 +34,7 @@
 			</p>
 		</nav>
 		<nav class="subjectmenu">
-			<c:forEach var="subject" items="${list}">
+			<c:forEach var="subject" items="${subjectList}">
 				<p>
 					<a href="/NANIKA/UnitServlet" class="subject"
 						name='${subject.subject_id}'>${subject.subject}</a>
