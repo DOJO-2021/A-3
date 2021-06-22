@@ -6,16 +6,23 @@
 <head>
 <meta charset="UTF-8">
 <title>NANIKA | 単元一覧</title>
+<link rel="stylesheet" href="/NANIKA/css/common.css">
+<link rel="stylesheet" href="/NANIKA/css/header.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<ul>
-	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
+<body>
+	<div class="wrapper">
+		<header>
+			<jsp:include page="/header.jsp" />
+		</header>
+<ul class="explorer">
+	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>&gt;
+	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>&gt;
 	<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
 </ul>
-<body>
-	<nav>
+
+	<nav class="menu">
 		<p>
 			<a href="/NANIKA/HomeServlet">メニュー</a>
 		</p>
