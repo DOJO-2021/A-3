@@ -55,13 +55,15 @@ a:active {
 	color: #f0e68c;
 }
 
-/* 上のリンク＞リンクのやつ*/
+/* 上の,リンク＞リンクのやつ*/
 .explorer li {
 	display: inline;
 	list-style-type: 0;
 }
 
 /*科目名メニューバー -------------------*/
+
+.subjectmenu {position: relative; left: 150; }
 .subjectmenu p {
 	display: inline;
 	padding: 0;
