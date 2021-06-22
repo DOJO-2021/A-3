@@ -37,12 +37,14 @@
          </tr>
         </table>
         <p><c:out value="${err}"/></p>
-        <a id="loginbtn_cover">
-					<input id="loginbtn" type="submit" value="Login">
-				</a>
-        <form action="/NANIKA/SignupServlet" method="get">
-				<a><input type="submit" value="Regist"></a>
+        <div class="submitbtn">
+	        <a class="custom-btn btn">
+						<input class="custom-btn btn" type="submit" value="Login">
+					</a>
+	        <form action="/NANIKA/SignupServlet" method="get">
+					<a class="custom-btn btn"><input type="submit" value="Regist" class="custom-btn btn"></a>
 			</form>
+		</div>
 		</main>
 		</div>
 	</body>
