@@ -20,8 +20,7 @@
 			<ul>
 				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
 				<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
-				<li><a href="/NANIKA/UnitServlet" name='${subject_id}'
-					id="subjectTitle">${subjectName}</a></li>
+				<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id="subjectTitle">${subjectName}</a></li>
 			</ul>
 		</div>
 		<nav class="menu">
