@@ -10,7 +10,12 @@
 	text-align: left;
 }
 
+.space{
+	line-height: 32px;
+}
+
 /*メニューバー -------------------*/
+.menu{position: relative; top: 20px; }
 .menu p {
 	display: inline;
 	padding: 0;
@@ -65,7 +70,7 @@ a:active {
 
 /*科目名メニューバー -------------------*/
 
-.subjectmenu {position: relative; left: 180px; bottom: 58px; }
+.subjectmenu {position: relative; left: 180px; bottom: 65px; /* 35px; */}
 .subjectmenu p {
 	display: inline;
 	padding: 0;
@@ -93,7 +98,7 @@ a:active {
 
 /*単元名メニューバー -------------------*/
 
-.unitmenu {position: relative; left: 360px; bottom: 140px; }
+.unitmenu {position: relative; left: 360px; bottom: 207px; /*140px; */}
 .unitmenu p {
 	display: inline;
 	padding: 0;
