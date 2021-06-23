@@ -18,8 +18,8 @@
 		</header>
 	<div class="explorer">
 		<ul>
-			<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-			<li><a href="/NANIKA/ResultSubjectServlet" id="js-menuTab">テスト結果一覧</a></li>
+			<li><a href="/NANIKA/HomeServlet">メニュー</a></li>&gt;
+			<li><a href="/NANIKA/ResultSubjectServlet" id="js-menuTab">テスト結果一覧</a></li>&gt;
 			<li><a href="/NANIKA/UnitServlet" id="subjectTitle" name='${subject_id}'>${subjectName}</a></li>
 		</ul>
 	</div>
