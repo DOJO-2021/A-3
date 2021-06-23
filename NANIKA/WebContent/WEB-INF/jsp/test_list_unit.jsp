@@ -48,6 +48,7 @@
 			</p>
 		</c:forEach>
 	</nav>
+	</div>
 	<script src="js/subject.js"></script>
 	<script src="js/unit.js"></script>
 	<div id="error" style="display: none">${error}</div>
