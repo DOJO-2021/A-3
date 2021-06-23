@@ -12,58 +12,68 @@
 <link rel="shortcut icon" href="image/nanikafavicon.ico">
 </head>
 <body>
-		<header>
-			<jsp:include page="/header.jsp" />
-		</header>
+	<header>
+		<jsp:include page="/header.jsp" />
+	</header>
 	<main>
 		<div class="testquestion">
 			<section id="js-que">
 				<form action="/NANIKA/TestServlet" method="post">
 					<h1>テスト受験</h1>
-					<p>
-						テスト残り時間： <span id="time_h"></span>:<span id="time_m"></span>
-					</p>
-					<p>単元：${unitName}</p>
+					<div class="t_timer">
+						<p>
+							テスト残り時間： <span id="time_h"></span>:<span id="time_m"></span>
+						</p>
+					</div>
+					<div>
+						<p id="titleunit">単元：${unitName}</p>
+					</div>
 					<c:forEach var="q_list" items="${questList}" varStatus="status">
+
 						<div class="que-contents-item" data-content="${status.index}">
-							<p>問題文</p>
-							<p>${q_list.question}</p>
+
+							<!--  <p>問題文</p> -->
+							<div class="box1">
+								<p>${q_list.question}</p>
+							</div>
+
 							<input type="hidden" name="questionid${status.count}"
 								value="${q_list.question_id}"> <input type="hidden"
 								name="answer${status.count}" value="${q_list.answer}">
-							<table border="1"  class="questionform">
+							<table class="questionform" border="5">
 								<tr>
-									<td class="questiontext"><label><input type="radio"
-											name="radiobutton${status.count}" value="${q_list.answer1}"
-											checked> ${q_list.answer1}</label></td>
+									<td class="questiontext"><label><input
+											type="radio" name="radiobutton${status.count}"
+											value="${q_list.answer1}" checked> ${q_list.answer1}</label></td>
 								</tr>
 								<tr>
-									<td class="questiontext"><label><input type="radio"
-											name="radiobutton${status.count}" value="${q_list.answer2}">
-											${q_list.answer2}</label></td>
+									<td class="questiontext"><label><input
+											type="radio" name="radiobutton${status.count}"
+											value="${q_list.answer2}"> ${q_list.answer2}</label></td>
 								</tr>
 								<tr>
-									<td class="questiontext"><label><input type="radio"
-											name="radiobutton${status.count}" value="${q_list.answer3}">
-											${q_list.answer3}</label></td>
+									<td class="questiontext"><label><input
+											type="radio" name="radiobutton${status.count}"
+											value="${q_list.answer3}"> ${q_list.answer3}</label></td>
 								</tr>
-								<tr >
-									<td class="questiontext"><label><input type="radio"
-											name="radiobutton${status.count}" value="${q_list.answer4}">
-											${q_list.answer4}</label></td>
+								<tr>
+									<td class="questiontext"><label><input
+											type="radio" name="radiobutton${status.count}"
+											value="${q_list.answer4}"> ${q_list.answer4}</label></td>
 								</tr>
 							</table>
 
 							<br>
 							<div class="selectbutton">
-							<button data-back="${status.index-1}" class="back ">戻る</button>
-							<button data-next="${status.count}" class="next ">次へ</button>
+								<button data-back="${status.index-1}" class="back ">戻る</button>
+								<button data-next="${status.count}" class="next ">次へ</button>
 							</div>
 
 						</div>
 					</c:forEach>
-					<div class="end">
-						<input type="submit" value="終了" onclick="return disp()" id="end">
+					<div>
+						<input type="submit" value="終了" onclick="return disp()" id="end"
+							class="end">
 					</div>
 				</form>
 			</section>
