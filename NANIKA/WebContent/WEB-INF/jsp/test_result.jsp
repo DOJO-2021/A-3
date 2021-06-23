@@ -20,8 +20,8 @@
 		</header>
 
 	<h1>テスト結果簡易表示</h1>
-	<p><c:out value="${unitName}"></c:out>のテスト結果</p>
-	<table  border= "5" bordercolor ="mediumslateblue" >
+	<p><b><c:out value="${unitName}"></c:out>のテスト結果</b></p>
+	<table  border= "5" bordercolor ="slateblue" >
 		<tr>
 		<td>回数</td>
 		<td>開始時間</td>
@@ -35,7 +35,7 @@
 			<input type="hidden" name='unit_id' value="${unitId}" >
 			<input type="hidden" name='start_time' value="${scorenew.start_time}">
 				<tr>
-					<td><c:out value="${count.index+1}" /></td>
+					<td><c:out value="${testcount}" /></td>
 					<td><c:out value="${scorenew.start_time} " /></td>
 					<td><c:out value="${scorenew.end_time} " /></td>
 					<td><c:out value="${scorenew.score} " /></td>
@@ -55,8 +55,9 @@
 	<br>
 	<form method="get" action="/NANIKA/TestDetailServlet">
 		<input type="hidden" name='unit_id' value="${unitId}" >
-		<input type="submit" name="REGIST" value="テスト詳細画面">
+		<a class="testdetail-btn"><input class="testdetail-btn" type="submit" name="REGIST" value="テスト詳細画面"></a>
 	</form>
+	<br>
 	<a href= "/NANIKA/HomeServlet">ホームに戻る</a>
 </body>
 </html>
