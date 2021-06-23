@@ -18,11 +18,12 @@
 		<header>
 			<jsp:include page="/header.jsp" />
 		</header>
-		<ul class="explorer">
-			<li><a href="/NANIKA/HomeServlet">メニュー</a></li> &gt;
-			<li><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></li>
-		</ul>
-
+		<div  class="explorer">
+			<ul>
+				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+				<li><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></li>
+			</ul>
+		</div>
 		<nav class="menu">
 			<p>
 				<a href="/NANIKA/HomeServlet">メニュー</a>
