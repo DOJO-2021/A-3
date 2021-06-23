@@ -61,6 +61,14 @@
 	border-width: 0 1px 1px 1px;
 	border-style: solid;
 	border-color: #c499ff;
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #145866 !important;
 }
 ::placeholder{
 	color: #145866;
@@ -74,7 +82,7 @@
 .custom-btn {
   width: 130px;
   height: 40px;
-  color: #fff;
+  color: #145866;
   border-radius: 5px;
   padding: 10px 25px;
   font-family: 'Lato', sans-serif;
@@ -84,7 +92,7 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   box-shadow:inset 2px 2px 2px 0px #145866,
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
@@ -112,7 +120,7 @@
   width:0;
   background: #dbae58;
   box-shadow:
-   -1px -1px 5px 0px #fff,
+   -1px -1px 5px 0px #145866,
    7px 7px 20px 0px #0003,
    4px 4px 5px 0px #0002;
   transition:400ms ease all;
