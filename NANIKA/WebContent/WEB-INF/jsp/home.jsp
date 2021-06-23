@@ -16,11 +16,13 @@
 		<header>
 			<jsp:include page="/header.jsp" />
 		</header>
-		<main>
+		<div class="explorer">
+			<ul >
+				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+			</ul>
+		</div>
 			<!--メニュータブ （左） -->
-			<div class="space">　</div>
 			<div class="menu">
-				<br>
 				<p>
 					<a href="">メニュー</a>
 				</p>
@@ -57,7 +59,6 @@
 	</c:forEach>
 	<p id = "user">${userName}</p>
 	</div>
-		</main>
 	</div>
 	<!-- CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
