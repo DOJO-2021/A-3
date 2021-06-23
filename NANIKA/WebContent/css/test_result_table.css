@@ -6,4 +6,13 @@
 
 table{
 	background-color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+}
+.testdetail-btn{
+	background-color: #eee8aa;
+}
+body{
+	text-align: center;
+	color: #332d30;
 }
