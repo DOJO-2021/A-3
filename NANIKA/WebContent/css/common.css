@@ -10,7 +10,12 @@
 	text-align: left;
 }
 
+.space{
+	line-height: 32px;
+}
+
 /*メニューバー -------------------*/
+.menu{position: relative; top: 20px; }
 .menu p {
 	display: inline;
 	padding: 0;
