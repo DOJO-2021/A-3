@@ -37,8 +37,10 @@ public class TestResultServlet extends HttpServlet {
 		request.setAttribute("unit_id", unitId);
 
 		ScoreDao nDao = new ScoreDao();
+		int testCount = nDao.testCount(userId, unitId);
 		List<NanikaBeans> scorenew = nDao.scoreNew(userId, unitId);
-
+		System.out.println("-----------------------testCount："+testCount);
+		request.setAttribute("testcount", testCount);
 		request.setAttribute("scorenew", scorenew);
 		for(NanikaBeans nanika : scorenew) {
 			System.out.println("----------------TestServlet");
