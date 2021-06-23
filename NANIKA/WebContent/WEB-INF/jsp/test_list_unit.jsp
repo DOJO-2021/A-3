@@ -88,8 +88,8 @@
 	<script src="js/unit.js"></script>
 	<div id="error" style="display: none">${error}</div>
 	<script type="text/javascript">
-		const $doc = document;
-		const $error = $doc.getElementById('error');
+		const $docc = document;
+		const $error = $docc.getElementById('error');
 		console.log("$error.textContent", $error.textContent);
 		if ($error.textContent != null && $error.textContent != "") {
 			alert($error.textContent);
