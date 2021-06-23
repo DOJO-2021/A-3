@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>テスト受験</title>
+		<link rel="stylesheet" href="/NANIKA/css/header.css">
+		<link rel="stylesheet" href="/NANIKA/css/common.css">
 </head>
 <body>
 	<header>
