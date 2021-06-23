@@ -4,137 +4,153 @@
 	display: none;
 }
 
-.testquestion{
+.testquestion {
 	text-align: center;
 }
 
-table{
+.t_timer {
+	text-align: right;
+	max-width: 1200px;
+}
+
+#titleunit {
+	position: left;
+	max-width: 1200px;
+	font-size: 20px;
+	color: #2b2b2b;
+}
+
+table {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 /*--------次へ　戻る-　終了---------*/
-button{
-	display:inline-block;
+button {
+	display: inline-block;
 }
-.selectbutton{
+
+.selectbutton {
 	text-align: center;
 }
 
 /*-----------次へ-------------*/
 .next {
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-
-  -webkit-transform-style: preserve-3d;
-
-  transform-style: preserve-3d;
+	border: 2px solid #000;
+	border-radius: 0;
+	background: #fff;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .next:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 5px;
-  height: 100%;
-
-  content: '';
-  -webkit-transition: all .3s;
-  transition: all .3s;
-
-  background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	background: #000;
 }
 
 .next:hover {
-  color: #fff;
-  background: #000;
+	color: #fff;
+	background: #000;
 }
 
 .next:hover:before {
-  background: #fff;
+	background: #fff;
 }
 
 /*-----------戻る--------------*/
 .back {
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-
-  -webkit-transform-style: preserve-3d;
-
-  transform-style: preserve-3d;
+	border: 2px solid #000;
+	border-radius: 0;
+	background: #fff;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .back:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 5px;
-  height: 100%;
-
-  content: '';
-  -webkit-transition: all .3s;
-  transition: all .3s;
-
-  background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	background: #000;
 }
 
 .back:hover {
-  color: #fff;
-  background: #000;
+	color: #fff;
+	background: #000;
 }
 
 .back:hover:before {
-  background: #fff;
+	background: #fff;
 }
 
 /*-------------終了-------------*/
-/*
 .end {
-  border: 2px solid #000;
-  border-radius: 0;
-  background: #fff;
-
-  -webkit-transform-style: preserve-3d;
-
-  transform-style: preserve-3d;
+	border: 2px solid #000;
+	border-radius: 0;
+	background: #fff;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .end:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 5px;
-  height: 100%;
-
-  content: '';
-  -webkit-transition: all .3s;
-  transition: all .3s;
-
-  background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	background: #000;
 }
 
 .end:hover {
-  color: #fff;
-  background: #000;
+	color: #fff;
+	background: #000;
 }
 
-.back:hover:before {
-  background: #fff;
+.end:hover:before {
+	background: #fff;
 }
-*/
+
 /*----------------------------*/
-
-.questionform{
+.questionform {
 	width: 250px;
- 	margin: 30px auto;
-/*  	padding: 20px;*/
+	margin: 30px auto;
+	background-color: #FFFFFF;
+	/*  	padding: 20px;*/
 }
 
-.questiontext{
+.questiontext {
 	text-align: left;
+	border-color: #674196;
+}
+
+/*-----------問題文-------------*/
+.box1 {
+	padding: 0.5em 1em;
+	margin: auto;
+	font-weight: bold;
+	color: #674196; /*文字色*/
+	background: #FFF;
+	border: solid 3px #674196; /*線*/
+	border-radius: 10px; /*角の丸み*/
+	width: 500px;
+	text-align: center;
+}
+
+.box1 p {
+	margin: 0;
+	padding: 0;
 }
