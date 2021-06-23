@@ -35,7 +35,7 @@
 			<input type="hidden" name='unit_id' value="${unitId}" >
 			<input type="hidden" name='start_time' value="${scorenew.start_time}">
 				<tr>
-					<td><c:out value="${count.index+1}" /></td>
+					<td><c:out value="${testcount}" /></td>
 					<td><c:out value="${scorenew.start_time} " /></td>
 					<td><c:out value="${scorenew.end_time} " /></td>
 					<td><c:out value="${scorenew.score} " /></td>
