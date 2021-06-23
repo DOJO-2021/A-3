@@ -5,10 +5,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>LoginPage</title>
+		<title>NANIKA | ログイン</title>
 		<link rel="stylesheet" href="/NANIKA/css/header.css">
 		<link rel="stylesheet" href="/NANIKA/css/common.css">
 		<link rel="stylesheet" href="/NANIKA/css/login.css">
+		<link rel="shortcut icon" href="image/nanikafavicon.ico">
 	</head>
 	<body>
 		<div class=wrapper>

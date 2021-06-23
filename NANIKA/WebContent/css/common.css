@@ -19,7 +19,7 @@
 
 .menu p a {
 	display: block;
-	border-left: 8px solid #C97556;
+	border-left: 8px solid #dbae58;
 	background-color: #474655;
 	padding: 3px 10px;
 	text-decoration: none;
@@ -31,7 +31,7 @@
 }
 
 .menu p a:hover {
-	border-left: 8px solid #990033;
+	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
 /*--------------------------------*/
@@ -72,7 +72,7 @@ a:active {
 
 .subjectmenu p a {
 	display: block;
-	border-left: 8px solid #C97556;
+	border-left: 8px solid #dbae58;
 	background-color: #474655;
 	padding: 3px 10px;
 	text-decoration: none;
@@ -84,7 +84,7 @@ a:active {
 }
 
 .subjectmenu p a:hover {
-	border-left: 8px solid #990033;
+	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
 /*--------------------------------*/
@@ -100,7 +100,7 @@ a:active {
 
 .unitmenu p a {
 	display: block;
-	border-left: 8px solid #C97556;
+	border-left: 8px solid #dbae58;
 	background-color: #474655;
 	padding: 3px 10px;
 	text-decoration: none;
@@ -112,7 +112,7 @@ a:active {
 }
 
 .unitmenu p a:hover {
-	border-left: 8px solid #990033;
+	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
 /*--------------------------------*/
