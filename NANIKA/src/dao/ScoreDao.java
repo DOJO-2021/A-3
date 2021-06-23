@@ -346,4 +346,56 @@ public class ScoreDao {
 
 
 
+
+	//テスト結果簡易表示画面
+			public int testCount(int user_id, int unit_id){
+//				List<NanikaBeans> scorenew = new ArrayList<NanikaBeans>();
+				Connection conn = null;
+				int testcount=0;
+				try {
+					// JDBCドライバを読み込む
+					Class.forName("org.h2.Driver");
+					// データベースに接続する（仮）
+					conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+					// SELECT文を準備する
+					String sql = "select count(*) "
+							+ " from table_score s inner join table_user u on u.user_id = s.user_id"
+							+ "	 inner join table_unit uni on uni.unit_id = s.unit_id"
+							+ "	 where s.user_id = ? AND uni.unit_id = ?";
+					PreparedStatement pStmt = conn.prepareStatement(sql);
+					pStmt.setInt(1, user_id);
+					pStmt.setInt(2, unit_id);
+					// SELECT文を実行し、結果表を取得する
+					ResultSet rs = pStmt.executeQuery();
+					// 結果表をコレクションにコピーする
+					rs.next();
+					testcount = rs.getInt("count(*)");
+					System.out.println("---------"+testcount);
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+
+				}
+				catch (ClassNotFoundException e) {
+					e.printStackTrace();
+
+				}
+				finally {
+					// データベースを切断
+					if (conn != null) {
+						try {
+							conn.close();
+						}
+						catch (SQLException e) {
+							e.printStackTrace();
+
+						}
+					}
+				}
+				// 結果を返す
+				return testcount;
+			}
+
+
+
 }
