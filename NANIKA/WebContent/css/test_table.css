@@ -13,7 +13,7 @@ table{
 	margin-right: auto;
 }
 
-/*--------次へ　戻る----------*/
+/*--------次へ　戻る-　終了---------*/
 button{
 	display:inline-block;
 }
@@ -91,4 +91,50 @@ button{
   background: #fff;
 }
 
+/*-------------終了-------------*/
+/*
+.end {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+
+  -webkit-transform-style: preserve-3d;
+
+  transform-style: preserve-3d;
+}
+
+.end:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  content: '';
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  background: #000;
+}
+
+.end:hover {
+  color: #fff;
+  background: #000;
+}
+
+.back:hover:before {
+  background: #fff;
+}
+*/
 /*----------------------------*/
+
+.questionform{
+	width: 250px;
+ 	margin: 30px auto;
+/*  	padding: 20px;*/
+}
+
+.questiontext{
+	text-align: left;
+}
