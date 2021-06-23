@@ -27,7 +27,7 @@ public class TestSubjectServlet extends HttpServlet {
 		//		パンくずリスト用のスコープ（home　＞　テスト受験）
 		HttpSession  session = request.getSession();
 		session.setAttribute("menu_tab", "テスト受験");
-
+		session.removeAttribute("unitId");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_subject.jsp");
 		dispatcher.forward(request, response);
 	}
