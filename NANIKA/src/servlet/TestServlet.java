@@ -28,7 +28,6 @@ public class TestServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 
-
 		if(request.getParameter("unit_id") != null) {
 			int unitId = Integer.parseInt((String)request.getParameter("unit_id"));
 			String unitName = request.getParameter("unit_name");
@@ -36,6 +35,7 @@ public class TestServlet extends HttpServlet {
 			session.setAttribute("unitId", unitId);
 			session.setAttribute("unitName", unitName);
 		}
+
 		int unitId = (int)session.getAttribute("unitId");
 		request.setAttribute("unit_id", unitId);
 		//QuestionsDaoから単元に当てはまるテスト問題を持ってくる
@@ -45,9 +45,16 @@ public class TestServlet extends HttpServlet {
 		//テスト問題をリクエストスコープに入れる
 		session.setAttribute("questList", questList);
 
-		//テスト受験画面にフォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
-		dispatcher.forward(request, response);
+		if(qDao.countQuestion(unitId) == false) {
+			request.setAttribute("error","問題が存在しません");
+			var a=  request.getAttribute("error");
+			System.out.println("--------error確認用 "+ a);
+			response.sendRedirect("/NANIKA/UnitServlet");
+		}else {
+			//テスト受験画面にフォワード
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
+			dispatcher.forward(request, response);
+		}
 
 	}
 

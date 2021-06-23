@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.QuestionsDao;
 import dao.UnitDao;
 import model.NanikaBeans;
 
@@ -42,12 +43,31 @@ public class UnitServlet extends HttpServlet {
 		List<NanikaBeans> UnitList = uDao.selectUnit(subjectId);
 		request.setAttribute("UnitList", UnitList);
 
+		int unitId = 0;
+
+		if(session.getAttribute("unitId") == null) {
+			System.out.println("nullだよ");
+		}else {
+			unitId = (int)session.getAttribute("unitId");
+			System.out.println(unitId);
+		}
+
 		if(menuTab.equals("テスト受験")) {
+			QuestionsDao qDao = new QuestionsDao();
+			if(qDao.countQuestion(unitId) == false && qDao.testQuestion(unitId) == null) {
+				request.setAttribute("error","問題が存在しません");
+			}
+
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
 			dispatcher.forward(request, response);
 		}
 
 		if(menuTab.equals("テスト結果一覧")) {
+			QuestionsDao qDao = new QuestionsDao();
+			if(qDao.countQuestion(unitId) == false && qDao.testQuestion(unitId) == null) {
+				request.setAttribute("error","問題が存在しません");
+			}
+
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result_list_unit.jsp");
 			dispatcher.forward(request, response);
 		}
