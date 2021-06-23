@@ -12,7 +12,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-${error}
 	<div class="wrapper">
 		<header>
 			<jsp:include page="/header.jsp" />
@@ -51,5 +50,14 @@ ${error}
 	</nav>
 	<script src="js/subject.js"></script>
 	<script src="js/unit.js"></script>
+	<div id="error" style="display: none">${error}</div>
+	<script type="text/javascript">
+	const $doc = document;
+	const $error = $doc.getElementById('error');
+	console.log("$error.textContent",$error.textContent);
+	if($error.textContent != null && $error.textContent != ""){
+		alert($error.textContent);
+	}
+	</script>
 </body>
 </html>

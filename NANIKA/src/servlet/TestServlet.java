@@ -49,7 +49,8 @@ public class TestServlet extends HttpServlet {
 			request.setAttribute("error","問題が存在しません");
 			var a=  request.getAttribute("error");
 			System.out.println("--------error確認用 "+ a);
-			response.sendRedirect("/NANIKA/UnitServlet");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
+			dispatcher.forward(request, response);
 		}else {
 			//テスト受験画面にフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
