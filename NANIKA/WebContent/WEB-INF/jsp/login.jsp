@@ -42,7 +42,7 @@
 	        <a class="custom-btn btn">
 						<input class="custom-btn btn" type="submit" value="Login">
 					</a>
-			<a href="/NANIKA/SignupServlet" class="custom-btn btn" >Regist</a>
+			<a href="/NANIKA/SignupServlet" class="custom-btn btn" id="regist" >Regist</a>
 		</div>
 		</main>
 		</div>

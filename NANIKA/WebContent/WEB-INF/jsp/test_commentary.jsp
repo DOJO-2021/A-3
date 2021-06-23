@@ -6,6 +6,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<link rel="stylesheet" href="/NANIKA/css/header.css">
+		<link rel="stylesheet" href="/NANIKA/css/common.css">
 		<link rel="stylesheet" href="css/table_commentary.css">
 	</head>
 	<body>

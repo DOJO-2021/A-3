@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>NANIKA | 単元一覧</title>
+		<link rel="stylesheet" href="/NANIKA/css/header.css">
+		<link rel="stylesheet" href="/NANIKA/css/common.css">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
