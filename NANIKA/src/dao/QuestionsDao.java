@@ -149,6 +149,56 @@ public class QuestionsDao {
 		return testQuestionList;
 	}
 
+	public boolean countQuestion(int unit_id){
+		boolean result = false;
+		//まだデータベースに繋がっていない状態
+		Connection conn = null;
 
+		try{
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+			//どのデータベースに繋ぐか
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+
+			// SELECT文を準備する
+			String sql = "SELECT COUNT(*) FROM TABLE_QUESTION WHERE UNIT_ID = ?";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+
+			pStmt.setInt(1, unit_id);
+
+			//SELECT文を実行し、結果表を取得する
+			ResultSet rs = pStmt.executeQuery();
+
+			// 結果表をコレクションにコピーする
+			rs.next();
+			if (rs.getInt("count(*)") != 0) {
+				result = true;
+			}
+
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					result = false;
+				}
+			}
+		}
+
+		// 結果を返す
+		return result;
+	}
 
 }

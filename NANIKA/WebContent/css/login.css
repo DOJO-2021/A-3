@@ -68,7 +68,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #145866 !important;
+    -webkit-text-fill-color: #332d30 !important;
 }
 ::placeholder{
 	color: #145866;
@@ -92,7 +92,7 @@ input:-webkit-autofill:active {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px #145866,
+   box-shadow:inset 2px 2px 2px 0px #eee8aa,
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
@@ -136,6 +136,15 @@ input:-webkit-autofill:active {
   width:100%;
   transition:800ms ease all;
 }
+#regist{
+	color: #145866;
+	font-size: 13px;
+}
+#regist:hover{
+	color: #dbae58;
+}
+
+
 /*------------------------------------------------------*/
 
 body{
