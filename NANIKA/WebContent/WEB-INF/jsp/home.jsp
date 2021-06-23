@@ -50,6 +50,7 @@
 
 			<hr>
 	<div style="display: none">
+	<div id = "content">総合</div>
 	<c:forEach var="list_item" items="${list}">
 		<p class="score" style="display: block">${list_item.score}</p>
 		<p class="subjectl" style="display: block">${list_item.subject}</p><br>
