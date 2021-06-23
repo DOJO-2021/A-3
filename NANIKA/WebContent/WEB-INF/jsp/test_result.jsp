@@ -8,14 +8,20 @@
 <title>NANIKA | テスト結果簡易表示</title>
 		<link rel="stylesheet" href="/NANIKA/css/header.css">
 		<link rel="stylesheet" href="/NANIKA/css/common.css">
+		<link rel="stylesheet" href="/NANIKA/css/test_result_table.css">
+		<link rel="shortcut icon" href="image/nanikafavicon.ico">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 <body>
+		<header>
+			<jsp:include page="/header.jsp" />
+		</header>
+
 	<h1>テスト結果簡易表示</h1>
 	<p><c:out value="${unitName}"></c:out>のテスト結果</p>
-	<table border="1">
+	<table  border= "5" bordercolor ="mediumslateblue" >
 		<tr>
 		<td>回数</td>
 		<td>開始時間</td>
@@ -41,7 +47,7 @@
 					<td>○</td>
 					</c:when>
 					</c:choose>
-					<td><input type="submit" name="REGIST" value="解説"></td>
+					<td><a class="commentary-btn"><input class="commentary-btn" type="submit" name="REGIST" value="解説"></a></td>
 				</tr>
 			</form>
 		</c:forEach>
