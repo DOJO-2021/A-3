@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>NANIKA | ホームページ</title>
 		<link rel="stylesheet" href="/NANIKA/css/common.css">
 		<link rel="stylesheet" href="/NANIKA/css/header.css">
 		<link rel="shortcut icon" href="image/nanikafavicon.ico">
