@@ -18,12 +18,14 @@
 		<header>
 			<jsp:include page="/header.jsp" />
 		</header>
+
 		<div class="explorer">
 			<ul>
 				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
 				<li><a href="/NANIKA/TestSubjectServlet">テスト受験</a></li>
 			</ul>
 		</div>
+	<main>
 		<nav class="menu">
 			<ul>
 				<li>
@@ -44,7 +46,7 @@
 			</ul>
 			</c:forEach>
 		</nav>
-
+	</main>
 		<br>
 		<hr>
 		<canvas id="myRaderChart" style="background-color: #fff"></canvas>
