@@ -16,6 +16,7 @@
 		<jsp:include page="/header.jsp" />
 	</header>
 	<main>
+	<div class="box-line">
 	<h1>テスト受験</h1>
 		<div class="testquestion">
 			<section id="js-que">
@@ -78,8 +79,8 @@
 				</form>
 			</section>
 		</div>
+	</div>
 	</main>
-
 	<!--
 <hr>
 <h2>確認用</h2>
