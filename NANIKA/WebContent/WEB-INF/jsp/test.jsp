@@ -41,26 +41,26 @@
 							<input type="hidden" name="questionid${status.count}"
 								value="${q_list.question_id}"> <input type="hidden"
 								name="answer${status.count}" value="${q_list.answer}">
-							<table class="questionform" border="5">
+							<table class="questionform" border="5" bordercolor ="slateblue" >
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer1}" checked> ${q_list.answer1}</label></td>
+											value="${q_list.answer1}" checked > 　　　　　　　　${q_list.answer1}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer2}"> ${q_list.answer2}</label></td>
+											value="${q_list.answer2}"> 　　　　　　　　${q_list.answer2}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer3}"> ${q_list.answer3}</label></td>
+											value="${q_list.answer3}"> 　　　　　　　　${q_list.answer3}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer4}"> ${q_list.answer4}</label></td>
+											value="${q_list.answer4}"> 　　　　　　　　${q_list.answer4}</label></td>
 								</tr>
 							</table>
 
