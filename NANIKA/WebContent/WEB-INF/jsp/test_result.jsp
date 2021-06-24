@@ -19,7 +19,7 @@
 			<jsp:include page="/header.jsp" />
 		</header>
 
-	<h1>テスト結果簡易表示</h1>
+	<h1>テスト結果</h1>
 	<p><b><c:out value="${unitName}"></c:out>のテスト結果</b></p>
 	<table  border= "5" bordercolor ="slateblue" >
 		<tr>

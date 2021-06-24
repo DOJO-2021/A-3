@@ -8,16 +8,21 @@
 <title>NANIKA | テスト詳細</title>
 		<link rel="stylesheet" href="/NANIKA/css/header.css">
 		<link rel="stylesheet" href="/NANIKA/css/common.css">
+		<link rel="stylesheet" href="/NANIKA/css/test_result_table.css">
+		<link rel="shortcut icon" href="image/nanikafavicon.ico">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<ul>
-	<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-	<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
-	<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
-</ul>
 <body>
-	<nav>
+		<header>
+			<jsp:include page="/header.jsp" />
+		</header>
+		<ul>
+			<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+			<li><a href="/NANIKA/TestSubjectServlet" id="js-menuTab">テスト受験</a></li>
+			<li><a href="/NANIKA/UnitServlet" name='${subject_id}' id = "subjectTitle">${subjectName}</a></li>
+		</ul>
+	<nav class="menu">
 		<p>
 			<a href="/NANIKA/HomeServlet">メニュー</a>
 		</p>
@@ -28,7 +33,7 @@
 			<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
 		</p>
 	</nav>
-	<nav>
+	<nav class="subjectmenu">
 		<c:forEach var="subject" items="${subjectList}">
 			<p>
 				<a href="/NANIKA/UnitServlet" class="subject"
@@ -36,7 +41,7 @@
 			</p>
 		</c:forEach>
 	</nav>
-	<nav>
+	<nav class="unitmenu">
 		<c:forEach var="unit" items="${UnitList}">
 			<p>
 				<a href="/NANIKA/TestServlet" class="js-unit" name='${unit.unit_id}'><c:out value="${unit.unit} " /></a>
@@ -44,7 +49,7 @@
 		</c:forEach>
 	</nav>
 		<h3><c:out value="${unitName} " />のテスト詳細</h3>
-	<table frame="box">
+	<table  border= "5" bordercolor ="slateblue">
 		<tr>
 			<th>回数</th>
 			<th>開始時間</th>
@@ -60,7 +65,7 @@
 					<td><c:out value="${scoreall.start_time} " /></td>
 					<td><c:out value="${scoreall.end_time} " /></td>
 					<td><c:out value="${scoreall.result} " /></td>
-					<td><input type="submit" name="REGIST" value="解説"></td>
+					<td><a class="commentary-btn"><input class="commentary-btn" type="submit" name="REGIST" value="解説"></a></td>
 				</tr>
 			</form>
 		</c:forEach>
