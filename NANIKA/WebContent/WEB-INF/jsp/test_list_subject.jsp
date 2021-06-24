@@ -9,6 +9,7 @@
 <title>NANIKA | 単元一覧</title>
 <link rel="stylesheet" href="/NANIKA/css/common.css">
 <link rel="stylesheet" href="/NANIKA/css/header.css">
+<link rel="shortcut icon" href="image/nanikafavicon.ico">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>

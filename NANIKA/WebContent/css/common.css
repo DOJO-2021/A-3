@@ -14,7 +14,7 @@
 	line-height: 32px;
 }
 
-/*メニューバー -------------------*/
+/*メニューバー -------------------
 .menu{position: relative; top: 20px; }
 .menu p {
 	display: inline;
@@ -39,6 +39,45 @@
 	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
+*/
+/*メニューバー -------------------*/
+.menu{position: relative; top: 20px; }
+.menu {
+	width: 980px;
+	clear: both;
+	overflow: hidden;
+	margin: 16px auto;
+}
+.menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu ul li {
+	width: 487px;
+	float: left;
+	display: block;
+	border-bottom: 3px solid #dbae58;
+	border-right: 3px solid #dbae58;
+	background-color: #474655;
+	padding: 10px 0px;
+	text-decoration: none;
+	color: #E1E2CF;
+	margin: 1px 0px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.menu ul li:hover {
+	border-bottom: 8px solid #c499ff;
+	background-color: #474655;
+}
+.menu ul li::after {
+    border-right: 3px solid #dbae58;
+}
+.menu ul li:last-child {border-right: none; }
+
 /*--------------------------------*/
 body {
 	background-color: #488a99;
@@ -133,3 +172,22 @@ a:active {
 	background-color: #474655;
 }
 /*--------------------------------*/
+header {
+	overflow: hidden;
+	margin: 50px auto;
+}
+main {
+	overflow: hidden;
+	margin: 0 auto;
+
+}
+#main {
+	margin: auto;
+	width: 220px;
+	float: left;
+}
+#sideChart {
+	margin: auto;
+	width: 730px;
+	float: right;
+}

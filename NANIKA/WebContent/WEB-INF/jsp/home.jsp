@@ -13,31 +13,24 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header>
-			<jsp:include page="/header.jsp" />
-		</header>
-		<div class="explorer">
-			<ul >
-				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-			</ul>
-		</div>
+	<header>
+		<jsp:include page="/header.jsp" />
+	</header>
+	<main>
+		<nav class="menu">
 			<!--メニュータブ （左） -->
-			<div class="menu">
-				<p>
-					<a href="">メニュー</a>
-				</p>
-				<p>
-					<a href="/NANIKA/TestSubjectServlet">テスト受験</a>
-				</p>
-				<p>
-					<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
-				</p>
+			<ul>
+				<li><a href="/NANIKA/TestSubjectServlet">テスト受験</a></li>
+				<li><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></li>
+			</ul>
+		</nav>
+			<div class="explorer">
+				<ul >
+					<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+				</ul>
 			</div>
-
-
+	</main>
 			<!-- （右側） -->
-			<br>
-			<hr>
 			<canvas id="myRaderChart" style="background-color: #fff"></canvas>
 			<hr>
 			<div>
@@ -49,17 +42,17 @@
 			</div>
 
 			<hr>
-	<div style="display: none">
-	<div id = "content">総合</div>
-	<c:forEach var="list_item" items="${list}">
-		<p class="score" style="display: block">${list_item.score}</p>
-		<p class="subjectl" style="display: block">${list_item.subject}</p><br>
-	</c:forEach>
-	<c:forEach var="list_item" items="${subjectList}">
-		<p class="subject" style="display: block">${list_item.subject}</p><br>
-	</c:forEach>
-	<p id = "user">${userName}</p>
-	</div>
+		<div style="display: none">
+		<div id = "content">総合</div>
+		<c:forEach var="list_item" items="${list}">
+			<p class="score" style="display: block">${list_item.score}</p>
+			<p class="subjectl" style="display: block">${list_item.subject}</p><br>
+		</c:forEach>
+		<c:forEach var="list_item" items="${subjectList}">
+			<p class="subject" style="display: block">${list_item.subject}</p><br>
+		</c:forEach>
+		<p id = "user">${userName}</p>
+		</div>
 	</div>
 	<!-- CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
