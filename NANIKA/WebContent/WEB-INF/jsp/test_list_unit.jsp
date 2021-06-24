@@ -56,7 +56,7 @@
 			</c:forEach>
 		</nav>
 		<h1>Radar Chart</h1>
-		<canvas id="myRaderChart" style="background-color: #fff"></canvas>
+		<canvas id="MyRaderChart" style="background-color: #fff"></canvas>
 		<hr>
 		<div>
 			<label>評価（システム）</label>
@@ -68,17 +68,22 @@
 
 		<hr>
 	</div>
-	<div style="display: none">
-	<div id = "content">総合</div>
-		<c:forEach var="list_item" items="${list}">
-			<p class="score" style="display: block">${list_item.score}</p>
-			<p class="subjectl" style="display: block">${list_item.subject}</p>
-			<br>
+	<div style="display: block">
+		<div id = "content">各単元</div>
+		<c:forEach var="unitLists" items="${UnitList_score}">     <!-- List<NanikaBeans>[] UnitList_score = new List[5]; -->
+															<!-- UnitList_score = sDao.scoreNew2(userbeans.getUser_id(), i,subjectId); 返り値「List<NanikaBeans>」 -->
+			<c:forEach var="list_item" items="${unitLists}">             <!-- 変更前 ${ list }-->
+				<p class="score" style="display: block">${list_item.score}</p>
+				<p class="superSubject" style="display: block">${list_item.unit}</p> <!-- 変更前 ${ list_item.subject }-->
+				<br>
+			</c:forEach>
 		</c:forEach>
-		<c:forEach var="list_item" items="${subjectList}">
+		<!--
+		<c:forEach var="list_item" items="${UnitList}">
 			<p class="subject" style="display: block">${list_item.subject}</p>
 			<br>
 		</c:forEach>
+		--><!-- 変更前 ${ subjectList }  82行目-->
 		<p id="user">${userName}</p>
 	</div>
 	<!-- CDN -->
@@ -86,7 +91,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<!-- レーダーチャート（仮） -->
 
-	<script src="js/rader.js"></script>
+	<script src="js/rader2.js"></script>
 	<script src="js/subject.js"></script>
 	<script src="js/unit.js"></script>
 	<div id="error" style="display: none">${error}</div>
