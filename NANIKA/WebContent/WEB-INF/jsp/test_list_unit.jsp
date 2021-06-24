@@ -25,34 +25,37 @@
 			</ul>
 		</div>
 		<nav class="menu">
-			<p>
-				<a href="/NANIKA/HomeServlet">メニュー</a>
-			</p>
-			<p>
-				<a href="/NANIKA/TestSubjectServlet">テスト受験</a>
-			</p>
-			<p>
-				<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
-			</p>
+			<ul>
+				<li>
+					<a href="/NANIKA/HomeServlet">メニュー</a>
+				</li>
+				<li>
+					<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
+				</li>
+			</ul>
 		</nav>
 		<nav class="subjectmenu">
 			<c:forEach var="subject" items="${subjectList}">
-				<p>
+			<ul>
+				<li>
 					<a href="/NANIKA/UnitServlet" class="subject"
 						name='${subject.subject_id}'>${subject.subject}</a>
-				</p>
+				</li>
+			</ul>
 			</c:forEach>
 		</nav>
 		<nav class="unitmenu">
 			<c:forEach var="unit" items="${UnitList}">
-				<p>
+			<ul>
+				<li>
 					<a href="/NANIKA/TestServlet" class="js-unit"
 						name='${unit.unit_id}' onclick="return disp()"><c:out
 							value="${unit.unit} " /></a>
-				</p>
+				</li>
+			</ul>
 			</c:forEach>
 		</nav>
-		<hr>
+		<h1>Radar Chart</h1>
 		<canvas id="myRaderChart" style="background-color: #fff"></canvas>
 		<hr>
 		<div>

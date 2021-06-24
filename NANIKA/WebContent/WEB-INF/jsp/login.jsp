@@ -18,32 +18,34 @@
 		</header>
 		<main>
       <h1 class="h1login"><b>Login</b></h1>
-			<form action="/NANIKA/LoginServlet" method="post" >
+	<form action="/NANIKA/LoginServlet" method="post" >
        <table class="logintable">
          <tr>
            <th>Email:</th>
            <td>
-        <div class="cp_iptxt">
-	<input type="text" placeholder="Someone@example.com" name="EMAIL" class="login">
-</div>
+		        <div class="cp_iptxt">
+					<input type="text" placeholder="Someone@example.com" name="EMAIL" class="login">
+				</div>
            </td>
          </tr>
-				<tr>
-          <th>Password:</th>
-          <td>
-             <div class="cp_iptxt">
-	<input type="password" placeholder="Password" name="PW" class="login">
-</div>
-          </td>
+		 <tr>
+         	<th>Password:</th>
+        	<td>
+          		<div class="cp_iptxt">
+				<input type="password" placeholder="Password" name="PW" class="login">
+			</div>
+       		</td>
          </tr>
         </table>
-        <p class="error"><c:out value="${err}"/></p>
-        <div class="submitbtn">
-	        <a class="custom-btn btn">
-						<input class="custom-btn btn" type="submit" value="Login">
-					</a>
-			<a href="/NANIKA/SignupServlet" class="custom-btn btn" id="regist" >Regist</a>
-		</div>
+
+	        <p class="error"><c:out value="${err}"/></p>
+	        <div class="submitbtn">
+		        <a class="custom-btn btn">
+							<input class="custom-btn btn" type="submit" value="Login">
+						</a>
+				<a href="/NANIKA/SignupServlet" class="custom-btn btn" id="regist" >Regist</a>
+			</div>
+		</form>
 		</main>
 		</div>
 	</body>
