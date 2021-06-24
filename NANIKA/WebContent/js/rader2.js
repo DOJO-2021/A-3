@@ -28,17 +28,21 @@ var myRadarChart = new Chart(ctx, {
 		datasets : [ {
 			label : [$user.textContent],
 			data : [$score[0].textContent, $score[1].textContent, $score[2].textContent, $score[3].textContent, $score[4].textContent],
-			backgroundColor : 'RGBA(225,95,150, 0.5)',
-			borderColor : 'RGBA(225,95,150, 1)',
+			backgroundColor : 'RGBA(0,0,0, 0.5)',
+			borderColor : 'RGBA(0,0,0, 1)',
 			borderWidth : 1,
-			pointBackgroundColor : 'RGB(46,106,177)'
+			pointBackgroundColor : 'RGB(0,0,0)'
 
 		} ]
 	},
 	options : {
+		responsive: true,
+		maintainAspectRadio: false,
 		title : {
 			display : true,
-			text : [$content.textContent+'のテスト成績']
+			fontSize: 20,
+			text : [$content.textContent+'のテスト成績'],
+			fontColor: "black"
 		},
 		scale : {
 			ticks : {
@@ -50,8 +54,17 @@ var myRadarChart = new Chart(ctx, {
 				}
 			},
 			pointLabels : {
-				fontSize : 16
-			}
+				fontSize : 16,
+                fontColor: "black"    // 文字の色
+			},
+			angleLines: {        // 軸（放射軸）
+                display: true,
+                color: "white"
+            },
+            gridLines: {         // 補助線（目盛の線）
+                display: true,
+                color: "black"
+            }
 		},
 
 		legend : {
