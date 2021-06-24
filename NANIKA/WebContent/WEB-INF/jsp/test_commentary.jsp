@@ -48,7 +48,7 @@
 							<tr>
 								<th>正解</th>
 								<th>選択</th>
-								<th>選択肢</th>
+								<th id="selectcomm">選択肢</th>
 								<th id="comm">解説</th>
 							</tr>
 							<tr>

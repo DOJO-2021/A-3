@@ -25,22 +25,23 @@
 			</ul>
 		</div>
 		<nav class="menu">
-			<p>
-				<a href="/NANIKA/HomeServlet">メニュー</a>
-			</p>
-			<p>
-				<a href="/NANIKA/TestSubjectServlet">テスト受験</a>
-			</p>
-			<p>
-				<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
-			</p>
+			<ul>
+				<li>
+					<a href="/NANIKA/HomeServlet">メニュー</a>
+				</li>
+				<li>
+					<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
+				</li>
+			</ul>
 		</nav>
 		<nav class="subjectmenu">
 			<c:forEach var="subject" items="${subjectList}">
-				<p>
+			<ul>
+				<li>
 					<a href="/NANIKA/UnitServlet" class="subject"
 						name='${subject.subject_id}'>${subject.subject}</a>
-				</p>
+				</li>
+			</ul>
 			</c:forEach>
 		</nav>
 

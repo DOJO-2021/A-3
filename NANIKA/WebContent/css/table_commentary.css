@@ -12,10 +12,15 @@ body{
 	 border: 10px solid #f5f5f5;
  	padding: 20px;
 	font-size: 20px;
+
+/*	枠の大きさ調整 */
+		width: 900px;
+		height: 650px;
 }
 
 #js-que{
-	margin-left:15%;
+	margin-left:18%;
+
 }
 
 .ulist {
@@ -63,8 +68,13 @@ table {
 	width: 100px;
 	height: 50px;
 }
-#comm{
+
+#selectcomm{
 	width: 200px;
+}
+
+#comm{
+	width: 280px;
 }
 /*--------次へ　戻る-　終了---------*/
 button {
@@ -75,9 +85,30 @@ button {
 	text-align: center;
 }
 
+/*終了ボタン位置*/
+.end {
+  position: absolute;
+  top: 1020px;
+  left: 1100px;
+}
+
+/*次へボタン位置*/
+.next{
+  	position: absolute;
+  	top: 1020px;
+  	left: 820px;
+}
+
+/*戻るボタン位置*/
+.back{
+  	position: absolute;
+  	top: 1020px;
+  	left: 600px;
+}
+
 /*-----------次へ-------------*/
 .next {
-	border: 2px solid #000;
+	border: 2px solid #2b2b2b;
 	border-radius: 0;
 	background: #fff;
 	-webkit-transform-style: preserve-3d;
@@ -93,12 +124,12 @@ button {
 	content: '';
 	-webkit-transition: all .3s;
 	transition: all .3s;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .next:hover {
 	color: #fff;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .next:hover:before {
@@ -107,7 +138,7 @@ button {
 
 /*-----------戻る--------------*/
 .back {
-	border: 2px solid #000;
+	border: 2px solid #2b2b2b;
 	border-radius: 0;
 	background: #fff;
 	-webkit-transform-style: preserve-3d;
@@ -123,12 +154,12 @@ button {
 	content: '';
 	-webkit-transition: all .3s;
 	transition: all .3s;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .back:hover {
 	color: #fff;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .back:hover:before {
@@ -137,7 +168,7 @@ button {
 
 /*-------------終了-------------*/
 .end {
-	border: 2px solid #000;
+	border: 2px solid #2b2b2b;
 	border-radius: 0;
 	background: #fff;
 	-webkit-transform-style: preserve-3d;
@@ -153,12 +184,12 @@ button {
 	content: '';
 	-webkit-transition: all .3s;
 	transition: all .3s;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .end:hover {
 	color: #fff;
-	background: #000;
+	background: #2b2b2b;
 }
 
 .end:hover:before {
