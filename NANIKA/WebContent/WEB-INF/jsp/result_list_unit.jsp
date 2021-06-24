@@ -39,7 +39,7 @@
 		<nav class="subjectmenu">
 			<c:forEach var="subject" items="${subjectList}">
 				<p>
-					<a href="/NANIKA/UnitServlet" class="subject"
+					<a href="/NANIKA/UnitServlet" class="subjectl"
 						name='${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
 				</p>
 			</c:forEach>
@@ -67,15 +67,26 @@
 	</div>
 	<div style="display: none">
 		<div id = "content">総合</div>
-		<c:forEach var="list_item" items="${list}">
-			<p class="score" style="display: block">${list_item.score}</p>
-			<p class="subjectl" style="display: block">${list_item.subject}</p>
-			<br>
+
+		<c:forEach var="unitLists" items="${UnitList_score}">     <!-- List<NanikaBeans>[] UnitList_score = new List[5]; -->
+															<!-- UnitList_score = sDao.scoreNew2(userbeans.getUser_id(), i,subjectId); 返り値「List<NanikaBeans>」 -->
+
+			<c:forEach var="list_item" items="${unitLists}">             <!-- 変更前 ${ list }-->
+				<p class="score" style="display: block">${list_item.score}</p>
+				<p class="subject" style="display: block">${list_item.unit}</p> <!-- 変更前 ${ list_item.subject }-->
+				<br>
+			</c:forEach>
+
 		</c:forEach>
-		<c:forEach var="list_item" items="${subjectList}">
+
+		<!--
+		<c:forEach var="list_item" items="${UnitList}">
 			<p class="subject" style="display: block">${list_item.subject}</p>
 			<br>
 		</c:forEach>
+
+		--><!-- 変更前 ${ subjectList }  82行目-->
+
 		<p id="user">${userName}</p>
 	</div>
 	<!-- CDN -->
