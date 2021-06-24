@@ -258,11 +258,11 @@ a:active {
 */
 /*--------------------------------*/
 header {
-	overflow: hidden;
+
 	margin: 50px auto;
 }
 main {
-	overflow: hidden;
+/*	overflow: hidden; */
 	margin: 0 auto;
 
 }
