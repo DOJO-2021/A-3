@@ -1,7 +1,7 @@
 const $doc = document;
-var ctx = $doc.getElementById("myRaderChart");
+var ctx = $doc.getElementById("MyRaderChart");
 const $score =$doc.getElementsByClassName('score');
-const $subject = $doc.getElementsByClassName('subjectl');
+const $subject = $doc.getElementsByClassName('superSubject');
 const $user = $doc.getElementById('user');
 const $content = $doc.getElementById('content');
 console.log($content.textContent);
@@ -38,7 +38,7 @@ var myRadarChart = new Chart(ctx, {
 	options : {
 		title : {
 			display : true,
-			text : [$content.textContent+'の試験成績']
+			text : [$content.textContent+'のテスト成績']
 		},
 		scale : {
 			ticks : {
