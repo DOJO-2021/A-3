@@ -24,7 +24,7 @@
 				<li><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></li>
 			</ul>
 		</div>
-				<nav class="menu">
+		<nav class="menu">
 			<ul>
 				<li>
 					<a href="/NANIKA/HomeServlet">メニュー</a>
