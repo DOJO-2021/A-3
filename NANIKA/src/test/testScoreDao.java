@@ -2,11 +2,8 @@ package test;
 
 import java.util.List;
 
-import dao.QuestionsDao;
 import dao.ScoreDao;
-import dao.UnitDao;
 import model.NanikaBeans;
-import model.QuestionBeans;
 
 public class testScoreDao {
 
@@ -26,6 +23,8 @@ public class testScoreDao {
 			System.out.println();
 			System.out.println();
 		}
+
+		/*
 
 		// UnitDao()のテスト
 		UnitDao dao1 = new UnitDao();
@@ -90,6 +89,7 @@ public class testScoreDao {
 			System.out.println();
 			System.out.println();
 		}
+	*/
 
 	}
 }

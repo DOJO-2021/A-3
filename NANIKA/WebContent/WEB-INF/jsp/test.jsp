@@ -12,14 +12,14 @@
 <link rel="shortcut icon" href="image/nanikafavicon.ico">
 </head>
 <body>
-	<header>
+	<header class="header">
 		<jsp:include page="/header.jsp" />
 	</header>
 	<main>
+	<h1>テスト受験</h1>
 		<div class="testquestion">
 			<section id="js-que">
 				<form action="/NANIKA/TestServlet" method="post">
-					<h1>テスト受験</h1>
 					<div class="t_timer">
 						<p>
 							テスト残り時間： <span id="time_h"></span>:<span id="time_m"></span>
