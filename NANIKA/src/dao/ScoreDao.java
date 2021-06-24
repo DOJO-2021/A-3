@@ -89,7 +89,7 @@ public class ScoreDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
 
 			// SELECT文を準備する
-			String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.result  from table_score s "
+			String sql = "select s.user_id, s.start_time, s.end_time, uni.unit, s.score, s.result from table_score s "
 					+ "inner join table_user u on u.user_id = s.user_id "
 					+ "inner join table_unit uni on uni.unit_id = s.unit_id "
 					+ "where s.user_id = ? AND uni.unit_id = ?";
@@ -107,6 +107,7 @@ public class ScoreDao {
 				rs.getString("unit"),
 				rs.getString("start_time"),
 				rs.getString("end_time"),
+				rs.getInt("score"),
 				rs.getInt("result")
 				);
 				scoreall.add(score);
