@@ -11,45 +11,47 @@
 		<link rel="stylesheet" href="/NANIKA/css/test_result_table.css">
 		<link rel="shortcut icon" href="image/nanikafavicon.ico">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
 </head>
 <body>
-		<header>
-			<jsp:include page="/header.jsp" />
-		</header>
+	<header>
+		<jsp:include page="/header.jsp" />
+	</header>
 
 	<h1>テスト結果</h1>
 	<p><b><c:out value="${unitName}"></c:out>のテスト結果</b></p>
 	<table  border= "5" bordercolor ="slateblue" >
 		<tr>
-		<td>回数</td>
-		<td>開始時間</td>
-		<td>終了時間</td>
-		<td>正解率</td>
-		<td>合否</td>
-		<td>解説</td>
+			<td>回数</td>
+			<td>開始時間</td>
+			<td>終了時間</td>
+			<td>正解率</td>
+			<td>合否</td>
+			<td>解説</td>
 		</tr>
 		<c:forEach var="scorenew" items="${scorenew}" varStatus="count">
-			<form method="POST" action="/NANIKA/TestCommentaryServlet">
+		<form method="POST" action="/NANIKA/TestCommentaryServlet">
 			<input type="hidden" name='unit_id' value="${unitId}" >
 			<input type="hidden" name='start_time' value="${scorenew.start_time}">
-				<tr>
-					<td><c:out value="${testcount}" /></td>
-					<td><c:out value="${scorenew.start_time} " /></td>
-					<td><c:out value="${scorenew.end_time} " /></td>
-					<td><c:out value="${scorenew.score} " /></td>
-					<c:choose>
+			<tr>
+				<td><c:out value="${testcount}" /></td>
+				<td><c:out value="${scorenew.start_time} " /></td>
+				<td><c:out value="${scorenew.end_time} " /></td>
+				<td><c:out value="${scorenew.score} " /></td>
+				<c:choose>
 					<c:when test="${scorenew.result == 0}">
-					<td>×</td>
+						<td>×</td>
 					</c:when>
 					<c:when test="${scorenew.result == 1}">
-					<td>○</td>
+						<td>○</td>
 					</c:when>
-					</c:choose>
-					<td><a class="commentary-btn"><input class="commentary-btn" type="submit" name="REGIST" value="解説"></a></td>
-				</tr>
-			</form>
+				</c:choose>
+				<td>
+					<a class="commentary-btn"><input class="commentary-btn" type="submit" name="REGIST" value="解説"></a>
+				</td>
+			</tr>
+		</form>
 		</c:forEach>
 	</table>
 	<br>
