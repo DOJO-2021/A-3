@@ -44,7 +44,7 @@
 					</div>
 					<br> <br>
 					<div class="commentary">
-						<table class="commentary">
+						<table  border= "5" bordercolor ="slateblue">
 							<tr>
 								<th>正解</th>
 								<th>選択</th>
