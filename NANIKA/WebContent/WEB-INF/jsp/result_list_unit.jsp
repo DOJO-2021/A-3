@@ -26,30 +26,33 @@
 			</ul>
 		</div>
 		<nav class="menu">
-			<p>
-				<a href="/NANIKA/HomeServlet">メニュー</a>
-			</p>
-			<p>
-				<a href="/NANIKA/TestSubjectServlet">テスト受験</a>
-			</p>
-			<p>
-				<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
-			</p>
+			<ul>
+				<li>
+					<a href="/NANIKA/HomeServlet">メニュー</a>
+				</li>
+				<li>
+					<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
+				</li>
+			</ul>
 		</nav>
-		<nav class="subjectmenu">
+			<nav class="subjectmenu">
 			<c:forEach var="subject" items="${subjectList}">
-				<p>
+			<ul>
+				<li>
 					<a href="/NANIKA/UnitServlet" class="subject"
-						name='${subject.subject_id}'><c:out value="${subject.subject}"></c:out></a>
-				</p>
+						name='${subject.subject_id}'>${subject.subject}</a>
+				</li>
+			</ul>
 			</c:forEach>
 		</nav>
 		<nav class="unitmenu">
 			<c:forEach var="unit" items="${UnitList}">
-				<p>
+			<ul>
+				<li>
 					<a href="/NANIKA/TestDetailServlet" class="js-unit"
 						name='${unit.unit_id}'><c:out value="${unit.unit} " /></a>
-				</p>
+				</li>
+			</ul>
 			</c:forEach>
 		</nav>
 		<hr>

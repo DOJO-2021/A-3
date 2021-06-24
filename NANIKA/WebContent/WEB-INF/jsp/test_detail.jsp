@@ -54,6 +54,7 @@
 			<th>回数</th>
 			<th>開始時間</th>
 			<th>終了時間</th>
+			<th>点数</th>
 			<th>合否</th>
 		</tr>
 		<c:forEach var="scoreall" items="${scoreall}" varStatus="count">
@@ -64,7 +65,15 @@
 					<td><c:out value="${count.index+1}" /></td>
 					<td><c:out value="${scoreall.start_time} " /></td>
 					<td><c:out value="${scoreall.end_time} " /></td>
-					<td><c:out value="${scoreall.result} " /></td>
+					<td><c:out value="${scoreall.score}" /></td>
+					<c:choose>
+					<c:when test="${scoreall.result == 0}">
+					<td>×</td>
+					</c:when>
+					<c:when test="${scoreall.result == 1}">
+					<td>○</td>
+					</c:when>
+					</c:choose>
 					<td><a class="commentary-btn"><input class="commentary-btn" type="submit" name="REGIST" value="解説"></a></td>
 				</tr>
 			</form>

@@ -86,7 +86,6 @@
 .subjectmenu {
 	width: 980px;
 	clear: both;
-	overflow: hidden;
 	margin: 16px auto;
 }
 .subjectmenu ul {
@@ -97,7 +96,6 @@
 .subjectmenu ul li {
 	width: 193px;
 	float: left;
-	display: block;
 	border-right: 3px solid #dbae58;
 	border-bottom: 5px solid #dbae58;
 	background-color: #474655;
@@ -126,7 +124,6 @@
 .unitmenu {
 	width: 980px;
 	clear: both;
-	overflow: hidden;
 	margin: 16px auto;
 }
 .unitmenu ul {
@@ -137,7 +134,6 @@
 .unitmenu ul li {
 	width: 193px;
 	float: left;
-	display: block;
 	border-right: 3px solid #dbae58;
 	border-bottom: 5px solid #dbae58;
 	background-color: #474655;
@@ -258,11 +254,12 @@ a:active {
 */
 /*--------------------------------*/
 header {
-	overflow: hidden;
+
 	margin: 50px auto;
 }
+<<<<<<< HEAD
 main {
-	overflow: hidden;
+/*	overflow: hidden; */
 	margin: 0 auto;
 
 }
@@ -271,6 +268,8 @@ main {
 	width: 220px;
 	float: left;
 }
+=======
+>>>>>>> 4d76632aaad3c94d596a692beac2a386d12d60ef
 #sideChart {
 	margin: auto;
 	width: 730px;

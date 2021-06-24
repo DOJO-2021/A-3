@@ -16,6 +16,11 @@
 	<header>
 		<jsp:include page="/header.jsp" />
 	</header>
+	<div class="explorer">
+			<ul>
+				<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
+			</ul>
+		</div>
 	<main>
 		<nav class="menu">
 			<!--メニュータブ （左） -->
