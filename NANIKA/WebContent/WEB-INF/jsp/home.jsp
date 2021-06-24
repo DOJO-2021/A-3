@@ -24,13 +24,9 @@
 				<li><a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a></li>
 			</ul>
 		</nav>
-			<div class="explorer">
-				<ul >
-					<li><a href="/NANIKA/HomeServlet">メニュー</a></li>
-				</ul>
-			</div>
 	</main>
 			<!-- （右側） -->
+			<h1>Radar Chart</h1>
 			<canvas id="myRaderChart" style="background-color: #fff"></canvas>
 			<hr>
 			<div>

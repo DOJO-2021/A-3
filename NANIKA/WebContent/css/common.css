@@ -40,7 +40,7 @@
 	background-color: #474655;
 }
 */
-/*メニューバー -------------------*/
+/*メニューバー C----------*/
 .menu{position: relative; top: 20px; }
 .menu {
 	width: 980px;
@@ -54,12 +54,12 @@
 	margin: 0;
 }
 
-.menu ul li {
+.menu ul li{
 	width: 487px;
 	float: left;
 	display: block;
-	border-bottom: 3px solid #dbae58;
 	border-right: 3px solid #dbae58;
+	border-bottom: 5px solid #dbae58;
 	background-color: #474655;
 	padding: 10px 0px;
 	text-decoration: none;
@@ -68,7 +68,10 @@
 	text-align: center;
 	font-size: 14px;
 }
-
+.menu ul li a{
+	width: 487px;
+	display: block;
+}
 .menu ul li:hover {
 	border-bottom: 8px solid #c499ff;
 	background-color: #474655;
@@ -78,6 +81,86 @@
 }
 .menu ul li:last-child {border-right: none; }
 
+/*--------------------------------*/
+.subjectmenu{position: relative; top: 20px; }
+.subjectmenu {
+	width: 980px;
+	clear: both;
+	overflow: hidden;
+	margin: 16px auto;
+}
+.subjectmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.subjectmenu ul li {
+	width: 193px;
+	float: left;
+	display: block;
+	border-right: 3px solid #dbae58;
+	border-bottom: 5px solid #dbae58;
+	background-color: #474655;
+	padding: 10px 0px;
+	text-decoration: none;
+	color: #E1E2CF;
+	margin: 1px 0px;
+	text-align: center;
+	font-size: 14px;
+}
+.subjectmenu ul li a{
+	width: 193px;
+	display: block;
+}
+
+.subjectmenu ul li:hover {
+	border-bottom: 8px solid #c499ff;
+	background-color: #474655;
+}
+.subjectmenu ul li::after {
+    border-right: 3px solid #dbae58;
+}
+.subjectmenu ul li :first-child {border-right: none; }
+/*--------------------------------*/
+.unitmenu{position: relative; top: 20px; }
+.unitmenu {
+	width: 980px;
+	clear: both;
+	overflow: hidden;
+	margin: 16px auto;
+}
+.unitmenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.unitmenu ul li {
+	width: 193px;
+	float: left;
+	display: block;
+	border-right: 3px solid #dbae58;
+	border-bottom: 5px solid #dbae58;
+	background-color: #474655;
+	padding: 10px 0px;
+	text-decoration: none;
+	color: #E1E2CF;
+	margin: 1px 0px;
+	text-align: center;
+	font-size: 14px;
+}
+.unitmenu ul li a{
+	width: 193px;
+	display: block;
+}
+
+.unitmenu ul li:hover {
+	border-bottom: 8px solid #c499ff;
+	background-color: #474655;
+}
+.unitmenu ul li::after {
+    border-right: 3px solid #dbae58;
+}
+.unitmenu ul li :last-child {border-right: none; }
 /*--------------------------------*/
 body {
 	background-color: #488a99;
@@ -116,9 +199,9 @@ a:active {
 }
 .explorer ul li:last-child::after {content: none; }
 
-/*科目名メニューバー -------------------*/
+/* 科目名メニューバー -------------------
 
-.subjectmenu {position: relative; left: 180px; bottom: 65px; /* 35px; */}
+.subjectmenu {position: relative; left: 180px; bottom: 65px;  35px; }
 .subjectmenu p {
 	display: inline;
 	padding: 0;
@@ -143,11 +226,12 @@ a:active {
 	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
+*/
 /*--------------------------------*/
 
-/*単元名メニューバー -------------------*/
+/*単元名メニューバー -------------------
 
-.unitmenu {position: relative; left: 360px; bottom: 207px; /*140px; */}
+.unitmenu {position: relative; left: 360px; bottom: 207px;}
 .unitmenu p {
 	display: inline;
 	padding: 0;
@@ -171,6 +255,7 @@ a:active {
 	border-left: 8px solid #c499ff;
 	background-color: #474655;
 }
+*/
 /*--------------------------------*/
 header {
 	overflow: hidden;
