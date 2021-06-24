@@ -56,7 +56,11 @@
 			</c:forEach>
 		</nav>
 		<h1>Radar Chart</h1>
-		<canvas id="MyRaderChart" style="background-color: #fff"></canvas>
+		<div id="canvas" style="position: relative; width: 950px; height: 470px; background-color: #488a99; border: ridge 10px
+
+; margin: 0 0 0 10px;">
+		<canvas id="MyRaderChart" style="broder-radius: 50px;"></canvas>
+		</div>
 		<hr>
 		<div>
 			<label>評価（システム）</label>
