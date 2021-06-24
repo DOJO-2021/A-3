@@ -105,6 +105,16 @@ public class NanikaBeans implements Serializable  {
 		this.start_time = start_time;
 		this.user_answer = user_answer;
 	}
+//UnitServlet ６３行目で使用
+	public NanikaBeans() {
+		super();
+	}
+//UnitServlet   ScoreDao 453行目
+	public NanikaBeans(String unit, int score) {
+		super();
+		this.unit = unit;
+		this.score = score;
+	}
 
 	//---------------------------------------
 	public int getUser_id() {
