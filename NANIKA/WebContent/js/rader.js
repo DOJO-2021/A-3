@@ -48,15 +48,16 @@ var myRadarChart = new Chart(ctx, {
 		scale : {
 
 			ticks : {
-
+//				display: false,
+				showLabelBackdrop : false, //文字の背景消す
 				suggestedMin : 0,
 				suggestedMax : 100,
 				stepSize : 10,
-
 				callback : function(value, index, values) {
 					return value + '点'
 				},
-				fontColor: '#474655'
+				fontColor: '#cacacc'
+
 
 
 			},
