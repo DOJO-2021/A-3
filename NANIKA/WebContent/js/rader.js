@@ -67,7 +67,7 @@ var myRadarChart = new Chart(ctx, {
 			},
 			angleLines: {        // 軸（放射軸）
                 display: true,
-                color: "white"
+                color: "#949495"
             },
             gridLines: {         // 補助線（目盛の線）
                 display: true,
