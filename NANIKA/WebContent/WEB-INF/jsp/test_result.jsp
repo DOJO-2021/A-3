@@ -58,7 +58,7 @@
 	<br>
 	<form method="get" action="/NANIKA/TestDetailServlet">
 		<input type="hidden" name='unit_id' value="${unitId}" >
-		<a class="testdetail-btn"><input class="testdetail-btn" type="submit" name="REGIST" value="テスト詳細画面"></a>
+		<a class="custom-btn btn"><input class="custom-btn btn" type="submit" name="REGIST" value="テスト詳細画面"></a>
 	</form>
 	<br>
 	<a href= "/NANIKA/HomeServlet">ホームに戻る</a>
