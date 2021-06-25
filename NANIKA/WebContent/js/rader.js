@@ -49,7 +49,9 @@ var myRadarChart = new Chart(ctx, {
 				stepSize : 10,
 				callback : function(value, index, values) {
 					return value + '点'
-				}
+				},
+				fontColor: '#474655',
+
 			},
 			pointLabels : {
 				fontSize : 16,

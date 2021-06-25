@@ -1,73 +1,73 @@
-
-
     var dropZone = document.getElementById('drop-zone');
     var preview = document.getElementById('preview');
     var fileInput = document.getElementById('file-input');
     var aaa = document.getElementById('aaa');
 
-    var upload_file_url;
-    var url5;
+    // ドラッグ&ドロップを許可する領域を取得
 
-    dropZone.addEventListener('dragover', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.style.background = '#e1e7f0';
-    }, false);
+	// 対象領域にファイルがドラッグされた際のイベントを登録
+	dropZone.addEventListener('dragover', (event) => {
+		event.stopPropagation();
+		event.preventDefault();
+		this.style.background = '#e1e7f0';
+		// ドラッグしているファイルの表示を変更
+		event.dataTransfer.dropEffect = 'copy';
+	}, false);
 
-    dropZone.addEventListener('dragleave', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.style.background = '#ffffff';
-    }, false);
-
-    fileInput.addEventListener('change', function () {
-        previewFile(this.files[0]);
+	fileInput.addEventListener('change', function () {
+        getFiles(this.files);
     });
 
-    dropZone.addEventListener('drop', function(e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.style.background = '#ffffff'; //背景色を白に戻す
-        var files = e.dataTransfer.files; //ドロップしたファイルを取得
+	// 対象領域外へファイルがドラッグされた際のイベントを登録
+	dropZone.addEventListener('dragleave', (event) => {
+		event.stopPropagation();
+		event.preventDefault();
+	}, false);
 
-        if (files.length > 1) return alert('アップロードできるファイルは1つだけです。');
+	// 対象領域にファイルがドロップされた際のイベントを登録
+	dropZone.addEventListener('drop', (event) => {
+
+		//ドラッグされたファイルを、ブラウザが開かないように設定
+		event.stopPropagation();
+		event.preventDefault();
+
+		//ドロップしたファイルを取得
+		var files = event.dataTransfer.files;
+		if (files.length > 1) return alert('アップロードできるファイルは1つだけです。');
         fileInput.files = files; //inputのvalueをドラッグしたファイルに置き換える。
-        console.log("---------");
-        console.log(files[0].name);
-        console.log("---------");
-        console.log(files[0].webkitRelativePath+ "-----aaaa");
-        console.log("----sss---");
-        console.log(files[0]);
+	   	getFiles(files);
+	});
 
-var url = location.href;
-var urlaaa = encodeURI(url).toString();
+function getFiles(files) {
+	for (let file of files) {
+		const dataArray = []; //配列を用意
+		const reader = new FileReader();
 
+		//テキスト形式で読み込む
+		reader.readAsText(file);
 
-// aaa.innerHTML = files[0].webkitRelativePath;
-      console.log(urlaaa);
+		// テキストの読み込みが完了した際のイベントを登録
+		reader.onload = (event) => {
 
-        previewFile(files[0]);
+		const text = event.target.result;
 
-        // アップロードしたファイルのURLを取得
-        // upload_file_url = URL.createObjectURL(files[0]).toString();
-        // url5 = files[0].webkitRelativePath;
-        // window.alert(url5);
+		const csv = text.split('\n');
 
-    }, false);
+		for (let i = 0; i < csv.length; i++) { //あるだけループ
+        	dataArray[i] = csv[i].split(',');
+    	}
+		console.log(csv);
+		let insertElement = '';
+		dataArray.forEach((element) => { //配列の中身を表示
+	        insertElement += '<tr>';
+	        element.forEach((childElement) => {
+	            insertElement += `<td>${childElement}</td>`
+	        });
+	        insertElement += '</tr>';
+	    });
+		preview.innerHTML = insertElement;
 
-    function previewFile(file) {
-        /* FileReaderで読み込み、プレビュー画像を表示。 */
-        var fr = new FileReader();
-        fr.readAsDataURL(file);
-        fr.onload = function() {
-            var img = document.createElement('img');
-            img.setAttribute('src', fr.result);
+      }
+   }
 
-            preview.innerHTML = '';
-            preview.appendChild(img);
-
-        };
-        // var relativePath = File.webkitRelativePath
-        //
-        // console.log(upload_file_url);
-    }
+}
