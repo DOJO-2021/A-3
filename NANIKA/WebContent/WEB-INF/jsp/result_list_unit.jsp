@@ -71,7 +71,7 @@
 
 		<hr>
 	</div>
-	<div style="display: block">
+	<div style="display: none">
 		<div id = "content">各単元</div>
 		<c:forEach var="unitLists" items="${UnitList_score}">     <!-- List<NanikaBeans>[] UnitList_score = new List[5]; -->
 															<!-- UnitList_score = sDao.scoreNew2(userbeans.getUser_id(), i,subjectId); 返り値「List<NanikaBeans>」 -->

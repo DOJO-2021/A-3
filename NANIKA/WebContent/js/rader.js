@@ -20,7 +20,6 @@ while (index < subjectLen) {
 	console.log($subject[index].textContent);
 	index++;
 }
-
 var myRadarChart = new Chart(ctx, {
 	type : 'radar',
 	data : {
@@ -31,31 +30,40 @@ var myRadarChart = new Chart(ctx, {
 			backgroundColor : 'RGBA(196,153,255, 0.5)',
 			borderColor : 'RGBA(0,0,0, 1)',
 			borderWidth : 1,
-			pointBackgroundColor : '#474655'
+			pointBackgroundColor : '#474655',
+
 
 		} ]
 	},
 	options : {
+
 		title : {
 			display : true,
 			text : [$content.textContent+'の試験成績'],
 			fontSize: 20,
 			fontColor: "#474655"
+
 		},
+
 		scale : {
+
 			ticks : {
+
 				suggestedMin : 0,
 				suggestedMax : 100,
 				stepSize : 10,
+
 				callback : function(value, index, values) {
 					return value + '点'
 				},
-				fontColor: '#474655',
+				fontColor: '#474655'
+
 
 			},
 			pointLabels : {
 				fontSize : 16,
-				fontColor: '#2b2b2b'    // 文字の色
+				fontColor: '#2b2b2b'  ,  // 文字の色
+
 			},
 			angleLines: {        // 軸（放射軸）
                 display: true,
@@ -63,7 +71,8 @@ var myRadarChart = new Chart(ctx, {
             },
             gridLines: {         // 補助線（目盛の線）
                 display: true,
-                color: '#474655'
+                color: '#474655',
+
             }
 
 		},
@@ -71,7 +80,8 @@ var myRadarChart = new Chart(ctx, {
 		legend : {
 			label : {
 				// This more specific font property overrides the global property
-				fontSize : 14
+				fontSize : 14,
+
 			}
 		}
 
