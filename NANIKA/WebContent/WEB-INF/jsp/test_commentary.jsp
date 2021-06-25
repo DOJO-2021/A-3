@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>NANIKA | 問題解説</title>
 <link rel="stylesheet" href="/NANIKA/css/header.css">
 <link rel="stylesheet" href="/NANIKA/css/common.css">
 <link rel="stylesheet" href="/NANIKA/css/table_commentary.css">
@@ -15,21 +15,18 @@
 	<header>
 		<jsp:include page="/header.jsp" />
 	</header>
-	<div>
-		<p>
-			<a href="/NANIKA/HomeServlet">メニュー</a>
-		</p>
-		<p>
-			<a href="/NANIKA/TestSubjectServlet">テスト受験</a>
-		</p>
-		<p>
-			<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
-		</p>
-	</div>
-
+<nav class="menu">
+			<ul>
+				<li>
+					<a href="/NANIKA/HomeServlet">メニュー</a>
+				</li>
+				<li>
+					<a href="/NANIKA/ResultSubjectServlet">テスト結果一覧</a>
+				</li>
+			</ul>
+		</nav>
 	<div id="js-que">
 		<div class="que-contents">
-
 			<c:forEach var="report" items="${queston_report}" varStatus="status">
 				<div class="que-contents-item" data-content="${status.index}">
 					<div>
@@ -95,7 +92,6 @@
 		</div>
 
 		<br>
-
 
 		<div class="list-nav">
 			<div class="ulist">
