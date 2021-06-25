@@ -40,7 +40,7 @@ td {
 <form action="/NANIKA/AdminServlet" method="post" enctype="multipart/form-data">
     <div id="drop-zone" style="border: 1px solid; padding: 30px; margin: auto 2px; width: 818px; height: 132px; border-radius: 10px;">
         <p>ファイルをドラッグ＆ドロップもしくは</p>
-        <input type="file" name="file" id="file-input" webkitRelativePath>
+        <input type="file" name="file" id="file-input" accept=".csv" webkitRelativePath>
     </div>
 
 <p class="aaa"></p>

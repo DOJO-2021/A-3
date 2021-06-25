@@ -35,7 +35,6 @@
 		var files = event.dataTransfer.files;
 		if (files.length > 1) return alert('アップロードできるファイルは1つだけです。');
         fileInput.files = files; //inputのvalueをドラッグしたファイルに置き換える。
-
 	   	getFiles(files);
 	});
 
@@ -70,4 +69,5 @@ function getFiles(files) {
 
       }
    }
+
 }
