@@ -201,4 +201,63 @@ public class QuestionsDao {
 		return result;
 	}
 
+	public boolean upDate(QuestionBeans param) {
+		Connection conn = null;
+		boolean result = false;
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する（仮）
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+
+			// INSERT文を準備する
+			String sql = "insert into table_question values (null,?,?,?,?,?,?,?,?,?,?,?,?)";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setInt(1, param.getUnit_id());
+			pStmt.setString(2, param.getQuestion());
+			pStmt.setString(3, param.getCommentary());
+			pStmt.setString(4, param.getAnswer_commentary1());
+			pStmt.setString(5, param.getAnswer_commentary2());
+			pStmt.setString(6, param.getAnswer_commentary3());
+			pStmt.setString(7, param.getAnswer_commentary4());
+			pStmt.setString(8, param.getAnswer1());
+			pStmt.setString(9, param.getAnswer2());
+			pStmt.setString(10, param.getAnswer3());
+			pStmt.setString(11, param.getAnswer4());
+			pStmt.setString(12, param.getAnswer());
+			// INSERT文を正常に実行できたかの判断
+			if (pStmt.executeUpdate() == 1) {
+				result = true;
+			}
+
+
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			result = false;
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+					result = false;
+				}
+			}
+		}
+		// 結果を返す
+		return result;
+
+
+	}
+
 }

@@ -29,11 +29,15 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("EMAIL");
 		String pw = request.getParameter("PW");
+		HttpSession session = request.getSession();
 
 		//ログイン処理
 		IdpwDao iDao = new IdpwDao();
 		//ログイン判定
-		if(iDao.isLoginOK(email,pw)) {
+		if(email.equals("admin@admin") && pw.equals("admin")){
+			session.setAttribute("admin","管理者");
+			response.sendRedirect("/NANIKA/AdminServlet");
+		}else if(iDao.isLoginOK(email,pw)) {
 			//ユーザIDとnameを取得
 			UserBeans userbeans = iDao.login(email,pw);
 			System.out.println("----------------LoginServlet");
@@ -42,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 			System.out.println("ユーザのemail："+ userbeans.getEmail());
 
 			// セッションスコープにIDを格納する
-			HttpSession session = request.getSession();
+
 			session.setAttribute("userbeans", userbeans);
 			// ホームサーブレットにリダイレクトする。ページが変わるのでリダイレクトを使用している。
 			response.sendRedirect("/NANIKA/HomeServlet");
