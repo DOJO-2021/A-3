@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>画像アップロード</h1>
-<form action="./upload.php" method="post" enctype="multipart/form-data">
+<form action="/NANIKA/AdminServlet" method="post" enctype="multipart/form-data">
     <div id="drop-zone" style="border: 1px solid; padding: 30px;">
         <p>ファイルをドラッグ＆ドロップもしくは</p>
         <input type="file" name="file" id="file-input" webkitRelativePath>
