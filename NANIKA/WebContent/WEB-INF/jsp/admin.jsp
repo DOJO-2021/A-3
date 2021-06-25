@@ -5,19 +5,35 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ドラッグ&ドロップでファイルをアップロード</title>
+    <title>管理者画面</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<h1>画像アップロード</h1>
+
+<ul class="nav ">
+  <li class="nav-item">
+    <a class="nav-link  disabled" href="#"><c:out value="${admin}"></c:out></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link active" href="/NANIKA/LoginServlet">Logout</a>
+  </li>
+</ul>
+
+<h2 style="padding: 1rem 2rem;
+  border-left: 4px solid #000; margin: 0 0 0 2px;">ファイルアップロード</h2>
+
+<br>
 <form action="/NANIKA/AdminServlet" method="post" enctype="multipart/form-data">
-    <div id="drop-zone" style="border: 1px solid; padding: 30px;">
+    <div id="drop-zone" style="border: 1px solid; padding: 30px; margin: auto 2px; width: 818px; height: 132px; border-radius: 10px;">
         <p>ファイルをドラッグ＆ドロップもしくは</p>
         <input type="file" name="file" id="file-input" webkitRelativePath>
     </div>
 
 <p class="aaa"></p>
 
-    <h2>アップロードした画像</h2>
+    <h2 style="padding: 1rem 2rem;
+  border-left: 4px solid #000; margin: 0 0 0 2px;">アップロード結果</h2>
     <div id="preview"></div>
     <input type="submit" style="margin-top: 50px">
 </form>
