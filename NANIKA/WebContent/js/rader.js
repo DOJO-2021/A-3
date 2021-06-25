@@ -79,9 +79,8 @@ var myRadarChart = new Chart(ctx, {
 
 		legend : {
 			label : {
-				// This more specific font property overrides the global property
+				//This more specific font property overrides the global property
 				fontSize : 14,
-
 			}
 		}
 
