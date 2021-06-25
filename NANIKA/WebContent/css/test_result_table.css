@@ -60,7 +60,13 @@ table{
 .testdetail-btn:hover {
   color: #FFF;
 }
-body{
+h3 {
 	text-align: center;
+}
+main {
+	text-align: center;
+}
+body{
+	/*text-align: center;*/
 	color: #332d30;
 }

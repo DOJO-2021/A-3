@@ -15,10 +15,11 @@
 </script>
 </head>
 <body>
+<div class="wrapper">
 	<header>
 		<jsp:include page="/header.jsp" />
 	</header>
-
+<main>
 	<h1>テスト結果</h1>
 	<p><b><c:out value="${unitName}"></c:out>のテスト結果</b></p>
 	<table  border= "5" bordercolor ="slateblue" >
@@ -61,5 +62,7 @@
 	</form>
 	<br>
 	<a href= "/NANIKA/HomeServlet">ホームに戻る</a>
+	</main>
+</div>
 </body>
 </html>
