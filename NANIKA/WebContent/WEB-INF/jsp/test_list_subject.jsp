@@ -48,9 +48,12 @@
 		</nav>
 	</main>
 		<br>
-		<hr>
-		<canvas id="myRaderChart" style="background-color: #fff"></canvas>
-		<hr>
+		<h1>Radar Chart</h1>
+
+		<div id="canvas" style="position: relative; width: 950px; height: 500px; background-color: #488a99; border: ridge 10px; margin: 0 0 0 10px;">
+			<canvas id="myRaderChart" style="background-color: #488a99"></canvas>
+		</div>
+
 		<div>
 			<label>評価（システム）</label>
 		</div>

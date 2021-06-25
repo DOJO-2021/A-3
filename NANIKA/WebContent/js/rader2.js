@@ -28,10 +28,10 @@ var myRadarChart = new Chart(ctx, {
 		datasets : [ {
 			label : [$user.textContent],
 			data : [$score[0].textContent, $score[1].textContent, $score[2].textContent, $score[3].textContent, $score[4].textContent],
-			backgroundColor : 'RGBA(0,0,0, 0.5)',
+			backgroundColor : '#c499ff',
 			borderColor : 'RGBA(0,0,0, 1)',
 			borderWidth : 1,
-			pointBackgroundColor : 'RGB(0,0,0)'
+			pointBackgroundColor : '#474655'
 
 		} ]
 	},
@@ -42,7 +42,7 @@ var myRadarChart = new Chart(ctx, {
 			display : true,
 			fontSize: 20,
 			text : [$content.textContent+'のテスト成績'],
-			fontColor: "black"
+			fontColor: "#474655"
 		},
 		scale : {
 			ticks : {
@@ -51,11 +51,11 @@ var myRadarChart = new Chart(ctx, {
 				stepSize : 10,
 				callback : function(value, index, values) {
 					return value + '点'
-				}
+				},
 			},
 			pointLabels : {
 				fontSize : 16,
-                fontColor: "black"    // 文字の色
+                fontColor: '#474655',    // 文字の色
 			},
 			angleLines: {        // 軸（放射軸）
                 display: true,
@@ -63,7 +63,7 @@ var myRadarChart = new Chart(ctx, {
             },
             gridLines: {         // 補助線（目盛の線）
                 display: true,
-                color: "black"
+                color: '#2b2b2b'
             }
 		},
 
