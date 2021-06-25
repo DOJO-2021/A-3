@@ -53,7 +53,7 @@ var myRadarChart = new Chart(ctx, {
 			},
 			pointLabels : {
 				fontSize : 16,
-				fontColor: '#474655'    // 文字の色
+				fontColor: '#2b2b2b'    // 文字の色
 			},
 			angleLines: {        // 軸（放射軸）
                 display: true,
@@ -61,7 +61,7 @@ var myRadarChart = new Chart(ctx, {
             },
             gridLines: {         // 補助線（目盛の線）
                 display: true,
-                color: '#2b2b2b'
+                color: '#474655'
             }
 
 		},
