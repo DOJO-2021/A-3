@@ -54,7 +54,7 @@
 			<th>回数</th>
 			<th>開始時間</th>
 			<th>終了時間</th>
-			<th>点数</th>
+			<th>正答率</th>
 			<th>合否</th>
 		</tr>
 		<c:forEach var="scoreall" items="${scoreall}" varStatus="count">

@@ -52,6 +52,7 @@ public class TestDetailServlet extends HttpServlet {
 			System.out.println("----------------ResultServlet");
 			System.out.println("ユーザID:"+ nanika.getUser_id());
 			System.out.println("テスト科目:"+ nanika.getUnit());
+			System.out.println(nanika.getScore());
 			System.out.println();
 		}
 
