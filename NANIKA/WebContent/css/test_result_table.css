@@ -13,14 +13,15 @@ table{
 	margin-left: auto;
 	margin-right: auto;
 }
-.testdetail-btn {
+/*----------------------
+.testdetail-btn input[type='submit'] {
   display: inline-block;
   width: 200px;
   text-align: center;
   background-color: #9ec34b;
   border: 2px solid #9ec34b;
   font-size: 16px;
-  color: #9ec34b;
+  color: #FFF;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 24px;
@@ -28,13 +29,13 @@ table{
   position: relative;
 }
 
-.testdetail-btn {
+.testdetail-btn input[type='submit'] {
   position: relative;
   z-index: 1;
 }
 
-.testdetail-btn::before,
-.testdetail-btn::after {
+.testdetail-btn input[type='submit']::before,
+.testdetail-btn input[type='submit']::after {
   content: "";
   display: block;
   background-color: #FFF;
@@ -44,22 +45,83 @@ table{
   top: 0;
   transition: .2s;
 }
-.testdetail-btn::before {
+.testdetail-btn input[type='submit']::before {
   left: 0;
 }
-.testdetail-btn::after {
+.testdetail-btn input[type='submit']::after {
   right: 0;
 }
 
-.testdetail-btn:hover:before,
-.testdetail-btn:hover:after {
+.testdetail-btn input[type='submit']:hover:before,
+.testdetail-btn input[type='submit']:hover:after {
   width: 0;
   background-color: #FFF;
 }
 
-.testdetail-btn:hover {
+.testdetail-btn input[type='submit']:hover {
   color: #FFF;
+}*/
+/*----------------------*/
+.custom-btn {
+  width: 200px;
+  height: 40px;
+  color: #145866;
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: 2px solid #9ec34b;
+   text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight:  bold;
+  background: #9ec34b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px #eee8aa,
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+   position: relative;
+  z-index: 1;
+
 }
+.btn {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: #9ec34b;
+}
+.btn:hover {
+ color: #9ec34b;
+ background-color: #FFF;
+}
+.btn:before,
+.btn:after{
+  content:'';
+  position:absolute;
+    display: block;
+  top:0;
+  height: 3px;
+  width: 0;
+  background: #FFF;
+
+  transition: .2s;
+}
+.btn:before{
+  right:0;
+}
+.btn:after{
+  left:0;
+}
+
+.btn:hover:before,
+.btn:hover:after{
+  width: 100%;
+  transition:800ms ease all;
+}
+/*----------------------*/
 h3 {
 	text-align: center;
 }
