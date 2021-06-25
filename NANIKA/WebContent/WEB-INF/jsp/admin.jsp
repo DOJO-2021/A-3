@@ -8,6 +8,18 @@
     <title>NANIKA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="shortcut icon" href="image/nanikafavicon.ico">
+	<style type="text/css">
+	table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  font-size: 12px;
+  padding: .2em .5em;
+  border: solid 1px #ccc;
+}
+	</style>
 </head>
 <body>
 
@@ -35,7 +47,7 @@
 
     <h2 style="padding: 1rem 2rem;
   border-left: 4px solid #000; margin: 0 0 0 2px;">アップロード結果</h2>
-    <div id="preview"></div>
+    <table id="preview"></table>
     <input type="submit" style="margin-top: 50px">
 </form>
 

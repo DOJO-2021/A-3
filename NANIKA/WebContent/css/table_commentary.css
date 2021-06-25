@@ -94,21 +94,21 @@ button {
 /*終了ボタン位置*/
 .end {
   position: absolute;
-  top: 1020px;
+  top: 980px;
   left: 1100px;
 }
 
 /*次へボタン位置*/
 .next{
   	position: absolute;
-  	top: 1020px;
+  	top: 980px;
   	left: 820px;
 }
 
 /*戻るボタン位置*/
 .back{
   	position: absolute;
-  	top: 1020px;
+  	top: 980px;
   	left: 600px;
 }
 

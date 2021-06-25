@@ -28,7 +28,7 @@ var myRadarChart = new Chart(ctx, {
 		datasets : [ {
 			label : [$user.textContent],
 			data : [$score[0].textContent, $score[1].textContent, $score[2].textContent, $score[3].textContent, $score[4].textContent],
-			backgroundColor : '#c499ff',
+			backgroundColor : 'RGBA(196,153,255, 0.5)',
 			borderColor : 'RGBA(0,0,0, 1)',
 			borderWidth : 1,
 			pointBackgroundColor : '#474655'
