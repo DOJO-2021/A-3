@@ -12,9 +12,16 @@
 <link rel="shortcut icon" href="image/nanikafavicon.ico">
 </head>
 <body>
-	<header class="header">
-		<jsp:include page="/header.jsp" />
-	</header>
+	<nav class="name">
+		<ul>
+			<li><c:out value="${userName }" /></li>
+		</ul>
+	</nav>
+
+	<h1 class="logo">
+		<img src="image/logo3.png" alt="NANIKA">
+	</h1>
+
 	<main>
 	<div class="box-line">
 	<h1>テスト受験</h1>
