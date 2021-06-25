@@ -48,9 +48,12 @@ td {
     <h2 style="padding: 1rem 2rem;
   border-left: 4px solid #000; margin: 0 0 0 2px;">アップロード結果</h2>
     <table id="preview"></table>
-    <input type="submit" style="margin-top: 50px">
+    <div id ="text"></div>
 </form>
 
+<form id ="text">
+<input type="submit" style="margin-top: 50px">
+</form>
 <script src="js/admin.js" ></script>
 </body>
 </html>

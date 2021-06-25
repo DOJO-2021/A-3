@@ -2,6 +2,7 @@
     var preview = document.getElementById('preview');
     var fileInput = document.getElementById('file-input');
     var aaa = document.getElementById('aaa');
+    var text = document.getElementById('text');
 
     // ドラッグ&ドロップを許可する領域を取得
 
@@ -66,6 +67,14 @@ function getFiles(files) {
 	        insertElement += '</tr>';
 	    });
 		preview.innerHTML = insertElement;
+
+		InsertElement = '';
+		dataArray.forEach((element) => { //配列の中身を表示
+	        element.forEach((childElement) => {
+	            InsertElement += `<input type="text" value=${childElement}>`
+	        });
+	    });
+	    text.innerHTML = InsertElement;
 
       }
    }
