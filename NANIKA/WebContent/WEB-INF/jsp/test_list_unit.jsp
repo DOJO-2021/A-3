@@ -55,11 +55,10 @@
 			</ul>
 			</c:forEach>
 		</nav>
+		<br>
 		<h1>Radar Chart</h1>
-		<div id="canvas" style="position: relative; width: 950px; height: 470px; background-color: #488a99; border: ridge 10px
-
-; margin: 0 0 0 10px;">
-		<canvas id="MyRaderChart" style="broder-radius: 50px;"></canvas>
+		<div id="canvas" style="position: relative; width: 950px; height: 470px; background-color: #488a99; border: ridge 10px; margin: 0 0 0 10px;">
+			<canvas id="MyRaderChart" style="broder-radius: 50px;"></canvas>
 		</div>
 		<hr>
 		<div>
