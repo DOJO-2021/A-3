@@ -52,22 +52,22 @@
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer1}" checked > 　　　　　　　　${q_list.answer1}</label></td>
+											value="${q_list.answer1}" checked > 　　　　　${q_list.answer1}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer2}"> 　　　　　　　　${q_list.answer2}</label></td>
+											value="${q_list.answer2}"> 　　　　　${q_list.answer2}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer3}"> 　　　　　　　　${q_list.answer3}</label></td>
+											value="${q_list.answer3}"> 　　　　　${q_list.answer3}</label></td>
 								</tr>
 								<tr>
 									<td class="questiontext"><label><input
 											type="radio" name="radiobutton${status.count}"
-											value="${q_list.answer4}"> 　　　　　　　　${q_list.answer4}</label></td>
+											value="${q_list.answer4}"> 　　　　　${q_list.answer4}</label></td>
 								</tr>
 							</table>
 
