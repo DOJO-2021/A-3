@@ -69,6 +69,7 @@
 		index++;
 	}
 
+
 })();
 
 function disp(){
@@ -81,3 +82,13 @@ function disp(){
 
 	}
 }
+
+var getTime = function() {
+var time = new Date();
+var h = time.getHours();
+var m = time.getMinutes();
+var s = time.getSeconds();
+var elem = document.getElementById('time');
+elem.innerHTML = h + "時 " + m + "分 " + s + "秒";
+}
+window.addEventListener("click", getTime, false);
