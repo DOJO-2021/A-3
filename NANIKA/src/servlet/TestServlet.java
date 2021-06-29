@@ -52,6 +52,10 @@ public class TestServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_list_unit.jsp");
 			dispatcher.forward(request, response);
 		}else {
+			Date TimeStamp = new Date();
+			SimpleDateFormat d1 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			String start_time = String.valueOf(d1.format(TimeStamp));
+			session.setAttribute("start_time", start_time);
 			//テスト受験画面にフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test.jsp");
 			dispatcher.forward(request, response);
@@ -66,10 +70,14 @@ public class TestServlet extends HttpServlet {
 		int user_id = nanikaBeans.getUser_id();
 		int unit_id = (int)session.getAttribute("unitId");
 
-		//開始時刻取得
+		String start_time = (String)session.getAttribute("start_time");
+
+		//終了時刻取得
 		Date TimeStamp = new Date();
 		SimpleDateFormat d1 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		String start_time = String.valueOf(d1.format(TimeStamp));
+		String end_time = String.valueOf(d1.format(TimeStamp));
+
+		System.out.println(end_time);
 
 		// リクエストパラメータを取i得する
 		request.setCharacterEncoding("UTF-8");
@@ -80,19 +88,13 @@ public class TestServlet extends HttpServlet {
 		int result = 0;
 
 		for(int i = 1;i<20;i++) {
-			System.out.println("上count:"+count);
-			System.out.println("上index:"+index);
 			if(request.getParameter("questionid"+i) == null) {
-				System.out.println("if文count:"+count);
-				System.out.println("if文index:"+index);
 				int score = (int)(count*100/index);
-				System.out.println(score);
 				if(score>=80) {
 					result = 1;
 				}
-				System.out.println(result);
 				//insertする(user_id、unit_id、start_time、end_time、score、result);
-				boolean score_result = sDao.insert_table_score(new ScoreBeans(user_id,unit_id,start_time,start_time,score,result));
+				boolean score_result = sDao.insert_table_score(new ScoreBeans(user_id,unit_id,start_time,end_time,score,result));
 				if(score_result) {
 					System.out.println("登録成功");
 				}else {

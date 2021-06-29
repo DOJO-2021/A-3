@@ -56,6 +56,7 @@ public class TestDetailServlet extends HttpServlet {
 			System.out.println();
 		}
 
+		session.setAttribute("menu_tab", "テスト結果一覧");
 
 
 		}catch(ClassCastException e) {
@@ -73,6 +74,8 @@ public class TestDetailServlet extends HttpServlet {
 				System.out.println("ユーザID:"+ nanika.getUser_id());
 				System.out.println("テスト科目:"+ nanika.getUnit());
 				System.out.println();
+
+				session.setAttribute("menu_tab", "テスト結果一覧");
 			}
 		}finally{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/test_detail.jsp");

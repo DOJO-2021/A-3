@@ -80,6 +80,7 @@
 						</div>
 					</c:forEach>
 					<div>
+					<input type="hidden" id="time" name="time">
 						<input type="submit" value="終了" onclick="return disp()" id="end"
 							class="end">
 					</div>
