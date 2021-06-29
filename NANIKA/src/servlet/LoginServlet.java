@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 		//ログイン処理
 		IdpwDao iDao = new IdpwDao();
 		//ログイン判定
-		if(email.equals("admin@admin") && pw.equals("admin")){
+		if(email.equals("admin@admin.co.jp") && pw.equals("admin")){
 			session.setAttribute("admin","管理者");
 			response.sendRedirect("/NANIKA/AdminServlet");
 		}else if(iDao.isLoginOK(email,pw)) {
