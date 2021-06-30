@@ -124,7 +124,7 @@ public class NanikaBeans implements Serializable  {
 //Admin4Servlet AdminDao
 	public NanikaBeans(int question_id,int unit_id ,String question, String commentary, String answer_commentary1,
 			String answer_commentary2, String answer_commentary3, String answer_commentary4, String answer1,
-			String answer2, String answer3, String answer4, String answer) {
+			String answer2, String answer3, String answer4, String answer, String unit) {
 		super();
 		this.question_id = question_id;
 		this.unit_id = unit_id;
@@ -139,8 +139,31 @@ public class NanikaBeans implements Serializable  {
 		this.answer3 = answer3;
 		this.answer4 = answer4;
 		this.answer = answer;
-	}
+		this.unit = unit;
 
+	}
+	//Admin4Servlet AdminDao 「問題の編集処理」insertで使用
+	public NanikaBeans(int unit_id, int question_id, String question, String commentary,
+			String answer1,String answer_commentary1,
+			String answer2,String answer_commentary2,
+			String answer3, String answer_commentary3,
+			String answer4, String answer_commentary4,
+			String answer) {
+		super();
+		this.unit_id = unit_id;
+		this.question_id = question_id;
+		this.question = question;
+		this.commentary = commentary;
+		this.answer_commentary1 = answer_commentary1;
+		this.answer_commentary2 = answer_commentary2;
+		this.answer_commentary3 = answer_commentary3;
+		this.answer_commentary4 = answer_commentary4;
+		this.answer1 = answer1;
+		this.answer2 = answer2;
+		this.answer3 = answer3;
+		this.answer4 = answer4;
+		this.answer = answer;
+	}
 	//---------------------------------------
 	public int getUser_id() {
 		return user_id;

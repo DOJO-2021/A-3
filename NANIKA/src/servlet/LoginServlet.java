@@ -34,9 +34,9 @@ public class LoginServlet extends HttpServlet {
 		//ログイン処理
 		IdpwDao iDao = new IdpwDao();
 		//ログイン判定
-		if(email.equals("admin@admin.co.jp") && pw.equals("admin")){
+		if(email.equals("admin@admin.co.jp") && pw.equals("password")){
 			session.setAttribute("admin","管理者");
-			response.sendRedirect("/NANIKA/AdminServlet");
+			response.sendRedirect("/NANIKA/Admin1Servlet");
 		}else if(iDao.isLoginOK(email,pw)) {
 			//ユーザIDとnameを取得
 			UserBeans userbeans = iDao.login(email,pw);
@@ -51,7 +51,8 @@ public class LoginServlet extends HttpServlet {
 			// ホームサーブレットにリダイレクトする。ページが変わるのでリダイレクトを使用している。
 			response.sendRedirect("/NANIKA/HomeServlet");
 		}else {
-
+			System.out.println("確認用："+ pw);
+			System.out.println("確認用："+ email);
 			// リクエストスコープにエラーメッセージを設定
 			request.setAttribute("err","IDまたはPWに間違いがあります。");
 			this.doGet(request, response);

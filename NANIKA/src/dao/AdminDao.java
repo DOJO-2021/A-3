@@ -144,7 +144,9 @@ public class AdminDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database","sa","");
 
 			//SELECT文を準備
-			String sql = "Select * from table_question where unit_id = ?";
+			String sql = "Select * from table_question q left join table_unit u  "
+					+ " on q.unit_id = u.unit_id "
+					+ " where q.unit_id = ?";
 			pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1,unit_id);
 
@@ -166,7 +168,8 @@ public class AdminDao {
 							rs.getString("ANSWER2"),
 							rs.getString("ANSWER3"),
 							rs.getString("ANSWER4"),
-							rs.getString("ANSWER")
+							rs.getString("ANSWER"),
+							rs.getString("UNIT")
 							);
 							Questions.add(question);
 					}
@@ -196,4 +199,95 @@ public class AdminDao {
 		// 結果を返す
 		return Questions;
 	}
+
+
+
+
+
+	// テスト編集  Admin4Servletで使用
+		public boolean insert_questions(NanikaBeans param) {
+			Connection conn = null;
+			boolean result = false;
+			//UserBeans userbeans=null; //返り値用
+
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する（仮）
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/A-3/NANIKA/database", "sa", "");
+
+				// INSERT文を準備する
+				String sql = "update table_question set "
+						+ "question = ? ,"
+						+ "commentary = ? ,"
+						+ "answer_commentary1 = ? ,"
+						+ "answer_commentary2 = ? ,"
+						+ "answer_commentary3 = ? ,"
+						+ "answer_commentary4 = ? ,"
+						+ "answer1 = ? ,"
+						+ "answer2 = ? ,"
+						+ "answer3 = ? ,"
+						+ "answer4 = ? ,"
+						+ "answer = ?  "
+						+ " where question_id  = ?  and unit_id = ?";
+
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+				pStmt.setString(1, param.getQuestion());
+				pStmt.setString(2, param.getCommentary());
+				pStmt.setString(3, param.getAnswer_commentary1());
+				pStmt.setString(4, param.getAnswer_commentary2());
+				pStmt.setString(5, param.getAnswer_commentary3());
+				pStmt.setString(6, param.getAnswer_commentary4());
+				pStmt.setString(7, param.getAnswer1());
+				pStmt.setString(8, param.getAnswer2());
+				pStmt.setString(9, param.getAnswer3());
+				pStmt.setString(10, param.getAnswer4());
+				pStmt.setString(11, param.getAnswer());
+				pStmt.setInt(12, param.getQuestion_id());
+				pStmt.setInt(13, param.getUnit_id());
+
+
+				// INSERT文を正常に実行できたかの判断
+				if (pStmt.executeUpdate() == 1) {
+					result = true;
+				}
+
+
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+//				loginResult = false;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+//				loginResult = false;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+//						loginResult = false;
+					}
+				}
+			}
+			// 結果を返す
+			return result;
+
+
+		}
+
+
+
+
+
+
+
+
+
 }

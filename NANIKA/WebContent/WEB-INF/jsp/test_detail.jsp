@@ -55,7 +55,8 @@
 		</ul>
 		</c:forEach>
 	</nav>
-		<h3><c:out value="${unitName} " />のテスト詳細</h3>
+		<h3>配列のテスト詳細</h3>
+		<!-- <c:out value="${unitName} " /> ちょっとここコメントアウトです。-->
 	<table  border= "5" bordercolor ="slateblue">
 		<tr>
 			<th>回数</th>
